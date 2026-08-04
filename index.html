@@ -1,0 +1,507 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Sito per La Taverna di Monterosso: cucina italiana, pesce, pizza e sapori liguri a Monterosso al Mare." />
+    <meta name="theme-color" content="#070d0a" />
+    <meta property="og:title" content="La Taverna di Monterosso" />
+    <meta property="og:description" content="Ristorante e pizzeria a Monterosso al Mare, tra cucina italiana, pesce e sapori liguri." />
+    <meta property="og:type" content="website" />
+    <title>La Taverna di Monterosso | Ristorante a Monterosso al Mare</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="site.css" />
+    <script src="site.js" defer></script>
+  </head>
+  <body>
+
+<a class="skip-link" href="#main" data-i18n="skip">Vai al contenuto</a>
+
+<header class="site-header" data-header>
+  <a class="brand brand-image" href="#top" aria-label="La Taverna di Monterosso, torna all'inizio">
+    <img class="brand-logo" src="assets/brand-la-taverna.png" width="1024" height="620" alt="La Taverna" />
+  </a>
+
+  <nav class="desktop-nav" aria-label="Navigazione principale">
+    <a href="#ristorante" data-i18n="nav.restaurant">Ristorante</a>
+    <a href="#location" data-i18n="nav.location">Location</a>
+    <a href="#recensioni" data-i18n="nav.reviews">Recensioni</a>
+    <a href="#contatti" data-i18n="nav.contacts">Contatti</a>
+  </nav>
+
+  <div class="header-actions">
+    <div class="language-switch" aria-label="Seleziona lingua">
+      <button class="is-active" type="button" data-lang="it" aria-pressed="true">ITA</button>
+      <span>/</span>
+      <button type="button" data-lang="en" aria-pressed="false">EN</button>
+    </div>
+    <a class="book-link" href="#prenota" data-booking-trigger data-context="Prenotazione tavolo">
+      <span data-i18n="cta.book">Prenota</span>
+      <svg class="whatsapp-cta-icon" viewBox="0 0 24 24" aria-hidden="true">
+        <circle class="whatsapp-icon-bg" cx="12" cy="12" r="10.2"></circle>
+        <circle class="whatsapp-icon-ring" cx="12" cy="12" r="9.15"></circle>
+        <path class="whatsapp-icon-phone" d="M12 5.15c-3.8 0-6.88 2.96-6.88 6.62 0 1.18.32 2.28.88 3.23l-.72 2.95 3.12-.76c1.04.77 2.28 1.2 3.6 1.2 3.8 0 6.88-2.96 6.88-6.62S15.8 5.15 12 5.15Zm3.83 9.62c-.38.48-.96.74-1.62.66-1.42-.16-3.07-1.02-4.34-2.27-1.18-1.16-1.92-2.57-2.04-3.42-.08-.56.1-1.05.51-1.45.18-.18.4-.2.61-.12.14.05.28.27.39.52l.51 1.15c.09.2.08.37-.04.53l-.36.45c-.13.16-.14.3-.04.47.42.74.97 1.32 1.66 1.73.75.45.91.49 1.1.3l.55-.62c.14-.16.31-.2.51-.12l1.32.58c.31.14.44.34.37.6-.04.17-.33.67-.55.94Z"></path>
+      </svg>
+    </a>
+    <button class="menu-toggle" type="button" aria-label="Apri il menu" aria-expanded="false" aria-controls="mobile-menu">
+      <span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobile-menu" role="dialog" aria-modal="true" aria-labelledby="mobile-menu-title" aria-hidden="true">
+  <button class="menu-backdrop" type="button" aria-label="Chiudi il menu" data-menu-close></button>
+  <div class="menu-panel" tabindex="-1">
+    <p class="menu-panel-kicker" id="mobile-menu-title">La Taverna · Monterosso</p>
+    <nav aria-label="Navigazione mobile">
+      <a href="#ristorante"><span>01</span><b data-i18n="nav.restaurant">Ristorante</b><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5 19 19"></path><path d="M10 19h9v-9"></path></svg></a>
+      <a href="#location"><span>02</span><b data-i18n="nav.location">Location</b><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5 19 19"></path><path d="M10 19h9v-9"></path></svg></a>
+      <a href="#recensioni"><span>03</span><b data-i18n="nav.reviews">Recensioni</b><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5 19 19"></path><path d="M10 19h9v-9"></path></svg></a>
+      <a href="#contatti"><span>04</span><b data-i18n="nav.contacts">Contatti</b><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5 19 19"></path><path d="M10 19h9v-9"></path></svg></a>
+    </nav>
+    <a class="menu-book" href="#prenota" data-booking-trigger data-context="Prenotazione tavolo">
+      <span data-i18n="cta.bookTable">Prenota un tavolo</span>
+      <svg class="whatsapp-cta-icon" viewBox="0 0 24 24" aria-hidden="true">
+        <circle class="whatsapp-icon-bg" cx="12" cy="12" r="10.2"></circle>
+        <circle class="whatsapp-icon-ring" cx="12" cy="12" r="9.15"></circle>
+        <path class="whatsapp-icon-phone" d="M12 5.15c-3.8 0-6.88 2.96-6.88 6.62 0 1.18.32 2.28.88 3.23l-.72 2.95 3.12-.76c1.04.77 2.28 1.2 3.6 1.2 3.8 0 6.88-2.96 6.88-6.62S15.8 5.15 12 5.15Zm3.83 9.62c-.38.48-.96.74-1.62.66-1.42-.16-3.07-1.02-4.34-2.27-1.18-1.16-1.92-2.57-2.04-3.42-.08-.56.1-1.05.51-1.45.18-.18.4-.2.61-.12.14.05.28.27.39.52l.51 1.15c.09.2.08.37-.04.53l-.36.45c-.13.16-.14.3-.04.47.42.74.97 1.32 1.66 1.73.75.45.91.49 1.1.3l.55-.62c.14-.16.31-.2.51-.12l1.32.58c.31.14.44.34.37.6-.04.17-.33.67-.55.94Z"></path>
+      </svg>
+    </a>
+    <div class="mobile-menu-meta">
+      <p>Ristorante · Pizzeria<br />Monterosso al Mare, SP</p>
+      <div>
+        <a href="tel:+390187829111">+39 0187 829111</a>
+        <a href="https://www.google.com/maps/search/?api=1&amp;query=La%20Taverna%20Via%20Molinelli%2039%20Monterosso%20al%20Mare" target="_blank" rel="noreferrer">Maps <svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5"></path><path d="M9 5h10v10"></path></svg></a>
+        <a href="mailto:ristorante-lataverna@libero.it">Email <svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5"></path><path d="M9 5h10v10"></path></svg></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<main id="main">
+  <section class="hero" id="top" aria-label="La Taverna di Monterosso, ristorante a Monterosso al Mare">
+    <picture class="hero-picture">
+      <source media="(max-width: 760px)" srcset="assets/hero-wine-mobile.jpg" />
+      <img
+        class="hero-image"
+        src="assets/hero-wine-desktop.jpg"
+        width="1672"
+        height="941"
+        fetchpriority="high"
+        decoding="async"
+        alt="Calice di vino illuminato sul tavolo de La Taverna al tramonto"
+      />
+    </picture>
+    <div class="hero-shade"></div>
+
+    <div class="hero-title-wrap">
+      <p class="hero-overline" data-i18n="hero.overline">Ristorante · Pizzeria</p>
+      <h1>La Taverna</h1>
+      <div class="hero-address">
+        <p>Monterosso al Mare</p>
+        <p>Cinque Terre · SP</p>
+      </div>
+      <p class="hero-hours" data-i18n-html="hero.hours"><span>Pranzo, cena &amp; convivialita</span> Cucina italiana · pesce · pizza · Liguria</p>
+      <div class="hero-actions" aria-label="Azioni principali">
+        <a class="hero-primary" href="#prenota" data-booking-trigger data-context="Prenotazione tavolo">
+          <span data-i18n="cta.bookTable">Prenota un tavolo</span>
+          <svg class="whatsapp-cta-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <circle class="whatsapp-icon-bg" cx="12" cy="12" r="10.2"></circle>
+            <circle class="whatsapp-icon-ring" cx="12" cy="12" r="9.15"></circle>
+            <path class="whatsapp-icon-phone" d="M12 5.15c-3.8 0-6.88 2.96-6.88 6.62 0 1.18.32 2.28.88 3.23l-.72 2.95 3.12-.76c1.04.77 2.28 1.2 3.6 1.2 3.8 0 6.88-2.96 6.88-6.62S15.8 5.15 12 5.15Zm3.83 9.62c-.38.48-.96.74-1.62.66-1.42-.16-3.07-1.02-4.34-2.27-1.18-1.16-1.92-2.57-2.04-3.42-.08-.56.1-1.05.51-1.45.18-.18.4-.2.61-.12.14.05.28.27.39.52l.51 1.15c.09.2.08.37-.04.53l-.36.45c-.13.16-.14.3-.04.47.42.74.97 1.32 1.66 1.73.75.45.91.49 1.1.3l.55-.62c.14-.16.31-.2.51-.12l1.32.58c.31.14.44.34.37.6-.04.17-.33.67-.55.94Z"></path>
+          </svg>
+        </a>
+        <a class="hero-secondary" href="#carta-menu" data-card-trigger="food">
+          <span data-i18n="cta.menu">Scopri il nostro menu</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-edge hero-edge-left" data-i18n="hero.edge">Cucina italiana &amp; sapori liguri</div>
+    <div class="hero-edge hero-edge-right">44.1461° N · 9.6549° E</div>
+
+    <a class="scroll-cue" href="#ristorante" aria-label="Scopri La Taverna">
+      <span data-i18n="hero.discover">Scopri La Taverna</span>
+      <i aria-hidden="true"></i>
+    </a>
+
+    <div class="hero-socials" aria-label="Link utili La Taverna">
+      <a
+        class="hero-social-link"
+        href="https://www.instagram.com/ristorante_la_taverna_5_terre/"
+        target="_blank"
+        rel="noreferrer"
+        aria-label="Segui La Taverna su Instagram"
+      >
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+          <circle cx="12" cy="12" r="4.2"></circle>
+          <circle cx="17.5" cy="6.7" r="0.8" class="instagram-dot"></circle>
+        </svg>
+        <span>Instagram</span>
+      </a>
+      <a
+        class="hero-social-link"
+        href="https://www.facebook.com/p/La-Taverna-di-Monterosso-100054517236999/?locale=it_IT"
+        target="_blank"
+        rel="noreferrer"
+        aria-label="Segui La Taverna su Facebook"
+      >
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path class="facebook-mark" d="M14.1 8.1h2.1V4.4h-2.8c-3.2 0-5.1 1.9-5.1 5.2v2H5.8v3.8h2.5v6.2h4.1v-6.2h3.2l0.6-3.8h-3.8V9.8c0-1.1 0.5-1.7 1.7-1.7Z"></path>
+        </svg>
+        <span>Facebook</span>
+      </a>
+    </div>
+  </section>
+
+  <section class="restaurant-section section-dark" id="ristorante">
+    <div class="section-heading reveal">
+      <p class="section-kicker" data-i18n="restaurant.kicker">01 · La nostra cucina</p>
+      <h2 data-i18n="nav.restaurant">Ristorante</h2>
+      <div class="heading-copy">
+        <p data-i18n="restaurant.copy1">
+          Piatti italiani, specialita di mare e sapori liguri in un ristorante accogliente nel cuore di Monterosso.
+        </p>
+        <p data-i18n="restaurant.copy2">Una tavola semplice, curata e generosa per vivere pranzo e cena tra le Cinque Terre.</p>
+      </div>
+    </div>
+
+    <div class="food-carousel reveal reveal-delay">
+      <div class="food-track" data-food-track tabindex="0" aria-label="Carosello dei piatti di La Taverna">
+        <figure class="food-card">
+          <img src="assets/food-01.png" width="1086" height="1448" alt="Polpo condito con olio, prezzemolo e pomodorini" loading="lazy" decoding="async" />
+          <figcaption><span>01</span><p data-i18n="food.catch">Il polpo</p></figcaption>
+        </figure>
+        <figure class="food-card food-card-offset">
+          <img src="assets/food-02.png" width="1086" height="1448" alt="Tartare di pesce con rucola, pomodorini e riduzione" loading="lazy" decoding="async" />
+          <figcaption><span>02</span><p data-i18n="food.pizza">La tartare</p></figcaption>
+        </figure>
+        <figure class="food-card">
+          <img src="assets/food-03.jpg" width="1061" height="1455" alt="Gamberi rossi freschi serviti su ghiaccio" loading="lazy" decoding="async" />
+          <figcaption><span>03</span><p data-i18n="food.seafood">I gamberi rossi</p></figcaption>
+        </figure>
+        <figure class="food-card food-card-offset">
+          <img src="assets/food-04.png" width="1086" height="1448" alt="Risotto di mare con cozze, vongole e gambero" loading="lazy" decoding="async" />
+          <figcaption><span>04</span><p data-i18n="food.pasta">Il risotto di mare</p></figcaption>
+        </figure>
+        <figure class="food-card">
+          <img src="assets/food-05.jpg" width="1086" height="1448" alt="Spaghetti alle vongole serviti in piatto bianco" loading="lazy" decoding="async" />
+          <figcaption><span>05</span><p data-i18n="food.ligurian">Gli spaghetti alle vongole</p></figcaption>
+        </figure>
+        <figure class="food-card food-card-offset">
+          <img src="assets/food-06.jpg" width="941" height="1672" alt="Dessert al cucchiaio con crema e salsa gialla" loading="lazy" decoding="async" />
+          <figcaption><span>06</span><p data-i18n="food.wine">Il dolce della casa</p></figcaption>
+        </figure>
+      </div>
+
+      <div class="carousel-footer">
+        <p><span data-food-current>01</span> / 06</p>
+        <div class="carousel-arrows">
+          <button type="button" data-food-prev aria-label="Piatto precedente"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12H4"></path><path d="m10 6-6 6 6 6"></path></svg></button>
+          <button type="button" data-food-next aria-label="Piatto successivo"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h16"></path><path d="m14 6 6 6-6 6"></path></svg></button>
+        </div>
+      </div>
+    </div>
+
+    <div class="center-cta reveal">
+      <a class="outline-button" href="#carta-menu" data-card-trigger="food">
+        <span data-i18n="cta.menu">Scopri il nostro menu</span><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5"></path><path d="M9 5h10v10"></path></svg>
+      </a>
+      <a class="outline-button" href="#carta-vini" data-card-trigger="wine">
+        <span data-i18n="cta.wine">Carta dei Vini</span><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5"></path><path d="M9 5h10v10"></path></svg>
+      </a>
+    </div>
+  </section>
+
+  <section class="location-section" id="location">
+    <div class="section-heading location-heading reveal">
+      <p class="section-kicker" data-i18n="location.kicker">02 · A Monterosso</p>
+      <h2 data-i18n="nav.location">Location</h2>
+      <div class="heading-copy">
+        <p data-i18n="location.copy1">Via Molinelli 39, a pochi passi dal ritmo luminoso di Monterosso al Mare.</p>
+        <p data-i18n="location.copy2">Sala, tavoli all'aperto e atmosfera informale per una sosta di gusto nelle Cinque Terre.</p>
+      </div>
+    </div>
+
+    <div class="location-carousel reveal reveal-delay">
+      <div class="location-track" data-location-track tabindex="0" aria-label="Carosello degli ambienti di La Taverna">
+        <figure class="location-card">
+          <img src="assets/location-01.jpg" width="1086" height="1448" alt="Tavolo apparecchiato de La Taverna con lampada, bicchieri e pianta verde" loading="lazy" decoding="async" />
+          <figcaption><span>01</span><p data-i18n="location.front">La tavola</p></figcaption>
+        </figure>
+        <figure class="location-card">
+          <img src="assets/location-03.png" width="1448" height="1086" alt="Sala interna de La Taverna con tavoli apparecchiati e luci calde" loading="lazy" decoding="async" />
+          <figcaption><span>02</span><p data-i18n="location.room">La sala</p></figcaption>
+        </figure>
+        <figure class="location-card">
+          <img src="assets/location-04.png" width="1088" height="1445" alt="Vista dall'alto della sala e del banco vini de La Taverna" loading="lazy" decoding="async" />
+          <figcaption><span>03</span><p data-i18n="location.table">I dettagli</p></figcaption>
+        </figure>
+      </div>
+
+      <div class="carousel-footer carousel-footer-dark">
+        <p><span data-location-current>01</span> / 03</p>
+        <div class="carousel-arrows">
+          <button type="button" data-location-prev aria-label="Ambiente precedente"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12H4"></path><path d="m10 6-6 6 6 6"></path></svg></button>
+          <button type="button" data-location-next aria-label="Ambiente successivo"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h16"></path><path d="m14 6 6 6-6 6"></path></svg></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="reviews-section" id="recensioni">
+    <div class="reviews-intro reveal">
+      <div>
+        <p class="section-kicker" data-i18n="reviews.kicker">03 · Recensioni</p>
+        <h2 data-i18n-html="reviews.title">Esperienze<br /><em>da condividere.</em></h2>
+      </div>
+      <div class="rating-column">
+        <div class="review-awards review-links-summary" aria-label="Canali recensioni La Taverna">
+          <span data-i18n="reviews.awards">Canali recensioni</span>
+          <a class="tripadvisor-badge" href="https://www.tripadvisor.it/Restaurant_Review-g187820-d8008467-Reviews-La_Taverna-Monterosso_al_Mare_Cinque_Terre_Italian_Riviera_Liguria.html" target="_blank" rel="noreferrer" aria-label="Recensioni La Taverna su Tripadvisor">
+            <svg viewBox="0 0 48 48" aria-hidden="true">
+              <circle cx="15.5" cy="25.5" r="9.5"></circle>
+              <circle cx="32.5" cy="25.5" r="9.5"></circle>
+              <circle cx="15.5" cy="25.5" r="3"></circle>
+              <circle cx="32.5" cy="25.5" r="3"></circle>
+              <path d="M4.5 15.5c6-3.7 12.6-5.5 19.5-5.5s13.5 1.8 19.5 5.5"></path>
+              <path d="m21.1 30.1 2.9 3.1 2.9-3.1"></path>
+            </svg>
+            <b>Tripadvisor</b>
+          </a>
+          <a class="tripadvisor-badge" href="https://www.tripadvisor.it/Restaurant_Review-g187820-d8008467-Reviews-La_Taverna-Monterosso_al_Mare_Cinque_Terre_Italian_Riviera_Liguria.html" target="_blank" rel="noreferrer" aria-label="Esperienze La Taverna su Tripadvisor">
+            <svg viewBox="0 0 48 48" aria-hidden="true">
+              <circle cx="15.5" cy="25.5" r="9.5"></circle>
+              <circle cx="32.5" cy="25.5" r="9.5"></circle>
+              <circle cx="15.5" cy="25.5" r="3"></circle>
+              <circle cx="32.5" cy="25.5" r="3"></circle>
+              <path d="M4.5 15.5c6-3.7 12.6-5.5 19.5-5.5s13.5 1.8 19.5 5.5"></path>
+              <path d="m21.1 30.1 2.9 3.1 2.9-3.1"></path>
+            </svg>
+            <b>Reviews</b>
+          </a>
+          <a class="tripadvisor-badge" href="https://www.tripadvisor.it/Restaurant_Review-g187820-d8008467-Reviews-La_Taverna-Monterosso_al_Mare_Cinque_Terre_Italian_Riviera_Liguria.html" target="_blank" rel="noreferrer" aria-label="La Taverna a Monterosso su Tripadvisor">
+            <svg viewBox="0 0 48 48" aria-hidden="true">
+              <circle cx="15.5" cy="25.5" r="9.5"></circle>
+              <circle cx="32.5" cy="25.5" r="9.5"></circle>
+              <circle cx="15.5" cy="25.5" r="3"></circle>
+              <circle cx="32.5" cy="25.5" r="3"></circle>
+              <path d="M4.5 15.5c6-3.7 12.6-5.5 19.5-5.5s13.5 1.8 19.5 5.5"></path>
+              <path d="m21.1 30.1 2.9 3.1 2.9-3.1"></path>
+            </svg>
+            <b>5 Terre</b>
+          </a>
+        </div>
+        <div class="rating-block">
+          <strong>★</strong>
+          <span></span>
+          <p data-i18n-html="reviews.rating">Recensioni aggiornate<br />sui profili ufficiali</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="review-grid reveal reveal-delay">
+      <article class="review-card">
+        <div class="stars" data-i18n="reviews.cardLabel1">Cucina</div>
+        <blockquote data-i18n="reviews.quote1">
+          Pesce, pizza e piatti italiani pensati per una pausa piena di gusto a Monterosso.
+        </blockquote>
+        <p data-i18n="reviews.author1">La Taverna · Ristorante</p>
+      </article>
+      <article class="review-card">
+        <div class="stars" data-i18n="reviews.cardLabel2">Accoglienza</div>
+        <blockquote data-i18n="reviews.quote2">
+          Servizio diretto, ambiente conviviale e tavoli pronti ad accogliere pranzi e cene.
+        </blockquote>
+        <p data-i18n="reviews.author2">Monterosso al Mare · SP</p>
+      </article>
+      <article class="review-card">
+        <div class="stars" data-i18n="reviews.cardLabel3">Cinque Terre</div>
+        <blockquote data-i18n="reviews.quote3">
+          Una tappa semplice e generosa tra mare, vicoli e profumi della Riviera ligure.
+        </blockquote>
+        <p data-i18n="reviews.author3">Via Molinelli 39</p>
+      </article>
+    </div>
+
+    <div class="reviews-link reveal">
+      <a class="review-text-link" href="https://www.google.com/search?q=La+Taverna+Monterosso+recensioni" target="_blank" rel="noreferrer">
+        <span data-i18n="reviews.read">Leggi le recensioni</span><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5"></path><path d="M9 5h10v10"></path></svg>
+      </a>
+      <a
+        class="review-cta"
+        href="https://www.google.com/search?sca_esv=3cca898eb5585582&amp;sxsrf=APpeQnuymiTluHvcdVBqZ89t_r5vc2yfGw:1785836131677&amp;si=APenkKm7iecQ4G6P-TsbSMFKIQtv3EFIqRAFw-i8uEbk55Z-_yRul-XFMTpOS7cDGlyVhxznpQymVQg9Z1VkTqdUo_kwnaK6V-cuEp8ASwweiJjtkN_PiraW2VJgc9c4cWdlL_EkMNmn7Ra8pjfpGcDb2d9X6_QSIw%3D%3D&amp;q=La+Taverna+di+Monterosso+Recensioni&amp;sa=X&amp;ved=2ahUKEwi7poWC1oaWAxWeRv4FHXULCoMQ0bkNegQIOBAH&amp;biw=1084&amp;bih=704&amp;dpr=2"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <span data-i18n="reviews.leave">Lascia una recensione</span><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5"></path><path d="M9 5h10v10"></path></svg>
+      </a>
+    </div>
+  </section>
+
+  <section class="contact-section" id="contatti">
+    <div class="contact-panel reveal">
+      <p class="section-kicker" data-i18n="contacts.kicker">04 · Contatti</p>
+      <h2 data-i18n-html="contacts.title">Ci vediamo<br />a <em>Monterosso.</em></h2>
+
+      <div class="contact-list">
+        <div>
+          <h3 data-i18n="contacts.where">Dove siamo</h3>
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=La%20Taverna%20Via%20Molinelli%2039%20Monterosso%20al%20Mare" target="_blank" rel="noreferrer">
+            La Taverna di Monterosso<br />Via Molinelli 39, 19016 Monterosso al Mare <svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5"></path><path d="M9 5h10v10"></path></svg>
+          </a>
+        </div>
+        <div>
+          <h3 data-i18n="contacts.hoursLabel">Orari</h3>
+          <p data-i18n-html="contacts.hours">Pranzo e cena<br />tutti i giorni</p>
+        </div>
+        <div>
+          <h3 data-i18n="contacts.phone">Telefono</h3>
+          <a href="tel:+390187829111">+39 0187 829111</a>
+        </div>
+        <div>
+          <h3 data-i18n="contacts.socialLabel">Email</h3>
+          <a href="mailto:ristorante-lataverna@libero.it">ristorante-lataverna@libero.it <svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5"></path><path d="M9 5h10v10"></path></svg></a>
+          <a href="https://latavernadimonterosso.eatbu.com/?lang=it" target="_blank" rel="noreferrer">Sito ufficiale <svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5"></path><path d="M9 5h10v10"></path></svg></a>
+        </div>
+      </div>
+
+      <div class="contact-actions">
+        <a class="contact-book" href="#prenota" data-booking-trigger data-context="Prenotazione tavolo">
+          <span data-i18n="cta.bookTable">Prenota un tavolo</span>
+          <svg class="whatsapp-cta-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <circle class="whatsapp-icon-bg" cx="12" cy="12" r="10.2"></circle>
+            <circle class="whatsapp-icon-ring" cx="12" cy="12" r="9.15"></circle>
+            <path class="whatsapp-icon-phone" d="M12 5.15c-3.8 0-6.88 2.96-6.88 6.62 0 1.18.32 2.28.88 3.23l-.72 2.95 3.12-.76c1.04.77 2.28 1.2 3.6 1.2 3.8 0 6.88-2.96 6.88-6.62S15.8 5.15 12 5.15Zm3.83 9.62c-.38.48-.96.74-1.62.66-1.42-.16-3.07-1.02-4.34-2.27-1.18-1.16-1.92-2.57-2.04-3.42-.08-.56.1-1.05.51-1.45.18-.18.4-.2.61-.12.14.05.28.27.39.52l.51 1.15c.09.2.08.37-.04.53l-.36.45c-.13.16-.14.3-.04.47.42.74.97 1.32 1.66 1.73.75.45.91.49 1.1.3l.55-.62c.14-.16.31-.2.51-.12l1.32.58c.31.14.44.34.37.6-.04.17-.33.67-.55.94Z"></path>
+          </svg>
+        </a>
+        <a class="contact-book contact-call" href="tel:+390187829111">
+          <span data-i18n="cta.call">Chiama ora</span>
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M7.2 3.8 4.8 5.4c-.8.5-1.1 1.5-.8 2.4 1.8 5.7 6.3 10.2 12 12 .9.3 1.9 0 2.4-.8l1.6-2.4c.4-.6.3-1.4-.2-1.9l-2.7-2.1c-.5-.4-1.2-.4-1.7 0l-1.5 1.2a13.2 13.2 0 0 1-3.7-3.7l1.2-1.5c.4-.5.4-1.2 0-1.7L9.1 4c-.5-.5-1.3-.6-1.9-.2Z"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="map-wrap reveal reveal-delay">
+      <div class="map-frame">
+        <iframe
+          title="Mappa di La Taverna di Monterosso"
+          src="https://www.google.com/maps?q=La%20Taverna%20di%20Monterosso%2C%20Via%20Molinelli%2039%2C%2019016%20Monterosso%20al%20Mare%20SP&amp;z=18&amp;output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+        <div class="map-veiling" aria-hidden="true"></div>
+        <div class="map-label">
+          <span data-i18n="contacts.mapLabel">Monterosso al Mare · Cinque Terre</span>
+          <strong>La Taverna di Monterosso</strong>
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=La%20Taverna%20Via%20Molinelli%2039%20Monterosso%20al%20Mare" target="_blank" rel="noreferrer">
+            <span data-i18n="contacts.openMap">Apri su Google Maps</span>
+            <svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5"></path><path d="M9 5h10v10"></path></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-main">
+    <a class="footer-logo" href="#top" aria-label="La Taverna di Monterosso, torna all'inizio">La Taverna</a>
+    <p data-i18n-html="footer.tagline">La cucina italiana,<br />il respiro del mare.</p>
+    <a href="#top"><span data-i18n="footer.top">Torna su</span><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20V4"></path><path d="m6 10 6-6 6 6"></path></svg></a>
+  </div>
+  <div class="footer-bottom">
+    <p>© <span data-year></span> La Taverna di Monterosso</p>
+    <p>Via Molinelli 39 · Monterosso al Mare</p>
+  </div>
+</footer>
+
+<div class="card-modal" data-card-modal aria-hidden="true" hidden>
+  <section class="card-dialog" role="dialog" aria-modal="true" aria-labelledby="card-title" tabindex="-1">
+    <header class="card-header">
+      <a class="card-logo" href="#top" aria-label="La Taverna">La Taverna</a>
+      <div class="card-tabs" role="tablist" aria-label="Seleziona la carta">
+        <button class="is-active" type="button" role="tab" aria-selected="true" data-card-tab="food" data-i18n="card.food">Menu</button>
+        <button type="button" role="tab" aria-selected="false" data-card-tab="wine" data-i18n="card.wine">Carta dei Vini</button>
+      </div>
+      <button class="card-close" type="button" aria-label="Chiudi la carta" data-card-close>
+        <span></span><span></span>
+      </button>
+    </header>
+
+    <div class="card-body">
+      <div class="card-intro">
+        <p class="section-kicker" data-card-kicker>La Taverna · Cucina italiana</p>
+        <h2 id="card-title" data-card-title>Il nostro<br /><em>menu.</em></h2>
+        <p data-card-description>
+          Proposte italiane, cucina ligure, pesce, pizza e piatti vegetariani. La carta puo variare secondo stagione e disponibilita.
+        </p>
+      </div>
+      <div class="catalog" data-card-content></div>
+      <p class="catalog-note" data-i18n="card.note">
+        In caso di allergie o intolleranze, prima di ordinare informa il personale di sala.
+      </p>
+    </div>
+  </section>
+</div>
+
+<div class="booking-modal" data-booking-modal aria-hidden="true" hidden>
+  <button class="booking-backdrop" type="button" aria-label="Chiudi il form" data-booking-close></button>
+  <section class="booking-dialog" role="dialog" aria-modal="true" aria-labelledby="booking-title" tabindex="-1">
+    <button class="booking-close" type="button" aria-label="Chiudi" data-booking-close>
+      <span></span><span></span>
+    </button>
+    <p class="section-kicker" data-i18n="form.kicker">Scrivici su WhatsApp</p>
+    <h2 id="booking-title" data-i18n-html="form.title">Raccontaci<br /><em>cosa desideri.</em></h2>
+    <p class="booking-intro" data-i18n="form.intro">
+      Compila i campi: prepareremo il messaggio e apriremo direttamente la chat WhatsApp con La Taverna.
+    </p>
+
+    <form data-contact-form>
+      <input type="hidden" name="context" value="Prenotazione tavolo" />
+      <label>
+        <span data-i18n="form.name">Nome e cognome *</span>
+        <input type="text" name="name" autocomplete="name" required />
+      </label>
+      <div class="form-row">
+        <label>
+          <span data-i18n="form.date">Data</span>
+          <input type="date" name="date" />
+        </label>
+        <label>
+          <span data-i18n="form.guests">Persone</span>
+          <select name="guests" autocomplete="off">
+            <option value="" data-i18n="form.choose">Scegli</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6+">6+</option>
+          </select>
+        </label>
+      </div>
+      <label>
+        <span data-i18n="form.message">Messaggio</span>
+        <textarea name="message" rows="3" data-i18n-placeholder="form.placeholder" placeholder="Orario, richieste o informazioni utili"></textarea>
+      </label>
+      <button class="whatsapp-submit" type="submit">
+        <span data-i18n="form.submit">Continua su WhatsApp</span>
+        <svg class="whatsapp-cta-icon" viewBox="0 0 24 24" aria-hidden="true">
+          <circle class="whatsapp-icon-bg" cx="12" cy="12" r="10.2"></circle>
+          <circle class="whatsapp-icon-ring" cx="12" cy="12" r="9.15"></circle>
+          <path class="whatsapp-icon-phone" d="M12 5.15c-3.8 0-6.88 2.96-6.88 6.62 0 1.18.32 2.28.88 3.23l-.72 2.95 3.12-.76c1.04.77 2.28 1.2 3.6 1.2 3.8 0 6.88-2.96 6.88-6.62S15.8 5.15 12 5.15Zm3.83 9.62c-.38.48-.96.74-1.62.66-1.42-.16-3.07-1.02-4.34-2.27-1.18-1.16-1.92-2.57-2.04-3.42-.08-.56.1-1.05.51-1.45.18-.18.4-.2.61-.12.14.05.28.27.39.52l.51 1.15c.09.2.08.37-.04.53l-.36.45c-.13.16-.14.3-.04.47.42.74.97 1.32 1.66 1.73.75.45.91.49 1.1.3l.55-.62c.14-.16.31-.2.51-.12l1.32.58c.31.14.44.34.37.6-.04.17-.33.67-.55.94Z"></path>
+        </svg>
+      </button>
+      <p class="form-note" data-i18n="form.note">Nessun dato viene salvato sul sito.</p>
+    </form>
+  </section>
+</div>
+
+  </body>
+</html>
