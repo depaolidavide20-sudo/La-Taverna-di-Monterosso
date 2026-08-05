@@ -1,9 +1,11 @@
 <!doctype html>
-<html lang="it">
+<html class="notranslate" lang="it" translate="no">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Sito per La Taverna di Monterosso: cucina italiana, pesce, pizza e sapori liguri a Monterosso al Mare." />
+    <meta name="google" content="notranslate" />
+    <meta name="robots" content="notranslate" />
     <meta name="theme-color" content="#070d0a" />
     <meta property="og:title" content="La Taverna di Monterosso" />
     <meta property="og:description" content="Ristorante e pizzeria a Monterosso al Mare, tra cucina italiana, pesce e sapori liguri." />
@@ -15,17 +17,18 @@
     <link rel="stylesheet" href="site.css" />
     <script src="site.js" defer></script>
   </head>
-  <body>
+  <body class="notranslate" translate="no">
 
 <a class="skip-link" href="#main" data-i18n="skip">Vai al contenuto</a>
 
 <header class="site-header" data-header>
   <a class="brand brand-mark" href="#top" aria-label="Lanterna, torna all'inizio">
     <span class="brand-name">LANTERNA</span>
-    <svg class="brand-fish" viewBox="0 0 132 34" aria-hidden="true">
-      <path class="brand-fish-outline" d="M12 17 28 7.8v18.4L12 17Zm16 0c17.4-9.8 39.6-10.2 60.2-2.8 8.9 3.2 16.9 4.1 30.2 2.8-13.3-1.3-21.3-.4-30.2 2.8C67.6 27.2 45.4 26.8 28 17Z"></path>
-      <path class="brand-fish-gill" d="M80.5 12.2c2.1 3.1 2.1 6.5 0 9.6"></path>
-      <circle class="brand-fish-eye" cx="103.6" cy="16" r="1.15"></circle>
+    <svg class="brand-fish" viewBox="0 0 112 32" aria-hidden="true">
+      <path class="brand-fish-tail" d="M8.5 16 23 7.8v16.4L8.5 16Z"></path>
+      <path class="brand-fish-outline" d="M23 16c13.4-7.5 31.6-8.9 51.8-4.1 8.4 2 16.9 4.8 29.7 4.1-12.8-.7-21.3 2.1-29.7 4.1C54.6 24.9 36.4 23.5 23 16Z"></path>
+      <path class="brand-fish-gill" d="M77 12.4c1.8 2.3 1.8 4.9 0 7.2"></path>
+      <circle class="brand-fish-eye" cx="89" cy="15" r="1.05"></circle>
     </svg>
   </a>
 
@@ -87,11 +90,12 @@
   <section class="hero" id="top" aria-label="La Taverna di Monterosso, ristorante a Monterosso al Mare">
     <picture class="hero-picture">
       <source media="(max-width: 760px)" srcset="assets/hero-wine-mobile.jpg" />
+      <source media="(min-width: 761px)" srcset="assets/hero-wine-desktop.jpg 1672w, assets/hero-wine-desktop-2x.jpg 3344w" sizes="100vw" />
       <img
         class="hero-image"
-        src="assets/hero-wine-desktop.jpg"
-        width="1672"
-        height="941"
+        src="assets/hero-wine-desktop-2x.jpg"
+        width="3344"
+        height="1882"
         fetchpriority="high"
         decoding="async"
         alt="Calice di vino illuminato sul tavolo de La Taverna al tramonto"
@@ -356,11 +360,6 @@
         <div>
           <h3 data-i18n="contacts.phone">Telefono</h3>
           <a href="tel:+390187829111">+39 0187 829111</a>
-        </div>
-        <div>
-          <h3 data-i18n="contacts.socialLabel">Email</h3>
-          <a href="mailto:ristorante-lataverna@libero.it">ristorante-lataverna@libero.it <svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5"></path><path d="M9 5h10v10"></path></svg></a>
-          <a href="https://latavernadimonterosso.eatbu.com/?lang=it" target="_blank" rel="noreferrer">Sito ufficiale <svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5"></path><path d="M9 5h10v10"></path></svg></a>
         </div>
       </div>
 
