@@ -102,8 +102,8 @@ button {
 
 .whatsapp-cta-icon {
   display: inline-block;
-  width: 1.28rem;
-  height: 1.28rem;
+  width: 1.42rem;
+  height: 1.42rem;
   flex: 0 0 auto;
   overflow: visible;
   fill: none;
@@ -119,25 +119,26 @@ button {
 
 .whatsapp-cta-icon .whatsapp-icon-chat,
 .whatsapp-cta-icon .whatsapp-icon-phone {
-  fill: none;
-  stroke: currentColor;
   transform-box: fill-box;
   transform-origin: center;
   vector-effect: non-scaling-stroke;
 }
 
 .whatsapp-cta-icon .whatsapp-icon-chat {
-  stroke-width: 1.48;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.72;
   animation: whatsappChatBreath 3.8s ease-in-out infinite;
 }
 
 .whatsapp-cta-icon .whatsapp-icon-phone {
-  stroke-width: 1.62;
+  fill: currentColor;
+  stroke: none;
   animation: whatsappPhoneTilt 3.8s ease-in-out infinite;
 }
 
-:where(.book-link, .menu-book, .hero-primary, .contact-book, .whatsapp-submit):hover .whatsapp-cta-icon,
-:where(.book-link, .menu-book, .hero-primary, .contact-book, .whatsapp-submit):focus-visible .whatsapp-cta-icon {
+:where(.book-link, .menu-book, .hero-primary, .mobile-sticky-book, .contact-book, .whatsapp-submit):hover .whatsapp-cta-icon,
+:where(.book-link, .menu-book, .hero-primary, .mobile-sticky-book, .contact-book, .whatsapp-submit):focus-visible .whatsapp-cta-icon {
   color: var(--gold-light);
   filter: drop-shadow(0 0.24rem 0.52rem rgba(240, 207, 138, 0.34));
   transform: translateY(-1px) scale(1.06);
@@ -274,21 +275,19 @@ body.menu-open .site-header {
 }
 
 .brand-fish-outline,
-.brand-fish-gill,
-.brand-fish-fin {
+.brand-fish-gill {
   fill: none;
   stroke: currentColor;
   vector-effect: non-scaling-stroke;
 }
 
 .brand-fish-outline {
-  stroke-width: 1.72;
+  stroke-width: 1.58;
 }
 
-.brand-fish-gill,
-.brand-fish-fin {
-  stroke-width: 1.32;
-  opacity: 0.78;
+.brand-fish-gill {
+  stroke-width: 1.12;
+  opacity: 0.72;
 }
 
 .brand-fish-eye {
@@ -3209,8 +3208,6 @@ body.modal-open {
 }
 
 .restaurant-mobile-copy,
-.reviews-title-mobile,
-.contact-title-mobile,
 .contact-socials,
 .footer-phone,
 .footer-socials {
@@ -3288,16 +3285,6 @@ body.modal-open {
     justify-items: center;
     align-items: center;
     gap: 0.85rem;
-  }
-
-  .reviews-title-desktop,
-  .contact-title-desktop {
-    display: none;
-  }
-
-  .reviews-title-mobile,
-  .contact-title-mobile {
-    display: block;
   }
 
   .reviews-intro h2 {
@@ -3836,5 +3823,298 @@ body.modal-open {
 @media (max-width: 390px) {
   .brand-image img {
     height: 2.05rem;
+  }
+}
+/* Final mobile booking and desktop hero override */
+.mobile-sticky-book {
+  display: none;
+}
+
+.form-row {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.whatsapp-cta-icon .whatsapp-icon-chat {
+  fill: none;
+  stroke: currentColor;
+}
+
+.whatsapp-cta-icon .whatsapp-icon-phone {
+  fill: currentColor;
+  stroke: none;
+}
+
+@media (min-width: 761px) {
+  .hero-secondary {
+    display: none;
+  }
+
+  .hero-image {
+    filter: brightness(1.32) contrast(1.07) saturate(1.06);
+  }
+
+  .hero-shade {
+    background:
+      linear-gradient(180deg, rgba(4, 9, 7, 0.045), rgba(4, 9, 7, 0) 38%, rgba(4, 9, 7, 0.08) 100%),
+      linear-gradient(90deg, rgba(4, 9, 7, 0.018), transparent 58%, rgba(4, 9, 7, 0.018));
+  }
+}
+
+@media (max-width: 760px) {
+  .hero-actions,
+  .hero-primary {
+    display: none;
+  }
+
+  .mobile-sticky-book {
+    position: fixed;
+    z-index: 120;
+    right: var(--page-x);
+    bottom: max(1rem, env(safe-area-inset-bottom));
+    left: var(--page-x);
+    display: inline-flex;
+    min-height: 3.85rem;
+    padding: 0 1.25rem;
+    border: 1px solid rgba(255, 253, 248, 0.88);
+    border-radius: var(--radius-soft);
+    align-items: center;
+    justify-content: center;
+    gap: 0.72rem;
+    background: rgba(255, 253, 248, 0.97);
+    color: var(--ink);
+    font-size: 0.86rem;
+    font-weight: 700;
+    line-height: 1;
+    text-transform: uppercase;
+    box-shadow: 0 1rem 2.25rem rgba(4, 9, 7, 0.28);
+    backdrop-filter: blur(14px);
+  }
+
+  .mobile-sticky-book .whatsapp-cta-icon {
+    width: 1.55rem;
+    height: 1.55rem;
+    color: var(--gold);
+  }
+
+  body.menu-open .mobile-sticky-book,
+  body.modal-open .mobile-sticky-book {
+    display: none;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Final reviews, contact and footer polish */
+.rating-block {
+  display: none;
+}
+
+.reviews-intro,
+.contact-panel,
+.site-footer {
+  text-align: center;
+}
+
+.reviews-intro {
+  align-items: center;
+}
+
+.reviews-intro h2 {
+  max-width: 100%;
+  font-size: clamp(3.15rem, 5.4vw, 5.55rem);
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.rating-column {
+  align-items: center;
+}
+
+.review-awards > span {
+  display: none;
+}
+
+.contact-panel h2 {
+  font-size: clamp(3.6rem, 5vw, 5.35rem);
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.site-footer {
+  padding: clamp(3.7rem, 6vw, 5.4rem) var(--page-x) 1.6rem;
+}
+
+.footer-main {
+  display: flex;
+  padding-bottom: clamp(1.8rem, 4vw, 2.8rem);
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.footer-logo {
+  justify-self: center;
+  color: var(--gold-light);
+  font-size: clamp(3.2rem, 6vw, 5rem);
+  line-height: 0.9;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.footer-main > p:not(.footer-phone) {
+  max-width: 20rem;
+  color: rgba(255, 253, 248, 0.78);
+  font-size: clamp(1.05rem, 1.8vw, 1.35rem);
+  line-height: 1.35;
+  text-align: center;
+}
+
+.footer-phone {
+  display: block;
+  margin: 0;
+  color: var(--gold-light);
+  font: 600 0.92rem/1.35 var(--sans);
+}
+
+.footer-socials {
+  display: flex;
+  justify-content: center;
+  gap: 0.72rem;
+  flex-wrap: wrap;
+}
+
+.footer-social-link {
+  display: inline-flex;
+  width: 3.05rem;
+  height: 3.05rem;
+  min-height: 3.05rem;
+  border: 1px solid rgba(240, 207, 138, 0.38);
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 253, 248, 0.88);
+  background:
+    radial-gradient(circle at 34% 24%, rgba(240, 207, 138, 0.2), transparent 48%),
+    linear-gradient(145deg, rgba(255, 253, 248, 0.08), rgba(240, 207, 138, 0.08));
+  box-shadow: 0 0.8rem 1.75rem rgba(0, 0, 0, 0.18);
+  transition: transform 0.25s var(--ease-out), color 0.25s var(--ease-out), border-color 0.25s var(--ease-out);
+}
+
+.footer-social-link:hover,
+.footer-social-link:focus-visible {
+  color: var(--gold-light);
+  border-color: rgba(240, 207, 138, 0.68);
+  transform: translateY(-0.14rem);
+}
+
+.footer-social-link svg {
+  width: 1.28rem;
+  height: 1.28rem;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.45;
+}
+
+.footer-social-link .instagram-dot,
+.footer-social-link .facebook-mark {
+  fill: currentColor;
+  stroke: none;
+}
+
+.footer-social-link span {
+  display: none;
+}
+
+.footer-main > a:not(.footer-logo) {
+  justify-self: center;
+  color: rgba(255, 253, 248, 0.7);
+}
+
+.footer-bottom {
+  display: grid;
+  justify-content: center;
+  gap: 0.35rem;
+  line-height: 1.55;
+  text-align: center;
+}
+
+@media (max-width: 760px) {
+  .reviews-section {
+    padding-top: 4.25rem;
+  }
+
+  .reviews-intro {
+    margin-bottom: 1.75rem;
+    gap: 1rem;
+  }
+
+  .reviews-intro h2 {
+    font-size: clamp(2rem, 8.2vw, 2.7rem);
+    white-space: nowrap;
+  }
+
+  .review-grid {
+    gap: 0.9rem;
+    scroll-padding-left: var(--page-x);
+  }
+
+  .review-card {
+    flex: 0 0 min(88vw, 24rem);
+    padding: 1.45rem;
+    border-radius: 0.85rem;
+  }
+
+  .review-card blockquote {
+    min-height: 7.2rem;
+    margin: 1rem 0 0;
+    font-size: 1.22rem;
+    line-height: 1.48;
+  }
+
+  .contact-panel h2 {
+    font-size: clamp(2.8rem, 12vw, 3.75rem);
+  }
+
+  .map-wrap {
+    height: 22.25rem;
+    padding: 0 var(--page-x) 3.7rem;
+    background:
+      linear-gradient(180deg, rgba(255, 253, 248, 0), rgba(184, 135, 70, 0.08)),
+      var(--paper);
+  }
+
+  .map-frame {
+    border: 1px solid rgba(184, 135, 70, 0.58);
+    border-radius: 1.45rem;
+    background: #fffdf8;
+    box-shadow:
+      0 1.25rem 2.6rem rgba(10, 18, 15, 0.15),
+      0 0 0 0.45rem rgba(255, 253, 248, 0.48);
+  }
+
+  .map-frame::before {
+    inset: 0.5rem;
+    border-color: rgba(184, 135, 70, 0.34);
+    border-radius: 1.08rem;
+  }
+
+  .map-frame iframe {
+    filter: saturate(1.28) contrast(1.05) brightness(1.07);
+  }
+
+  .map-veiling {
+    background:
+      linear-gradient(180deg, rgba(255, 253, 248, 0.02), transparent 58%, rgba(255, 253, 248, 0.08)),
+      radial-gradient(circle at 18% 15%, rgba(240, 207, 138, 0.08), transparent 34%);
+  }
+
+  .footer-social-link {
+    width: 3.05rem;
+    height: 3.05rem;
+    min-height: 3.05rem;
   }
 }

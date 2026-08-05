@@ -48,8 +48,7 @@ const translations = {
     "location.table": "I dettagli",
     "location.details": "I dettagli",
     "reviews.kicker": "03 · Recensioni",
-    "reviews.title": "<span class=\"reviews-title-desktop\">Esperienze<br><em>da condividere.</em></span><span class=\"reviews-title-mobile\">Recensioni</span>",
-    "reviews.rating": "Recensioni aggiornate<br>sui profili ufficiali",
+    "reviews.title": "Cosa dicono di noi",
     "reviews.awards": "Canali recensioni",
     "reviews.cardLabel1": "Cucina",
     "reviews.cardLabel2": "Accoglienza",
@@ -63,7 +62,7 @@ const translations = {
     "reviews.read": "Leggi le recensioni",
     "reviews.leave": "Lascia una recensione",
     "contacts.kicker": "04 · Contatti",
-    "contacts.title": "<span class=\"contact-title-desktop\">Ci vediamo<br>a <em>Monterosso.</em></span><span class=\"contact-title-mobile\">Contatti</span>",
+    "contacts.title": "Contatti",
     "contacts.where": "Dove siamo",
     "contacts.hoursLabel": "Orari",
     "contacts.hours": "Pranzo e cena<br>tutti i giorni",
@@ -78,10 +77,11 @@ const translations = {
     "form.intro": "Compila i campi: prepareremo il messaggio e apriremo direttamente la chat WhatsApp con La Taverna.",
     "form.name": "Nome e cognome *",
     "form.date": "Data",
+    "form.time": "Orario",
     "form.guests": "Persone",
     "form.choose": "Scegli",
     "form.message": "Messaggio",
-    "form.placeholder": "Orario, richieste o informazioni utili",
+    "form.placeholder": "Richieste o informazioni utili",
     "form.submit": "Continua su WhatsApp",
     "form.note": "Nessun dato viene salvato sul sito.",
   },
@@ -123,8 +123,7 @@ const translations = {
     "location.table": "The details",
     "location.details": "The details",
     "reviews.kicker": "03 · Reviews",
-    "reviews.title": "<span class=\"reviews-title-desktop\">Experiences<br><em>to share.</em></span><span class=\"reviews-title-mobile\">Reviews</span>",
-    "reviews.rating": "Updated reviews<br>on official profiles",
+    "reviews.title": "What guests say",
     "reviews.awards": "Review channels",
     "reviews.cardLabel1": "Cuisine",
     "reviews.cardLabel2": "Hospitality",
@@ -138,7 +137,7 @@ const translations = {
     "reviews.read": "Read reviews",
     "reviews.leave": "Leave a review",
     "contacts.kicker": "04 · Contacts",
-    "contacts.title": "<span class=\"contact-title-desktop\">See you<br>in <em>Monterosso.</em></span><span class=\"contact-title-mobile\">Contacts</span>",
+    "contacts.title": "Contacts",
     "contacts.where": "Find us",
     "contacts.hoursLabel": "Opening hours",
     "contacts.hours": "Lunch and dinner<br>every day",
@@ -153,10 +152,11 @@ const translations = {
     "form.intro": "Complete the fields: we will prepare your message and open a direct WhatsApp chat with La Taverna.",
     "form.name": "Full name *",
     "form.date": "Date",
+    "form.time": "Time",
     "form.guests": "Guests",
     "form.choose": "Select",
     "form.message": "Message",
-    "form.placeholder": "Time, requests or useful information",
+    "form.placeholder": "Requests or useful information",
     "form.submit": "Continue on WhatsApp",
     "form.note": "No data is stored on this website.",
   },
@@ -529,29 +529,37 @@ bookingForm?.addEventListener("submit", (event) => {
   event.preventDefault();
   const data = new FormData(bookingForm);
   const isEnglish = currentLanguage === "en";
-  const rawContext = String(data.get("context") || "Prenotazione tavolo");
-  const context = isEnglish
-    ? rawContext === "Richiesta menu" ? "Menu information" : "Table reservation"
-    : rawContext;
-  const lines = isEnglish
-    ? [
-        "Hello La Taverna,",
-        `My name is ${data.get("name")}.`,
-        `Request: ${context}`,
-        data.get("date") ? `Date: ${data.get("date")}` : "",
-        data.get("guests") ? `Guests: ${data.get("guests")}` : "",
-        data.get("message") ? `Message: ${data.get("message")}` : "",
-      ]
-    : [
-        "Ciao La Taverna,",
-        `sono ${data.get("name")}.`,
-        `Richiesta: ${context}`,
-        data.get("date") ? `Data: ${data.get("date")}` : "",
-        data.get("guests") ? `Persone: ${data.get("guests")}` : "",
-        data.get("message") ? `Messaggio: ${data.get("message")}` : "",
-      ];
+  const name = String(data.get("name") || "").trim();
+  const date = String(data.get("date") || "").trim();
+  const time = String(data.get("time") || "").trim();
+  const guests = String(data.get("guests") || "").trim();
+  const note = String(data.get("message") || "").trim();
+  const formattedDate = date
+    ? new Intl.DateTimeFormat(isEnglish ? "en-GB" : "it-IT", { day: "2-digit", month: "2-digit", year: "numeric" }).format(new Date(`${date}T12:00:00`))
+    : "";
 
-  const message = lines.filter(Boolean).join("\n");
+  const details = isEnglish
+    ? [
+        guests ? `for ${guests} ${guests === "1" ? "person" : "people"}` : "",
+        formattedDate ? `on ${formattedDate}` : "",
+        time ? `at ${time}` : "",
+      ].filter(Boolean).join(" ")
+    : [
+        guests ? `per ${guests} ${guests === "1" ? "persona" : "persone"}` : "",
+        formattedDate ? `per il giorno ${formattedDate}` : "",
+        time ? `alle ${time}` : "",
+      ].filter(Boolean).join(" ");
+
+  const message = isEnglish
+    ? [
+        `Hello La Taverna, my name is ${name} and I would like to book a table${details ? ` ${details}` : ""}.`,
+        note ? `\n${note}` : "",
+      ].join("")
+    : [
+        `Ciao La Taverna, sono ${name} e vorrei prenotare un tavolo${details ? ` ${details}` : ""}.`,
+        note ? `\n${note}` : "",
+      ].join("");
+
   window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`, "_blank", "noopener,noreferrer");
 });
 
