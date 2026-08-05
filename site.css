@@ -102,28 +102,56 @@ button {
 
 .whatsapp-cta-icon {
   display: inline-block;
-  width: 1.34rem;
-  height: 1.34rem;
+  width: 1.28rem;
+  height: 1.28rem;
   flex: 0 0 auto;
   overflow: visible;
   fill: none;
-  stroke: none;
+  color: var(--gold);
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
   vertical-align: middle;
-  filter: drop-shadow(0 0.28rem 0.58rem rgba(0, 0, 0, 0.24));
+  filter: drop-shadow(0 0.18rem 0.42rem rgba(184, 135, 70, 0.26));
+  transform-origin: center;
+  transition: color 0.25s ease, transform 0.25s ease, filter 0.25s ease;
 }
 
-.whatsapp-cta-icon .whatsapp-icon-bg {
-  fill: #1fbf62;
-}
-
-.whatsapp-cta-icon .whatsapp-icon-ring {
+.whatsapp-cta-icon .whatsapp-icon-chat,
+.whatsapp-cta-icon .whatsapp-icon-phone {
   fill: none;
-  stroke: rgba(240, 207, 138, 0.92);
-  stroke-width: 0.72;
+  stroke: currentColor;
+  transform-box: fill-box;
+  transform-origin: center;
+  vector-effect: non-scaling-stroke;
+}
+
+.whatsapp-cta-icon .whatsapp-icon-chat {
+  stroke-width: 1.48;
+  animation: whatsappChatBreath 3.8s ease-in-out infinite;
 }
 
 .whatsapp-cta-icon .whatsapp-icon-phone {
-  fill: #fff;
+  stroke-width: 1.62;
+  animation: whatsappPhoneTilt 3.8s ease-in-out infinite;
+}
+
+:where(.book-link, .menu-book, .hero-primary, .contact-book, .whatsapp-submit):hover .whatsapp-cta-icon,
+:where(.book-link, .menu-book, .hero-primary, .contact-book, .whatsapp-submit):focus-visible .whatsapp-cta-icon {
+  color: var(--gold-light);
+  filter: drop-shadow(0 0.24rem 0.52rem rgba(240, 207, 138, 0.34));
+  transform: translateY(-1px) scale(1.06);
+}
+
+@keyframes whatsappChatBreath {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.045); }
+}
+
+@keyframes whatsappPhoneTilt {
+  0%, 100% { transform: rotate(0deg); }
+  42% { transform: rotate(-3deg); }
+  68% { transform: rotate(2.5deg); }
 }
 
 .skip-link {
@@ -213,6 +241,59 @@ body.menu-open .site-header {
   letter-spacing: -0.045em;
   line-height: 0.8;
   text-transform: lowercase;
+}
+
+.brand-mark {
+  display: grid;
+  width: clamp(8rem, 12vw, 11.5rem);
+  color: var(--gold-light);
+  gap: 0.18rem;
+  justify-items: start;
+  text-decoration: none;
+}
+
+.brand-name {
+  font-family: var(--serif);
+  font-size: clamp(1.34rem, 2vw, 2.05rem);
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  line-height: 0.86;
+  text-shadow: 0 0.32rem 0.9rem rgba(0, 0, 0, 0.38);
+}
+
+.brand-fish {
+  width: clamp(5.55rem, 8.6vw, 8.1rem);
+  height: auto;
+  color: #c99b58;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2;
+  filter: drop-shadow(0 0.28rem 0.65rem rgba(0, 0, 0, 0.32));
+}
+
+.brand-fish-outline,
+.brand-fish-gill,
+.brand-fish-fin {
+  fill: none;
+  stroke: currentColor;
+  vector-effect: non-scaling-stroke;
+}
+
+.brand-fish-outline {
+  stroke-width: 1.72;
+}
+
+.brand-fish-gill,
+.brand-fish-fin {
+  stroke-width: 1.32;
+  opacity: 0.78;
+}
+
+.brand-fish-eye {
+  fill: currentColor;
+  stroke: none;
 }
 
 .desktop-nav {
@@ -428,7 +509,7 @@ body.menu-open .site-header {
   transform: scale(1.015);
   animation: heroSettle 1.8s ease forwards;
   image-rendering: auto;
-  filter: brightness(1.18) contrast(1.12) saturate(1.06);
+  filter: brightness(1.22) contrast(1.08) saturate(1.06);
   will-change: transform;
 }
 
@@ -438,8 +519,8 @@ body.menu-open .site-header {
 
 .hero-shade {
   background:
-    linear-gradient(180deg, rgba(4, 9, 7, 0.34), rgba(4, 9, 7, 0.04) 36%, rgba(4, 9, 7, 0.1) 66%, rgba(4, 9, 7, 0.5)),
-    linear-gradient(90deg, rgba(4, 9, 7, 0.12), transparent 52%, rgba(4, 9, 7, 0.1));
+    linear-gradient(180deg, rgba(4, 9, 7, 0.16), rgba(4, 9, 7, 0.01) 34%, rgba(4, 9, 7, 0.04) 66%, rgba(4, 9, 7, 0.25)),
+    linear-gradient(90deg, rgba(4, 9, 7, 0.04), transparent 52%, rgba(4, 9, 7, 0.04));
 }
 
 .hero-title-wrap {
@@ -467,6 +548,10 @@ body.menu-open .site-header {
   line-height: 0.8;
   text-transform: uppercase;
   text-shadow: 0 0.08em 0.35em rgba(0, 0, 0, 0.18);
+}
+
+.hero-title-mobile {
+  display: none;
 }
 
 .hero-address {
@@ -941,7 +1026,7 @@ body.menu-open .site-header {
   width: 6rem;
   height: 6rem;
   border-radius: 50%;
-  color: rgba(10, 18, 15, 0.76);
+  color: #8f6530;
   font-size: 0.55rem;
   font-weight: 600;
   letter-spacing: 0.12em;
@@ -957,17 +1042,42 @@ body.menu-open .site-header {
 
 .review-links-summary a:hover,
 .review-links-summary a:focus-visible {
-  background: var(--ink);
-  color: var(--white);
+  background: rgba(255, 253, 248, 0.9);
+  color: #a87535;
   transform: translateY(-2px);
-  box-shadow: 0 1rem 2.4rem rgba(10, 18, 15, 0.18);
+  box-shadow:
+    inset 0 0 0 1px rgba(240, 207, 138, 0.58),
+    0 1rem 2.4rem rgba(184, 135, 70, 0.18);
 }
 
 .tripadvisor-badge {
+  position: relative;
   gap: 0.25rem;
   background:
-    radial-gradient(circle at 35% 25%, rgba(240, 207, 138, 0.34), transparent 42%),
-    rgba(255, 253, 248, 0.58);
+    radial-gradient(circle at 34% 24%, rgba(240, 207, 138, 0.48), transparent 42%),
+    linear-gradient(145deg, rgba(255, 253, 248, 0.92), rgba(240, 207, 138, 0.18));
+  isolation: isolate;
+  animation: owlBadgeFloat 5.8s ease-in-out infinite;
+}
+
+.tripadvisor-badge:nth-of-type(2) {
+  animation-delay: 0.35s;
+}
+
+.tripadvisor-badge:nth-of-type(3) {
+  animation-delay: 0.7s;
+}
+
+.tripadvisor-badge::after {
+  position: absolute;
+  inset: 0.55rem;
+  border-radius: 50%;
+  background: radial-gradient(circle at 32% 24%, rgba(255, 253, 248, 0.82), transparent 44%);
+  content: "";
+  opacity: 0.5;
+  pointer-events: none;
+  z-index: -1;
+  animation: owlBadgeGlow 4.8s ease-in-out infinite;
 }
 
 .tripadvisor-badge svg {
@@ -981,16 +1091,93 @@ body.menu-open .site-header {
   justify-self: center;
 }
 
-.tripadvisor-badge svg circle:nth-of-type(3),
-.tripadvisor-badge svg circle:nth-of-type(4) {
-  fill: currentColor;
+.tripadvisor-badge:hover,
+.tripadvisor-badge:focus-visible {
+  color: #a87535;
+}
+
+.tripadvisor-badge .tripadvisor-owl {
+  transform-origin: center;
+  animation: owlNod 4.4s ease-in-out infinite;
+}
+
+.tripadvisor-badge:nth-of-type(2) .tripadvisor-owl {
+  animation-delay: 0.45s;
+}
+
+.tripadvisor-badge:nth-of-type(3) .tripadvisor-owl {
+  animation-delay: 0.9s;
+}
+
+.tripadvisor-badge .owl-eye,
+.tripadvisor-badge .owl-pupil,
+.tripadvisor-badge .owl-brow,
+.tripadvisor-badge .owl-beak {
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.tripadvisor-badge .owl-eye {
+  fill: rgba(255, 253, 248, 0.9);
+  animation: owlBlink 6.2s ease-in-out infinite;
+}
+
+.tripadvisor-badge .owl-pupil {
+  fill: #8f6530;
   stroke: none;
+  animation: owlLook 4.6s ease-in-out infinite;
+}
+
+.tripadvisor-badge .owl-brow {
+  animation: owlBrowLift 4.4s ease-in-out infinite;
+}
+
+.tripadvisor-badge .owl-beak {
+  color: var(--gold);
+  animation: owlBeakPulse 4.4s ease-in-out infinite;
 }
 
 .tripadvisor-badge b {
   font-size: 0.54rem;
   font-weight: 700;
   letter-spacing: 0;
+}
+
+@keyframes owlBadgeFloat {
+  0%, 100% { transform: translateY(0); }
+  45% { transform: translateY(-0.38rem); }
+}
+
+@keyframes owlBadgeGlow {
+  0%, 100% { opacity: 0.32; transform: scale(0.96); }
+  50% { opacity: 0.66; transform: scale(1.04); }
+}
+
+@keyframes owlNod {
+  0%, 100% { transform: rotate(0deg); }
+  35% { transform: rotate(-3deg); }
+  70% { transform: rotate(2.5deg); }
+}
+
+@keyframes owlBlink {
+  0%, 88%, 94%, 100% { transform: scaleY(1); }
+  91% { transform: scaleY(0.16); }
+}
+
+@keyframes owlLook {
+  0%, 100% { transform: translateX(0); }
+  28% { transform: translateX(1.05px); }
+  64% { transform: translateX(-0.95px); }
+}
+
+@keyframes owlBrowLift {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-1px); }
+}
+
+@keyframes owlBeakPulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.12); }
 }
 
 .rating-block strong {
@@ -2340,9 +2527,9 @@ body.modal-open {
 
 .hero-shade {
   background:
-    linear-gradient(180deg, rgba(4, 9, 7, 0.38), rgba(4, 9, 7, 0.05) 30%, rgba(4, 9, 7, 0.12) 62%, rgba(4, 9, 7, 0.54)),
-    radial-gradient(circle at 52% 55%, rgba(240, 207, 138, 0.08), transparent 38%),
-    linear-gradient(90deg, rgba(4, 9, 7, 0.1), transparent 50%, rgba(4, 9, 7, 0.1));
+    linear-gradient(180deg, rgba(4, 9, 7, 0.14), rgba(4, 9, 7, 0.01) 30%, rgba(4, 9, 7, 0.04) 62%, rgba(4, 9, 7, 0.22)),
+    radial-gradient(circle at 52% 55%, rgba(240, 207, 138, 0.04), transparent 38%),
+    linear-gradient(90deg, rgba(4, 9, 7, 0.03), transparent 50%, rgba(4, 9, 7, 0.03));
 }
 
 .hero-title-wrap {
@@ -2461,6 +2648,13 @@ body.modal-open {
 .hero-social-link svg {
   width: 2.75rem;
   height: 2.75rem;
+}
+
+@media (min-width: 761px) {
+  .hero-title-wrap .hero-socials {
+    right: 0;
+    bottom: -4.85rem;
+  }
 }
 
 .section-heading,
@@ -2650,8 +2844,8 @@ body.modal-open {
 
   .hero-shade {
     background:
-      linear-gradient(180deg, rgba(4, 9, 7, 0.36), rgba(4, 9, 7, 0.04) 28%, rgba(4, 9, 7, 0.14) 56%, rgba(4, 9, 7, 0.6)),
-      linear-gradient(90deg, rgba(4, 9, 7, 0.08), rgba(4, 9, 7, 0.01) 48%, rgba(4, 9, 7, 0.08));
+      linear-gradient(180deg, rgba(4, 9, 7, 0.12), rgba(4, 9, 7, 0.01) 28%, rgba(4, 9, 7, 0.04) 56%, rgba(4, 9, 7, 0.2)),
+      linear-gradient(90deg, rgba(4, 9, 7, 0.03), transparent 48%, rgba(4, 9, 7, 0.03));
   }
 
   .hero-title-wrap {
@@ -3011,6 +3205,579 @@ body.modal-open {
 @media (max-width: 390px) {
   .brand-image img {
     height: 2.05rem;
+  }
+}
+
+.restaurant-mobile-copy,
+.reviews-title-mobile,
+.contact-title-mobile,
+.contact-socials,
+.footer-phone,
+.footer-socials {
+  display: none;
+}
+
+@media (max-width: 760px) {
+  .restaurant-section,
+  .location-section,
+  .reviews-section,
+  .contact-section,
+  .site-footer {
+    text-align: center;
+  }
+
+  .section-heading,
+  .reviews-intro,
+  .contact-panel,
+  .footer-main,
+  .footer-bottom {
+    text-align: center;
+  }
+
+  .section-heading {
+    justify-items: center;
+  }
+
+  .heading-copy {
+    max-width: 20rem;
+    margin-inline: auto;
+    justify-items: center;
+    text-align: center;
+  }
+
+  .restaurant-section {
+    padding-top: 4.35rem;
+    padding-bottom: 4.55rem;
+  }
+
+  .restaurant-section .heading-copy p:not(.restaurant-mobile-copy) {
+    display: none;
+  }
+
+  .restaurant-mobile-copy {
+    display: block;
+    max-width: 18rem;
+    color: rgba(255, 253, 248, 0.76);
+    font-size: 0.98rem;
+    line-height: 1.52;
+  }
+
+  .food-card figcaption,
+  .location-card figcaption {
+    justify-content: center;
+    gap: 0.65rem;
+    text-align: center;
+  }
+
+  .center-cta {
+    padding-top: 2.75rem;
+  }
+
+  .location-section {
+    padding-top: 4.4rem;
+    padding-bottom: 4.4rem;
+  }
+
+  .reviews-section {
+    padding-top: 3.95rem;
+    padding-bottom: 4.25rem;
+  }
+
+  .reviews-intro {
+    margin-bottom: 1.45rem;
+    justify-items: center;
+    align-items: center;
+    gap: 0.85rem;
+  }
+
+  .reviews-title-desktop,
+  .contact-title-desktop {
+    display: none;
+  }
+
+  .reviews-title-mobile,
+  .contact-title-mobile {
+    display: block;
+  }
+
+  .reviews-intro h2 {
+    margin-top: 0.75rem;
+    font-size: clamp(2.6rem, 13vw, 3.55rem);
+    line-height: 1;
+    white-space: nowrap;
+  }
+
+  .rating-column {
+    align-items: center;
+    gap: 0;
+  }
+
+  .review-awards {
+    display: flex;
+    justify-content: center;
+    gap: 0.62rem;
+  }
+
+  .review-awards > span,
+  .rating-block {
+    display: none;
+  }
+
+  .review-links-summary a {
+    width: 3.75rem;
+    height: 3.75rem;
+    min-height: 3.75rem;
+    color: #8f6530;
+    background:
+      radial-gradient(circle at 34% 24%, rgba(255, 253, 248, 0.94), transparent 46%),
+      linear-gradient(145deg, rgba(255, 253, 248, 0.98), rgba(240, 207, 138, 0.34));
+    box-shadow:
+      inset 0 0 0 1px rgba(184, 135, 70, 0.42),
+      0 0.7rem 1.45rem rgba(10, 18, 15, 0.1);
+  }
+
+  .review-links-summary a:hover,
+  .review-links-summary a:focus-visible {
+    background:
+      radial-gradient(circle at 34% 24%, rgba(255, 253, 248, 1), transparent 46%),
+      linear-gradient(145deg, rgba(255, 253, 248, 1), rgba(240, 207, 138, 0.42));
+    color: #8f6530;
+    transform: translateY(-0.16rem);
+  }
+
+  .tripadvisor-badge svg {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .tripadvisor-badge b {
+    display: none;
+  }
+
+  .review-grid {
+    margin-right: 0;
+    gap: 0.7rem;
+    justify-content: flex-start;
+  }
+
+  .review-card {
+    flex: 0 0 min(76vw, 18.75rem);
+    padding: 1rem;
+    border-radius: var(--radius-soft);
+  }
+
+  .review-card blockquote {
+    min-height: 0;
+    margin: 0.75rem 0 0;
+    font-size: 1.02rem;
+    line-height: 1.45;
+  }
+
+  .review-card > p {
+    display: none;
+  }
+
+  .reviews-link {
+    padding-top: 1.2rem;
+    gap: 0.7rem;
+  }
+
+  .reviews-link a,
+  .review-cta {
+    min-height: 3rem;
+    padding: 0 1rem;
+    justify-content: center;
+    gap: 0.75rem;
+    font-size: 0.76rem;
+  }
+
+  .contact-section {
+    display: block;
+  }
+
+  .contact-panel {
+    padding-top: 4rem;
+    padding-bottom: 2.35rem;
+    align-items: center;
+  }
+
+  .contact-panel h2 {
+    margin-top: 0.75rem;
+    font-size: clamp(2.75rem, 13vw, 3.65rem);
+    line-height: 1;
+    white-space: nowrap;
+  }
+
+  .contact-list {
+    width: 100%;
+    max-width: 22rem;
+    margin: 1.45rem auto 1.05rem;
+  }
+
+  .contact-list > div {
+    padding: 0.85rem 0;
+  }
+
+  .contact-list > div:nth-child(4) {
+    display: none;
+  }
+
+  .contact-list h3,
+  .contact-list p,
+  .contact-list a {
+    text-align: center;
+  }
+
+  .contact-list a,
+  .contact-list p {
+    justify-content: center;
+    font-size: 0.93rem;
+    line-height: 1.48;
+  }
+
+  .contact-socials {
+    display: flex;
+    justify-content: center;
+    gap: 0.72rem;
+    margin: 0.45rem auto 1.2rem;
+  }
+
+  .contact-social-link {
+    display: inline-flex;
+    width: 3rem;
+    height: 3rem;
+    min-height: 3rem;
+    border: 1px solid rgba(184, 135, 70, 0.44);
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    color: var(--ink);
+    background:
+      radial-gradient(circle at 34% 24%, rgba(255, 253, 248, 0.96), transparent 48%),
+      linear-gradient(145deg, rgba(255, 253, 248, 0.98), rgba(240, 207, 138, 0.28));
+    box-shadow: 0 0.8rem 1.75rem rgba(10, 18, 15, 0.08);
+    transition: transform 0.25s var(--ease-out), box-shadow 0.25s var(--ease-out);
+  }
+
+  .contact-social-link:hover,
+  .contact-social-link:focus-visible {
+    color: var(--ink);
+    transform: translateY(-0.16rem);
+    box-shadow: 0 1rem 2rem rgba(184, 135, 70, 0.16);
+  }
+
+  .contact-social-link svg {
+    width: 1.25rem;
+    height: 1.25rem;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.45;
+  }
+
+  .contact-social-link .instagram-dot,
+  .contact-social-link .facebook-mark {
+    fill: currentColor;
+    stroke: none;
+  }
+
+  .contact-social-link span {
+    display: none;
+  }
+
+  .contact-actions {
+    width: min(100%, 22rem);
+    margin-inline: auto;
+  }
+
+  .contact-actions .contact-book:not(.contact-call) {
+    display: none;
+  }
+
+  .contact-book {
+    justify-content: center;
+    gap: 0.75rem;
+  }
+
+  .map-wrap {
+    height: 18.5rem;
+    padding: 0 var(--page-x) 4.25rem;
+    background: var(--paper);
+  }
+
+  .map-frame {
+    border-color: rgba(184, 135, 70, 0.46);
+    border-radius: 1.35rem;
+    background: #fffdf8;
+    box-shadow:
+      0 1.1rem 2.1rem rgba(10, 18, 15, 0.12),
+      inset 0 0 0 1px rgba(255, 253, 248, 0.55);
+  }
+
+  .map-frame::before {
+    inset: 0.42rem;
+    border-color: rgba(184, 135, 70, 0.28);
+    border-radius: 1.05rem;
+  }
+
+  .map-frame iframe {
+    filter: saturate(1.2) contrast(1.03) brightness(1.05);
+  }
+
+  .map-veiling {
+    background: linear-gradient(180deg, rgba(255, 253, 248, 0.04), rgba(255, 253, 248, 0.02));
+  }
+
+  .map-label {
+    display: none;
+  }
+
+  .site-footer {
+    padding: 3.35rem var(--page-x) calc(6.25rem + env(safe-area-inset-bottom));
+  }
+
+  .footer-main {
+    display: flex;
+    padding-bottom: 1.7rem;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.95rem;
+  }
+
+  .footer-logo {
+    justify-self: center;
+    color: var(--gold-light);
+    font-size: clamp(2.9rem, 15vw, 4.2rem);
+    line-height: 0.9;
+    text-transform: uppercase;
+  }
+
+  .footer-main > p:not(.footer-phone) {
+    max-width: 18rem;
+    color: rgba(255, 253, 248, 0.78);
+    font-size: 1.12rem;
+    line-height: 1.36;
+    text-align: center;
+  }
+
+  .footer-phone {
+    display: block;
+    margin: 0;
+    font-family: var(--sans);
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+
+  .footer-phone a {
+    color: var(--gold-light);
+  }
+
+  .footer-socials {
+    display: flex;
+    justify-content: center;
+    gap: 0.65rem;
+    flex-wrap: wrap;
+  }
+
+  .footer-socials a {
+    display: inline-flex;
+    min-height: 2.6rem;
+    padding: 0 0.95rem;
+    border: 1px solid rgba(240, 207, 138, 0.34);
+    border-radius: 999px;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255, 253, 248, 0.84);
+    font-size: 0.78rem;
+  }
+
+  .footer-socials a:hover,
+  .footer-socials a:focus-visible {
+    color: var(--gold-light);
+  }
+
+  .footer-main > a:not(.footer-logo) {
+    justify-self: center;
+  }
+
+  .footer-bottom {
+    display: grid;
+    justify-content: center;
+    gap: 0.35rem;
+    line-height: 1.5;
+    text-align: center;
+  }
+}
+
+@media (max-width: 760px) {
+  body {
+    padding-bottom: calc(5.35rem + env(safe-area-inset-bottom));
+  }
+
+  .hero {
+    height: 100svh;
+    min-height: 100svh;
+    padding: 6.25rem var(--page-x) calc(5.8rem + env(safe-area-inset-bottom));
+    place-items: center;
+  }
+
+  .hero-title-wrap {
+    display: flex;
+    width: 100%;
+    min-height: 0;
+    padding: 0;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .hero-overline,
+  .hero-hours,
+  .hero-edge,
+  .scroll-cue {
+    display: none;
+  }
+
+  .hero h1 {
+    width: 100%;
+    max-width: none;
+    font-size: clamp(2.55rem, 11vw, 3.9rem);
+    letter-spacing: 0.035em;
+    line-height: 0.95;
+    white-space: nowrap;
+  }
+
+  .hero-title-desktop {
+    display: none;
+  }
+
+  .hero-title-mobile {
+    display: inline;
+  }
+
+  .hero-address {
+    margin: 0.7rem 0 0;
+    font-family: var(--sans);
+    font-size: clamp(0.78rem, 3.15vw, 0.95rem);
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    line-height: 1.2;
+  }
+
+  .hero-address p:first-child {
+    display: block;
+  }
+
+  .hero-address p:nth-child(2) {
+    display: none;
+  }
+
+  .hero-socials {
+    position: static;
+    display: flex;
+    margin-top: 1.15rem;
+    align-items: center;
+    justify-content: center;
+    gap: 0.72rem;
+  }
+
+  .hero-social-link {
+    display: inline-flex;
+    width: 3rem;
+    height: 3rem;
+    min-height: 3rem;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero-social-link span {
+    display: none;
+  }
+
+  .hero-social-link svg {
+    width: 3rem;
+    height: 3rem;
+    padding: 0.72rem;
+    border-color: rgba(255, 253, 248, 0.78);
+    background: rgba(7, 13, 10, 0.18);
+    backdrop-filter: blur(10px);
+  }
+
+  .hero-actions {
+    width: auto;
+    margin: 0;
+  }
+
+  .hero-secondary {
+    display: none;
+  }
+
+  .hero-primary {
+    position: fixed;
+    z-index: 85;
+    right: var(--page-x);
+    bottom: max(1rem, env(safe-area-inset-bottom));
+    left: var(--page-x);
+    width: auto;
+    min-height: 3.75rem;
+    border-color: rgba(255, 253, 248, 0.86);
+    background: rgba(255, 253, 248, 0.96);
+    color: var(--ink);
+    box-shadow: 0 1rem 2.2rem rgba(4, 9, 7, 0.24);
+    backdrop-filter: blur(14px);
+  }
+
+  .hero-primary:hover,
+  .hero-primary:focus-visible {
+    transform: none;
+  }
+}
+
+@media (max-width: 390px) {
+  .hero h1 {
+    font-size: clamp(2.28rem, 10.7vw, 3.15rem);
+  }
+}
+
+.site-header .brand-mark {
+  width: clamp(8rem, 12vw, 11.5rem);
+  min-width: 8rem;
+}
+
+@media (max-width: 1000px) {
+  .site-header .brand-mark {
+    width: 8rem;
+    min-width: 8rem;
+  }
+}
+
+@media (max-width: 760px) {
+  .site-header .brand-mark {
+    width: 7.1rem;
+    min-width: 7.1rem;
+  }
+
+  .site-header .brand-name {
+    font-size: 1.12rem;
+  }
+
+  .site-header .brand-fish {
+    width: 5rem;
+  }
+}
+
+@media (max-width: 390px) {
+  .site-header .brand-mark {
+    width: 6.5rem;
+    min-width: 6.5rem;
+  }
+
+  .site-header .brand-name {
+    font-size: 1rem;
+  }
+
+  .site-header .brand-fish {
+    width: 4.55rem;
   }
 }
 
