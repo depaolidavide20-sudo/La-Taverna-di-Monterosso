@@ -16,7 +16,9 @@ test("static HTML contains the La Taverna website", async () => {
   assert.match(html, /assets\/hero-wine-desktop\.jpg/);
   assert.match(html, /assets\/hero-wine-desktop-2x\.jpg/);
   assert.match(html, /assets\/hero-wine-mobile\.jpg/);
-  assert.match(html, /Facciata in pietra de La Taverna di Monterosso/);
+  assert.match(html, /class="hero-image"[\s\S]*alt=""/);
+  assert.match(html, /class="hero-image"[\s\S]*aria-hidden="true"/);
+  assert.doesNotMatch(html, /Facciata in pietra de La Taverna di Monterosso/);
   assert.match(html, /LANTERNA/);
   assert.match(html, /header-brand-mark/);
   assert.match(html, /assets\/brand-la-taverna-header-v2\.png/);
@@ -151,6 +153,10 @@ test("static assets are self-contained and scoped", async () => {
   assert.match(css, /@media \(max-width:\s*760px\)[\s\S]*\.hero-address\s*\{[\s\S]*order:\s*3/);
   assert.match(css, /@media \(max-width:\s*760px\)[\s\S]*\.hero-hours,[\s\S]*\.hero-actions\s*\{[\s\S]*display:\s*none/);
   assert.match(css, /@media \(max-width:\s*760px\)[\s\S]*\.hero-edge\s*\{[\s\S]*display:\s*block/);
+  assert.match(css, /Final screenshot fixes/);
+  assert.match(css, /\.hero-image\s*\{[\s\S]*color:\s*transparent[\s\S]*font-size:\s*0/);
+  assert.match(css, /@media \(min-width:\s*761px\)[\s\S]*\.contact-section \.contact-actions \.contact-book\s*\{[\s\S]*background:\s*var\(--paper\)[\s\S]*color:\s*var\(--ink\)/);
+  assert.match(css, /@media \(max-width:\s*760px\)[\s\S]*\.footer-main\s*\{[\s\S]*flex-direction:\s*column/);
   assert.match(css, /\.footer-socials/);
   assert.match(css, /\.footer-social-link/);
   assert.match(css, /flex-direction:\s*column/);
