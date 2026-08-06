@@ -3492,3 +3492,138 @@ body {
     pointer-events: none;
   }
 }
+
+/* Final brand image and no-gold corrections */
+:root {
+  --gold: var(--ink);
+  --gold-light: var(--ink);
+  --orange: var(--ink);
+  --accent-gold: var(--ink);
+  --accent-gold-bright: var(--ink);
+}
+
+.site-header,
+.hero,
+.restaurant-section,
+.site-footer,
+.mobile-menu,
+.mobile-menu .menu-panel,
+.map-label {
+  --gold: var(--white);
+  --gold-light: var(--white);
+  --orange: var(--white);
+  --accent-gold: var(--white);
+  --accent-gold-bright: var(--white);
+}
+
+.location-section,
+.reviews-section,
+.contact-section,
+.card-modal,
+.booking-modal {
+  --gold: var(--ink);
+  --gold-light: var(--ink);
+  --orange: var(--ink);
+  --accent-gold: var(--ink);
+  --accent-gold-bright: var(--ink);
+}
+
+.site-header .header-brand-mark {
+  display: block;
+  width: clamp(6.8rem, 8vw, 8.6rem);
+  color: var(--white);
+  line-height: 0;
+}
+
+.site-header .brand-logo-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 0.2rem 0.55rem rgba(0, 0, 0, 0.28));
+}
+
+.site-header .brand-name,
+.site-header .brand-fish {
+  display: none;
+}
+
+.site-header :where(.desktop-nav a, .language-switch, .language-switch button, .language-switch span, .menu-toggle, .menu-toggle span),
+.mobile-menu :where(.menu-panel-kicker, nav a, nav a span, nav a b, nav a .ui-icon, .mobile-menu-meta, .mobile-menu-meta a, .mobile-menu-meta .ui-icon) {
+  color: var(--white);
+}
+
+.hero :where(.hero-overline, .hero-address, .hero-hours, .hero-hours span, .hero-edge, .scroll-cue, .hero-social-link),
+.restaurant-section :where(.section-kicker, .heading-copy, .heading-copy p, .restaurant-mobile-copy),
+.site-footer :where(.footer-logo, .footer-main > p, .footer-phone a, .footer-main > a, .footer-bottom, .footer-social-link) {
+  color: var(--white);
+}
+
+.location-section :where(.section-kicker, h2 em, figcaption, figcaption span, .carousel-footer > p),
+.reviews-section :where(.section-kicker, h2 em, .stars, .review-links-summary a, .reviews-link a),
+.contact-section :where(.section-kicker, h2 em, .contact-list h3, .contact-list a, .contact-list p, .contact-social-link),
+.card-modal :where(.section-kicker, h2 em, .catalog-section h3, .catalog-item > span),
+.booking-modal :where(.section-kicker, h2 em, label > span) {
+  color: var(--ink);
+}
+
+.desktop-nav a::after,
+.mobile-menu nav a::after,
+.restaurant-section .section-kicker::after,
+.site-footer .footer-main > a::after {
+  background: var(--white);
+}
+
+.location-section .section-kicker::after,
+.reviews-section .section-kicker::after,
+.contact-section .section-kicker::after,
+.card-modal .section-kicker::after,
+.booking-modal .section-kicker::after {
+  background: var(--ink);
+}
+
+.whatsapp-cta-icon {
+  color: currentColor;
+  filter: none;
+}
+
+:where(.book-link, .menu-book, .hero-primary, .mobile-sticky-book, .contact-book, .whatsapp-submit):hover .whatsapp-cta-icon,
+:where(.book-link, .menu-book, .hero-primary, .mobile-sticky-book, .contact-book, .whatsapp-submit):focus-visible .whatsapp-cta-icon {
+  color: currentColor;
+  filter: none;
+}
+
+.map-label {
+  border-color: rgba(255, 253, 248, 0.36);
+}
+
+.map-label a {
+  border-color: rgba(255, 253, 248, 0.5);
+}
+
+.tripadvisor-badge .owl-pupil {
+  fill: var(--ink);
+}
+
+@media (min-width: 761px) {
+  .hero .hero-socials {
+    right: var(--page-x);
+    bottom: clamp(2rem, 4vh, 3.2rem);
+    left: auto;
+    justify-content: flex-end;
+    transform: none;
+  }
+}
+
+@media (max-width: 760px) {
+  .site-header .header-brand-mark {
+    width: 6.2rem;
+  }
+
+  .hero .hero-socials {
+    right: var(--page-x);
+    bottom: 1rem;
+    left: auto;
+    gap: 0.6rem;
+    transform: none;
+  }
+}
