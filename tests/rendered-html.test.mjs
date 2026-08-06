@@ -28,6 +28,8 @@ test("static HTML contains the La Taverna website", async () => {
   assert.match(html, /Cucina italiana, pesce e sapori liguri nel cuore di Monterosso/);
   assert.match(html, /class="hero-socials"/);
   assert.match(html, /class="contact-socials"/);
+  assert.match(html, /class="contact-phone-cell"/);
+  assert.match(html, /class="contact-phone-row"/);
   assert.match(html, /class="footer-socials"/);
   assert.match(html, /class="footer-social-link"/);
   assert.match(html, /data-i18n="reviews\.title">Cosa dicono di noi/);
@@ -130,6 +132,12 @@ test("static assets are self-contained and scoped", async () => {
   assert.match(css, /Definitive requested Aug 6 corrections[\s\S]*\.reviews-intro > div:first-child,[\s\S]*\.reviews-intro h2\s*\{[\s\S]*text-align:\s*center/);
   assert.match(css, /\.whatsapp-icon-mark\s*\{[\s\S]*fill:\s*currentColor[\s\S]*stroke:\s*none/);
   assert.match(css, /\.contact-socials/);
+  assert.match(css, /Definitive black and white detail pass/);
+  assert.match(css, /\.mobile-menu \.menu-book\s*\{[\s\S]*background:\s*var\(--white\)[\s\S]*color:\s*var\(--ink\)/);
+  assert.match(css, /body \.mobile-sticky-book\.is-on-light\s*\{[\s\S]*background:\s*var\(--ink\)[\s\S]*color:\s*var\(--white\)/);
+  assert.match(css, /\.hero \.hero-socials\s*\{[\s\S]*left:\s*50%[\s\S]*transform:\s*translateX\(-50%\)/);
+  assert.match(css, /\.tripadvisor-badge \.owl-frame\s*\{[\s\S]*stroke-width:\s*2\.05/);
+  assert.match(css, /\.site-header \.brand-mark/);
   assert.match(css, /\.footer-socials/);
   assert.match(css, /\.footer-social-link/);
   assert.match(css, /flex-direction:\s*column/);
@@ -147,6 +155,9 @@ test("static assets are self-contained and scoped", async () => {
   assert.match(script, /per il giorno \$\{formattedDate\}/);
   assert.match(script, /alle \$\{time\}/);
   assert.match(script, /https:\/\/wa\.me\/\$\{whatsappNumber\}/);
+  assert.match(script, /setStickyBookTheme/);
+  assert.match(script, /footerSection/);
+  assert.match(script, /is-on-light/);
   assert.match(script, /setupCarousel/);
   assert.match(favicon, /<svg/);
   assert.doesNotMatch(css, /hero-verve|dish-0|location-0|_sites-preview|codex-preview/i);
