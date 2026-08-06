@@ -3884,3 +3884,156 @@ body {
     text-align: center;
   }
 }
+
+/* Final mobile-only polish pass */
+@media (max-width: 760px) {
+  .site-header {
+    min-height: 4.35rem;
+    padding-top: 0.4rem;
+    padding-bottom: 0.4rem;
+    background: rgba(0, 0, 0, 0.74);
+    backdrop-filter: blur(14px);
+  }
+
+  .site-header::after {
+    opacity: 0.42;
+  }
+
+  .site-header .header-brand-mark {
+    width: 6.65rem;
+  }
+
+  .header-actions {
+    gap: 0.42rem;
+  }
+
+  .language-switch {
+    font-size: 0.58rem;
+  }
+
+  .menu-toggle {
+    width: 2.35rem;
+    height: 2.35rem;
+  }
+
+  .hero {
+    padding-top: 6.1rem;
+    padding-bottom: calc(6.2rem + env(safe-area-inset-bottom));
+  }
+
+  .hero-overline {
+    order: 1;
+    margin: 0 0 0.72rem;
+    font-size: 0.56rem;
+    letter-spacing: 0.2em;
+  }
+
+  .hero h1 {
+    order: 2;
+    font-size: clamp(3rem, 14.3vw, 4.15rem);
+  }
+
+  .hero-address {
+    order: 3;
+    margin-top: 0.82rem;
+  }
+
+  .hero .hero-socials {
+    top: calc(50% + 5.75rem);
+  }
+
+  .hero-edge {
+    top: 50%;
+    font-size: 0.46rem;
+    letter-spacing: 0.18em;
+    opacity: 0.9;
+  }
+
+  .hero-edge-left {
+    left: 0.72rem;
+    writing-mode: vertical-rl;
+    transform: translateY(-50%) rotate(180deg);
+    transform-origin: center;
+  }
+
+  .hero-edge-right {
+    right: 0.72rem;
+    writing-mode: vertical-rl;
+    transform: translateY(-50%);
+    transform-origin: center;
+  }
+
+  .mobile-sticky-book {
+    right: var(--page-x);
+    bottom: calc(1rem + env(safe-area-inset-bottom));
+    left: var(--page-x);
+    width: auto;
+    min-height: 3.35rem;
+    padding: 0 1.15rem;
+    border-width: 1px;
+    border-radius: 6px;
+    box-shadow: 0 0.9rem 2.1rem rgba(0, 0, 0, 0.22);
+  }
+
+  .reviews-intro {
+    gap: 1rem;
+    margin-bottom: clamp(2.4rem, 8vw, 3.2rem);
+  }
+
+  .rating-column {
+    width: 100%;
+    align-items: center;
+  }
+
+  .review-awards {
+    margin-top: 0.35rem;
+    justify-content: center;
+    gap: 0.55rem;
+  }
+
+  .review-awards > span {
+    display: none;
+  }
+
+  .review-links-summary a {
+    width: 4.45rem;
+    height: 4.45rem;
+    min-height: 4.45rem;
+    color: var(--ink);
+  }
+
+  .tripadvisor-badge b,
+  .tripadvisor-badge .tripadvisor-owl {
+    color: var(--ink);
+  }
+
+  .tripadvisor-badge .owl-frame,
+  .tripadvisor-badge .owl-eye,
+  .tripadvisor-badge .owl-beak,
+  .tripadvisor-badge .owl-gesture {
+    stroke: var(--ink);
+  }
+
+  .tripadvisor-badge .owl-pupil {
+    fill: var(--ink);
+  }
+
+  .contact-section .contact-actions .contact-book {
+    background: var(--paper);
+    border-color: rgba(10, 18, 15, 0.42);
+    color: var(--ink);
+    box-shadow: none;
+  }
+
+  .contact-section .contact-actions .contact-book:hover,
+  .contact-section .contact-actions .contact-book:focus-visible {
+    background: var(--paper);
+    border-color: var(--ink);
+    color: var(--ink);
+  }
+
+  .contact-section .contact-actions .contact-book :where(svg, .whatsapp-cta-icon, .whatsapp-icon-mark) {
+    color: currentColor;
+    fill: currentColor;
+  }
+}
