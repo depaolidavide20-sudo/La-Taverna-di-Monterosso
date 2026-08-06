@@ -18,19 +18,19 @@ const translations = {
     "nav.contacts": "Contatti",
     "cta.book": "Prenota",
     "cta.bookTable": "Prenota un tavolo",
-    "cta.menu": "Scopri il nostro menu",
+    "cta.menu": "Scopri il nostro menù",
     "cta.wine": "Carta dei Vini",
     "cta.call": "Chiama ora",
-    "card.food": "Menu",
+    "card.food": "Menù",
     "card.wine": "Carta dei Vini",
-    "card.note": "In caso di allergie o intolleranze, prima di ordinare informa il personale di sala. La carta puo variare secondo stagione e disponibilita.",
-    "card.wineNote": "Etichette e annate possono variare secondo disponibilita. Chiedi al personale il suggerimento del giorno.",
+    "card.note": "In caso di allergie o intolleranze, prima di ordinare informa il personale di sala. La carta può variare secondo stagione e disponibilità.",
+    "card.wineNote": "Etichette e annate possono variare secondo disponibilità. Chiedi al personale il suggerimento del giorno.",
     "hero.overline": "Ristorante - Pizzeria",
-    "hero.hours": "<span>Pranzo, cena &amp; convivialita</span> Cucina italiana · pesce · pizza · Liguria",
+    "hero.hours": "<span>Pranzo, cena &amp; convivialità</span> Cucina italiana · pesce · pizza · Liguria",
     "hero.edge": "Cucina italiana & sapori liguri",
     "hero.discover": "Scopri La Taverna",
     "restaurant.kicker": "01 · La nostra cucina",
-    "restaurant.copy1": "Piatti italiani, specialita di mare e sapori liguri in un ristorante accogliente nel cuore di Monterosso.",
+    "restaurant.copy1": "Piatti italiani, specialità di mare e sapori liguri in un ristorante accogliente nel cuore di Monterosso.",
     "restaurant.copy2": "Una tavola semplice, curata e generosa per vivere pranzo e cena tra le Cinque Terre.",
     "restaurant.mobileCopy": "Cucina italiana, pesce e sapori liguri nel cuore di Monterosso.",
     "food.catch": "Il polpo",
@@ -167,8 +167,8 @@ const menuCatalogs = {
     intro: {
       it: {
         kicker: "La Taverna · Cucina italiana",
-        title: "Il nostro<br><em>menu.</em>",
-        description: "Proposte italiane, cucina ligure, pesce, pizza e piatti vegetariani. La carta puo variare secondo stagione e disponibilita.",
+        title: "Il nostro<br><em>menù.</em>",
+        description: "Proposte italiane, cucina ligure, pesce, pizza e piatti vegetariani. La carta può variare secondo stagione e disponibilità.",
       },
       en: {
         kicker: "La Taverna · Italian cuisine",
@@ -181,7 +181,7 @@ const menuCatalogs = {
         it: "Dal mare", en: "From the sea",
         items: [
           { it: "Pescato del giorno con profumi mediterranei", en: "Catch of the day with Mediterranean notes" },
-          { it: "Frutti di mare e specialita liguri", en: "Seafood and Ligurian specialities" },
+          { it: "Frutti di mare e specialità liguri", en: "Seafood and Ligurian specialities" },
           { it: "Frittura e piatti semplici da condividere", en: "Fried seafood and simple dishes to share" },
         ],
       },
@@ -222,7 +222,7 @@ const menuCatalogs = {
         items: [
           { it: "Prosecco e bollicine per aperitivo", en: "Prosecco and sparkling wines for aperitif" },
           { it: "Metodo classico italiano", en: "Italian traditional method" },
-          { it: "Cuvée speciali secondo disponibilita", en: "Special cuvees according to availability" },
+          { it: "Cuvée speciali secondo disponibilità", en: "Special cuvees according to availability" },
         ],
       },
       {
@@ -287,7 +287,7 @@ const setMenu = (open, restoreFocus = true) => {
   mobileMenu?.classList.toggle("is-open", open);
   mobileMenu?.setAttribute("aria-hidden", String(!open));
   menuToggle?.setAttribute("aria-expanded", String(open));
-  menuToggle?.setAttribute("aria-label", open ? "Chiudi il menu" : "Apri il menu");
+  menuToggle?.setAttribute("aria-label", open ? "Chiudi il menù" : "Apri il menù");
   setBackgroundInert(open);
 
   if (open) {

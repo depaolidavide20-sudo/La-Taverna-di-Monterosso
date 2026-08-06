@@ -3832,6 +3832,61 @@ body {
   }
 }
 
+/* Final modal brand and desktop contact refinements */
+.card-brand-mark {
+  display: inline-flex;
+  width: clamp(8.15rem, 12vw, 11rem);
+  min-width: 8.15rem;
+  height: auto;
+  align-items: center;
+  justify-self: start;
+}
+
+.card-brand-mark .brand-logo-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  object-position: left center;
+  opacity: 0.92;
+  filter: brightness(0) contrast(1.08);
+}
+
+.card-brand-mark .brand-name,
+.card-brand-mark .brand-fish {
+  display: none;
+}
+
+.contact-call .phone-line-icon {
+  width: 1.06rem;
+  height: 1.06rem;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.08;
+  vector-effect: non-scaling-stroke;
+}
+
+.contact-call .phone-line-icon path {
+  fill: none;
+  stroke: currentColor;
+}
+
+@media (min-width: 761px) {
+  .contact-phone-cell {
+    padding-left: 1rem;
+    border-right: 0;
+  }
+}
+
+@media (max-width: 760px) {
+  .card-brand-mark {
+    width: 6.85rem;
+    min-width: 6.85rem;
+  }
+}
+
 @media (max-width: 760px) {
   .site-footer {
     padding: clamp(2.8rem, 4.2vw, 4rem) var(--page-x) 1.2rem;
