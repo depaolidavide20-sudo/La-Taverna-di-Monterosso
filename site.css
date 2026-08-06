@@ -2668,2167 +2668,15 @@ body.modal-open {
   50% { transform: scale(1.055); }
 }
 
-/* Hard final brand and WhatsApp correction */
-.brand-fish {
-  display: block;
-  width: clamp(5.25rem, 7.4vw, 6.85rem);
-  height: auto;
-  color: currentColor;
-  fill: none;
-  stroke: none;
-  filter: none;
-}
-
-.brand-fish-body,
-.brand-fish-fin,
-.brand-fish-gill {
-  fill: none;
-  stroke: currentColor;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  vector-effect: non-scaling-stroke;
-}
-
-.brand-fish-body {
-  stroke-width: 1.58;
-}
-
-.brand-fish-fin {
-  stroke-width: 1.42;
-}
-
-.brand-fish-gill {
-  stroke-width: 1.04;
-  opacity: 0.82;
-}
-
-.brand-fish-eye {
-  fill: currentColor;
-  stroke: none;
-}
-
-.whatsapp-cta-icon {
-  display: block;
-  width: 1.24rem;
-  height: 1.24rem;
-  flex: 0 0 1.24rem;
-  overflow: visible;
-  color: var(--ink);
-  fill: currentColor;
-  stroke: none;
-  filter: none;
-  transform-origin: center;
-  animation: whatsappIconPulse 4.8s ease-in-out infinite;
-}
-
-.whatsapp-icon-mark {
-  fill: currentColor;
-  stroke: none;
-  transform: none;
-  animation: none;
-}
-
-:where(.book-link, .menu-book, .hero-primary, .mobile-sticky-book, .contact-book, .whatsapp-submit):hover .whatsapp-cta-icon,
-:where(.book-link, .menu-book, .hero-primary, .mobile-sticky-book, .contact-book, .whatsapp-submit):focus-visible .whatsapp-cta-icon {
-  color: var(--ink);
-  filter: none;
-  transform: translateY(-1px) scale(1.04);
-}
-
-.mobile-sticky-book .whatsapp-cta-icon {
-  width: 1.42rem;
-  height: 1.42rem;
-  flex-basis: 1.42rem;
-}
-
-@keyframes whatsappIconPulse {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.055); }
-}
-
-/* Absolute final logo/icon correction */
-.brand-fish {
-  width: clamp(5.15rem, 7.8vw, 7rem);
-  color: currentColor;
-}
-
-.brand-fish-body,
-.brand-fish-fin,
-.brand-fish-gill {
-  fill: none;
-  stroke: currentColor;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  vector-effect: non-scaling-stroke;
-}
-
-.brand-fish-body {
-  stroke-width: 1.5;
-}
-
-.brand-fish-fin {
-  stroke-width: 1.16;
-}
-
-.brand-fish-gill {
-  stroke-width: 1.08;
-  opacity: 0.82;
-}
-
-.brand-fish-eye {
-  fill: currentColor;
-  stroke: none;
-}
-
-.whatsapp-cta-icon {
-  width: 1.32rem;
-  height: 1.32rem;
-  color: var(--ink);
-  fill: none;
-  stroke: none;
-  filter: none;
-}
-
-.whatsapp-icon-mark {
-  fill: currentColor;
-  stroke: none;
-  transform-box: fill-box;
-  transform-origin: center;
-  animation: whatsappMarkSettle 4.2s ease-in-out infinite;
-}
-
-:where(.book-link, .menu-book, .hero-primary, .mobile-sticky-book, .contact-book, .whatsapp-submit):hover .whatsapp-cta-icon,
-:where(.book-link, .menu-book, .hero-primary, .mobile-sticky-book, .contact-book, .whatsapp-submit):focus-visible .whatsapp-cta-icon {
-  color: var(--ink);
-  filter: none;
-  transform: translateY(-1px) scale(1.035);
-}
-
-.mobile-sticky-book .whatsapp-cta-icon {
-  width: 1.54rem;
-  height: 1.54rem;
-}
-
-@keyframes whatsappMarkSettle {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.025); }
-}
-
-/* Final compact footer pass */
-@media (min-width: 761px) {
-  .site-footer {
-    padding: 1.55rem var(--page-x) 0.8rem;
-  }
-
-  .footer-main {
-    display: flex;
-    padding-bottom: 0.75rem;
-    align-items: center;
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 1rem;
-  }
-
-  .footer-logo {
-    font-size: clamp(2.15rem, 3.4vw, 3rem);
-  }
-
-  .footer-main > p:not(.footer-phone) {
-    max-width: 14rem;
-    font-size: 0.86rem;
-    line-height: 1.18;
-    text-align: left;
-  }
-
-  .footer-phone {
-    font-size: 0.78rem;
-  }
-
-  .footer-social-link {
-    width: 2.25rem;
-    height: 2.25rem;
-    min-height: 2.25rem;
-  }
-
-  .footer-social-link svg {
-    width: 1rem;
-    height: 1rem;
-  }
-
-  .footer-bottom {
-    font-size: 0.58rem;
-    line-height: 1.35;
-  }
-}
-
-@media (max-width: 760px) {
-  .site-footer {
-    padding: 1.55rem var(--page-x) 1rem;
-  }
-
-  .footer-main {
-    gap: 0.42rem;
-    padding-bottom: 0.72rem;
-  }
-
-  .footer-logo {
-    font-size: clamp(2.05rem, 9vw, 2.7rem);
-  }
-
-  .footer-main > p:not(.footer-phone) {
-    max-width: 13rem;
-    font-size: 0.82rem;
-    line-height: 1.16;
-  }
-
-  .footer-phone {
-    font-size: 0.76rem;
-  }
-
-  .footer-socials {
-    gap: 0.4rem;
-  }
-
-  .footer-social-link {
-    width: 2.25rem;
-    height: 2.25rem;
-    min-height: 2.25rem;
-  }
-
-  .footer-social-link svg {
-    width: 0.98rem;
-    height: 0.98rem;
-  }
-
-  .footer-bottom {
-    font-size: 0.56rem;
-    line-height: 1.25;
-  }
-}
-
-/* UI UX Pro Max responsive redesign pass */
-* {
-  letter-spacing: 0;
-}
-
-:where(a[href], button, input, select, textarea, [tabindex]):focus-visible {
-  outline: 2px solid var(--focus-ring);
-  outline-offset: 4px;
-}
-
-:where(.location-section, .reviews-section, .contact-section, .card-modal, .booking-modal) :where(a[href], button, input, select, textarea, [tabindex]):focus-visible {
-  outline-color: var(--ink);
-}
-
-:where(a[href], button) {
-  touch-action: manipulation;
-}
-
-.desktop-nav a,
-.language-switch button,
-.mobile-menu nav a,
-.mobile-menu-meta a,
-.footer-main > a:not(.footer-logo),
-.contact-list a,
-.review-text-link {
-  min-height: 2.75rem;
-}
-
-.desktop-nav a,
-.language-switch button,
-.footer-main > a:not(.footer-logo),
-.review-text-link {
-  display: inline-flex;
-  align-items: center;
-}
-
-.site-header {
-  min-height: 5.5rem;
-  padding-top: max(1rem, env(safe-area-inset-top));
-  transition: min-height 0.28s var(--ease-out), padding 0.28s var(--ease-out), background 0.28s var(--ease-out);
-}
-
-.site-header.is-scrolled {
-  min-height: 4.75rem;
-  background: rgba(7, 13, 10, 0.94);
-}
-
-.desktop-nav a,
-.book-link,
-.language-switch,
-.menu-book,
-.outline-button,
-.review-cta,
-.contact-book,
-.whatsapp-submit,
-.hero-primary,
-.hero-secondary {
-  font-weight: 600;
-  letter-spacing: 0;
-}
-
-.language-switch {
-  gap: 0.35rem;
-  color: rgba(255, 253, 248, 0.68);
-}
-
-.language-switch button {
-  min-width: 2.75rem;
-  justify-content: center;
-  border-radius: 999px;
-}
-
-.book-link {
-  min-height: 3rem;
-  border-color: rgba(255, 253, 248, 0.72);
-}
-
-.book-link:hover,
-.book-link:focus-visible {
-  background: var(--white);
-  color: var(--ink);
-}
-
-.hero {
-  height: min(100svh, 58rem);
-  min-height: 44rem;
-  padding-top: 7.5rem;
-  isolation: isolate;
-}
-
-.hero-image {
-  object-position: center center;
-}
-
-.hero-shade {
-  background:
-    linear-gradient(180deg, rgba(4, 9, 7, 0.14), rgba(4, 9, 7, 0.01) 30%, rgba(4, 9, 7, 0.04) 62%, rgba(4, 9, 7, 0.22)),
-    radial-gradient(circle at 52% 55%, rgba(240, 207, 138, 0.04), transparent 38%),
-    linear-gradient(90deg, rgba(4, 9, 7, 0.03), transparent 50%, rgba(4, 9, 7, 0.03));
-}
-
-.hero-title-wrap {
-  max-width: 70rem;
-  margin: 0 auto;
-}
-
-.hero-overline,
-.hero-hours,
-.hero-edge,
-.scroll-cue,
-.hero-social-link,
-.section-kicker,
-.food-card figcaption,
-.location-card figcaption,
-.carousel-footer > p,
-.review-awards > span,
-.review-links-summary a,
-.stars,
-.review-card > p,
-.reviews-link a,
-.contact-list h3,
-.map-label,
-.footer-bottom,
-.card-tabs button,
-.catalog-section h3 small,
-.catalog-note,
-.booking-dialog label > span,
-.form-note {
-  letter-spacing: 0;
-}
-
-.hero-overline {
-  margin-bottom: 1rem;
-  color: rgba(255, 253, 248, 0.86);
-  font-size: 0.78rem;
-}
-
-.hero h1 {
-  font-size: 11rem;
-  letter-spacing: 0;
-  line-height: 0.86;
-}
-
-.hero-address {
-  margin: 2.35rem 0 1.35rem;
-  font-size: 1.9rem;
-  line-height: 1.18;
-}
-
-.hero-hours {
-  max-width: 42rem;
-  margin-right: auto;
-  margin-left: auto;
-  color: rgba(255, 253, 248, 0.9);
-  font-size: 0.92rem;
-  line-height: 1.55;
-}
-
-.hero-hours span {
-  margin-bottom: 0.15rem;
-  color: var(--gold-light);
-}
-
-.hero-actions {
-  display: flex;
-  margin-top: 1.65rem;
-  justify-content: center;
-  align-items: center;
-  gap: 0.75rem;
-  flex-wrap: wrap;
-}
-
-.hero-primary,
-.hero-secondary {
-  display: inline-flex;
-  min-height: 3.25rem;
-  padding: 0 1.25rem;
-  border: 1px solid rgba(255, 253, 248, 0.72);
-  align-items: center;
-  justify-content: center;
-  gap: 0.75rem;
-  border-radius: var(--radius-soft);
-  font-size: 0.82rem;
-  text-transform: uppercase;
-  transition: transform 0.22s var(--ease-out), background 0.22s var(--ease-out), border-color 0.22s var(--ease-out), color 0.22s var(--ease-out);
-}
-
-.hero-primary {
-  background: var(--white);
-  color: var(--ink);
-}
-
-.hero-secondary {
-  background: rgba(7, 13, 10, 0.24);
-  color: var(--white);
-}
-
-.hero-primary:hover,
-.hero-primary:focus-visible,
-.hero-secondary:hover,
-.hero-secondary:focus-visible {
-  transform: translateY(-1px);
-}
-
-.hero-secondary:hover,
-.hero-secondary:focus-visible {
-  background: rgba(255, 253, 248, 0.12);
-  border-color: var(--white);
-}
-
-.hero-social-link {
-  min-height: 2.75rem;
-}
-
-.hero-social-link svg {
-  width: 2.75rem;
-  height: 2.75rem;
-}
-
-@media (min-width: 761px) {
-  .hero-title-wrap .hero-socials {
-    right: 0;
-    bottom: -4.85rem;
-  }
-}
-
-.section-heading,
-.reviews-intro,
-.card-intro {
-  max-width: 86rem;
-}
-
-.section-heading h2,
-.reviews-intro h2,
-.contact-panel h2,
-.card-intro h2,
-.booking-dialog h2 {
-  letter-spacing: 0;
-}
-
-.section-heading h2 {
-  font-size: 5.8rem;
-  line-height: 0.95;
-}
-
-.heading-copy,
-.card-intro > p:last-child,
-.booking-intro {
-  font-size: 1rem;
-  line-height: 1.72;
-}
-
-.heading-copy {
-  color: rgba(255, 255, 255, 0.72);
-}
-
-.location-heading .heading-copy,
-.card-intro > p:last-child,
-.booking-intro {
-  color: rgba(10, 18, 15, 0.68);
-}
-
-.food-card img,
-.location-card img {
-  background: rgba(255, 253, 248, 0.05);
-}
-
-.food-card figcaption,
-.location-card figcaption {
-  font-size: 0.8rem;
-  line-height: 1.35;
-}
-
-.carousel-arrows button,
-.card-close,
-.booking-close,
-.menu-toggle {
-  min-width: 2.75rem;
-  min-height: 2.75rem;
-}
-
-.outline-button,
-.review-cta,
-.contact-book,
-.menu-book,
-.whatsapp-submit {
-  min-height: 3.25rem;
-  border-radius: var(--radius-soft);
-  font-size: 0.82rem;
-}
-
-.review-card blockquote {
-  min-height: 8rem;
-}
-
-.contact-list p,
-.contact-list a {
-  color: rgba(10, 18, 15, 0.72);
-  font-size: 0.95rem;
-  line-height: 1.62;
-}
-
-.contact-list a {
-  display: flex;
-  align-items: center;
-}
-
-.contact-list h3 {
-  font-size: 0.76rem;
-}
-
-.card-tabs button {
-  min-height: 2.9rem;
-  border-radius: 999px;
-}
-
-.booking-dialog input,
-.booking-dialog select,
-.booking-dialog textarea {
-  min-height: 3rem;
-  font-size: 1rem;
-}
-
-.booking-dialog input:focus,
-.booking-dialog select:focus,
-.booking-dialog textarea:focus {
-  outline: 2px solid rgba(10, 18, 15, 0.2);
-  outline-offset: 3px;
-}
-
-.booking-dialog label > span {
-  color: rgba(10, 18, 15, 0.72);
-  font-size: 0.76rem;
-}
-
-[inert] {
-  pointer-events: none;
-  user-select: none;
-}
-
-@media (max-width: 1200px) {
-  .hero h1 {
-    font-size: 8.75rem;
-  }
-
-  .section-heading h2 {
-    font-size: 4.9rem;
-  }
-}
-
-@media (max-width: 1000px) {
-  .hero h1 {
-    font-size: 7.2rem;
-  }
-
-  .hero-address {
-    font-size: 1.6rem;
-  }
-
-  .contact-section {
-    align-items: stretch;
-  }
-}
-
-@media (max-width: 760px) {
-  :root {
-    --page-x: 1.25rem;
-    --section-y: 4.75rem;
-  }
-
-  .site-header {
-    min-height: 4.75rem;
-    padding-top: max(0.75rem, env(safe-area-inset-top));
-    padding-bottom: 0.75rem;
-  }
-
-  .brand-image {
-    width: 5.9rem;
-    height: 2.35rem;
-  }
-
-  .header-actions {
-    gap: 0.4rem;
-  }
-
-  .language-switch {
-    font-size: 0.72rem;
-  }
-
-  .language-switch button {
-    min-width: 2.4rem;
-    min-height: 2.4rem;
-    padding: 0;
-  }
-
-  .menu-toggle {
-    width: 2.9rem;
-    height: 2.9rem;
-  }
-
-  .hero {
-    height: auto;
-    min-height: 100svh;
-    padding: 7rem var(--page-x) 5.5rem;
-    place-items: end center;
-  }
-
-  .hero-image {
-    object-position: center center;
-  }
-
-  .hero-shade {
-    background:
-      linear-gradient(180deg, rgba(4, 9, 7, 0.12), rgba(4, 9, 7, 0.01) 28%, rgba(4, 9, 7, 0.04) 56%, rgba(4, 9, 7, 0.2)),
-      linear-gradient(90deg, rgba(4, 9, 7, 0.03), transparent 48%, rgba(4, 9, 7, 0.03));
-  }
-
-  .hero-title-wrap {
-    display: flex;
-    min-height: calc(100svh - 12.5rem);
-    padding-top: 9rem;
-    flex-direction: column;
-    justify-content: flex-end;
-  }
-
-  .hero-overline {
-    margin-bottom: 0.8rem;
-    font-size: 0.76rem;
-  }
-
-  .hero h1 {
-    max-width: 100%;
-    font-size: 4.95rem;
-    line-height: 0.9;
-    overflow-wrap: normal;
-  }
-
-  .hero-address {
-    margin: 1.65rem 0 1rem;
-    font-size: 1.36rem;
-    line-height: 1.22;
-  }
-
-  .hero-hours {
-    max-width: 20.5rem;
-    font-size: 0.94rem;
-    line-height: 1.55;
-  }
-
-  .hero-actions {
-    width: 100%;
-    margin-top: 1.35rem;
-    align-items: stretch;
-    flex-direction: column;
-  }
-
-  .hero-primary,
-  .hero-secondary {
-    width: 100%;
-    min-height: 3.35rem;
-    padding: 0 1rem;
-    font-size: 0.86rem;
-  }
-
-  .hero-socials {
-    right: auto;
-    bottom: 1.2rem;
-    left: var(--page-x);
-  }
-
-  .hero-social-link {
-    width: 2.85rem;
-    height: 2.85rem;
-  }
-
-  .hero-social-link svg {
-    width: 2.85rem;
-    height: 2.85rem;
-  }
-
-  .menu-panel {
-    width: min(100%, 27rem);
-    padding: calc(5.25rem + env(safe-area-inset-top)) 1.25rem 1.5rem;
-  }
-
-  .mobile-menu nav a,
-  .mobile-menu.is-open nav a {
-    min-height: 3.75rem;
-    font-size: 1.65rem;
-    align-items: center;
-  }
-
-  .mobile-menu-meta {
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 1.25rem;
-  }
-
-  .mobile-menu-meta > div {
-    width: 100%;
-    text-align: left;
-  }
-
-  .mobile-menu-meta a {
-    min-height: 2.75rem;
-  }
-
-  .section-heading {
-    margin-bottom: 3rem;
-  }
-
-  .section-heading h2,
-  .reviews-intro h2,
-  .contact-panel h2,
-  .card-intro h2 {
-    font-size: 3.9rem;
-    line-height: 0.96;
-  }
-
-  .heading-copy,
-  .card-intro > p:last-child,
-  .booking-intro {
-    max-width: none;
-    font-size: 1rem;
-  }
-
-  .food-card {
-    flex-basis: min(82vw, 21rem);
-  }
-
-  .food-card img,
-  .food-card-offset img {
-    height: 26rem;
-    max-height: none;
-  }
-
-  .food-card-offset {
-    padding-top: 1.75rem;
-  }
-
-  .location-card {
-    flex-basis: min(86vw, 22rem);
-  }
-
-  .location-card img,
-  .location-placeholder {
-    height: 24rem;
-  }
-
-  .carousel-footer {
-    padding-top: 1.5rem;
-  }
-
-  .carousel-arrows button {
-    width: 3rem;
-    height: 3rem;
-  }
-
-  .reviews-intro {
-    gap: 2rem;
-  }
-
-  .review-links-summary a {
-    width: 4.75rem;
-    height: 4.75rem;
-    font-size: 0.66rem;
-  }
-
-  .review-card {
-    flex-basis: 84vw;
-  }
-
-  .review-card blockquote {
-    min-height: 8.5rem;
-    font-size: 1.45rem;
-  }
-
-  .reviews-link a,
-  .review-cta {
-    width: 100%;
-    justify-content: space-between;
-  }
-
-  .contact-panel {
-    padding-top: 4.5rem;
-    padding-bottom: 4.5rem;
-  }
-
-  .contact-list {
-    grid-template-columns: 1fr;
-  }
-
-  .contact-list > div,
-  .contact-list > div:nth-child(even) {
-    padding-right: 0;
-    padding-left: 0;
-  }
-
-  .contact-list > div:nth-child(odd) {
-    border-right: 0;
-  }
-
-  .contact-list a,
-  .contact-list p {
-    font-size: 1rem;
-  }
-
-  .contact-actions {
-    gap: 0.75rem;
-  }
-
-  .contact-book {
-    min-height: 3.5rem;
-  }
-
-  .map-wrap {
-    height: 24rem;
-  }
-
-  .map-label {
-    right: 1.5rem;
-    bottom: 1.5rem;
-    left: 1.5rem;
-    padding: 1rem;
-  }
-
-  .map-label a {
-    width: 100%;
-    justify-content: space-between;
-  }
-
-  .card-tabs {
-    gap: 0.5rem;
-  }
-
-  .card-tabs button {
-    min-height: 3rem;
-    padding: 0 0.85rem;
-    font-size: 0.72rem;
-  }
-
-  .catalog-item {
-    grid-template-columns: 1fr;
-    gap: 0.5rem;
-  }
-
-  .catalog-item h4 {
-    font-size: 1.3rem;
-  }
-
-  .catalog-item p {
-    font-size: 0.92rem;
-  }
-
-  .booking-dialog {
-    width: 100%;
-    padding: calc(5rem + env(safe-area-inset-top)) 1.25rem max(2rem, env(safe-area-inset-bottom));
-  }
-
-  .booking-dialog h2 {
-    font-size: 3.4rem;
-  }
-
-  .form-row {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 390px) {
-  .hero h1 {
-    font-size: 4.45rem;
-  }
-
-  .hero-hours {
-    max-width: 18rem;
-  }
-}
-
-.hero-hours {
-  overflow-wrap: break-word;
-  text-wrap: balance;
-  white-space: normal;
-}
-
-@media (max-width: 760px) {
-  .site-header {
-    grid-template-columns: auto minmax(0, 1fr);
-    column-gap: 0.75rem;
-  }
-
-  .brand {
-    min-width: 0;
-  }
-
-  .header-actions {
-    min-width: 0;
-    justify-self: end;
-  }
-
-  .language-switch {
-    gap: 0.05rem;
-  }
-
-  .language-switch span {
-    display: none;
-  }
-
-  .language-switch button {
-    min-width: 2.75rem;
-    min-height: 2.75rem;
-  }
-
-  .menu-toggle {
-    flex: 0 0 2.75rem;
-  }
-
-  .hero-hours {
-    max-width: 18.5rem;
-    font-size: 0.88rem;
-  }
-}
-
-@media (max-width: 390px) {
-  .brand-image {
-    width: 5.2rem;
-    height: 2.05rem;
-  }
-
-  .hero h1 {
-    font-size: 4.25rem;
-  }
-}
-
-@media (max-width: 1000px) {
-  .site-header {
-    display: flex;
-    width: 100%;
-    max-width: 100vw;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  .desktop-nav {
-    display: none;
-  }
-
-  .header-actions {
-    width: auto;
-    max-width: calc(100vw - 9rem);
-    flex: 0 1 auto;
-    margin-left: auto;
-    justify-content: flex-end;
-  }
-}
-
-@media (max-width: 760px) {
-  .header-actions {
-    max-width: calc(100vw - 7rem);
-    gap: 0.25rem;
-  }
-
-  .brand-image {
-    min-height: 2.75rem;
-    align-items: center;
-  }
-
-  .brand-image img {
-    height: 2.35rem;
-  }
-}
-
-@media (max-width: 390px) {
-  .brand-image img {
-    height: 2.05rem;
-  }
-}
-
-.restaurant-mobile-copy,
-.contact-socials,
-.footer-phone,
-.footer-socials {
-  display: none;
-}
-
-@media (max-width: 760px) {
-  .restaurant-section,
-  .location-section,
-  .reviews-section,
-  .contact-section,
-  .site-footer {
-    text-align: center;
-  }
-
-  .section-heading,
-  .reviews-intro,
-  .contact-panel,
-  .footer-main,
-  .footer-bottom {
-    text-align: center;
-  }
-
-  .section-heading {
-    justify-items: center;
-  }
-
-  .heading-copy {
-    max-width: 20rem;
-    margin-inline: auto;
-    justify-items: center;
-    text-align: center;
-  }
-
-  .restaurant-section {
-    padding-top: 4.35rem;
-    padding-bottom: 4.55rem;
-  }
-
-  .restaurant-section .heading-copy p:not(.restaurant-mobile-copy) {
-    display: none;
-  }
-
-  .restaurant-mobile-copy {
-    display: block;
-    max-width: 18rem;
-    color: rgba(255, 253, 248, 0.76);
-    font-size: 0.98rem;
-    line-height: 1.52;
-  }
-
-  .food-card figcaption,
-  .location-card figcaption {
-    justify-content: center;
-    gap: 0.65rem;
-    text-align: center;
-  }
-
-  .center-cta {
-    padding-top: 2.75rem;
-  }
-
-  .location-section {
-    padding-top: 4.4rem;
-    padding-bottom: 4.4rem;
-  }
-
-  .reviews-section {
-    padding-top: 3.95rem;
-    padding-bottom: 4.25rem;
-  }
-
-  .reviews-intro {
-    margin-bottom: 1.45rem;
-    justify-items: center;
-    align-items: center;
-    gap: 0.85rem;
-  }
-
-  .reviews-intro h2 {
-    margin-top: 0.75rem;
-    font-size: clamp(2.6rem, 13vw, 3.55rem);
-    line-height: 1;
-    white-space: nowrap;
-  }
-
-  .rating-column {
-    align-items: center;
-    gap: 0;
-  }
-
-  .review-awards {
-    display: flex;
-    justify-content: center;
-    gap: 0.62rem;
-  }
-
-  .review-awards > span,
-  .rating-block {
-    display: none;
-  }
-
-  .review-links-summary a {
-    width: 3.75rem;
-    height: 3.75rem;
-    min-height: 3.75rem;
-    color: #8f6530;
-    background:
-      radial-gradient(circle at 34% 24%, rgba(255, 253, 248, 0.94), transparent 46%),
-      linear-gradient(145deg, rgba(255, 253, 248, 0.98), rgba(240, 207, 138, 0.34));
-    box-shadow:
-      inset 0 0 0 1px rgba(184, 135, 70, 0.42),
-      0 0.7rem 1.45rem rgba(10, 18, 15, 0.1);
-  }
-
-  .review-links-summary a:hover,
-  .review-links-summary a:focus-visible {
-    background:
-      radial-gradient(circle at 34% 24%, rgba(255, 253, 248, 1), transparent 46%),
-      linear-gradient(145deg, rgba(255, 253, 248, 1), rgba(240, 207, 138, 0.42));
-    color: #8f6530;
-    transform: translateY(-0.16rem);
-  }
-
-  .tripadvisor-badge svg {
-    width: 2rem;
-    height: 2rem;
-  }
-
-  .tripadvisor-badge b {
-    display: none;
-  }
-
-  .review-grid {
-    margin-right: 0;
-    gap: 0.7rem;
-    justify-content: flex-start;
-  }
-
-  .review-card {
-    flex: 0 0 min(76vw, 18.75rem);
-    padding: 1rem;
-    border-radius: var(--radius-soft);
-  }
-
-  .review-card blockquote {
-    min-height: 0;
-    margin: 0.75rem 0 0;
-    font-size: 1.02rem;
-    line-height: 1.45;
-  }
-
-  .review-card > p {
-    display: none;
-  }
-
-  .reviews-link {
-    padding-top: 1.2rem;
-    gap: 0.7rem;
-  }
-
-  .reviews-link a,
-  .review-cta {
-    min-height: 3rem;
-    padding: 0 1rem;
-    justify-content: center;
-    gap: 0.75rem;
-    font-size: 0.76rem;
-  }
-
-  .contact-section {
-    display: block;
-  }
-
-  .contact-panel {
-    padding-top: 4rem;
-    padding-bottom: 2.35rem;
-    align-items: center;
-  }
-
-  .contact-panel h2 {
-    margin-top: 0.75rem;
-    font-size: clamp(2.75rem, 13vw, 3.65rem);
-    line-height: 1;
-    white-space: nowrap;
-  }
-
-  .contact-list {
-    width: 100%;
-    max-width: 22rem;
-    margin: 1.45rem auto 1.05rem;
-  }
-
-  .contact-list > div {
-    padding: 0.85rem 0;
-  }
-
-  .contact-list > div:nth-child(4) {
-    display: none;
-  }
-
-  .contact-list h3,
-  .contact-list p,
-  .contact-list a {
-    text-align: center;
-  }
-
-  .contact-list a,
-  .contact-list p {
-    justify-content: center;
-    font-size: 0.93rem;
-    line-height: 1.48;
-  }
-
-  .contact-socials {
-    display: flex;
-    justify-content: center;
-    gap: 0.72rem;
-    margin: 0.45rem auto 1.2rem;
-  }
-
-  .contact-social-link {
-    display: inline-flex;
-    width: 3rem;
-    height: 3rem;
-    min-height: 3rem;
-    border: 1px solid rgba(184, 135, 70, 0.44);
-    border-radius: 50%;
-    align-items: center;
-    justify-content: center;
-    color: var(--ink);
-    background:
-      radial-gradient(circle at 34% 24%, rgba(255, 253, 248, 0.96), transparent 48%),
-      linear-gradient(145deg, rgba(255, 253, 248, 0.98), rgba(240, 207, 138, 0.28));
-    box-shadow: 0 0.8rem 1.75rem rgba(10, 18, 15, 0.08);
-    transition: transform 0.25s var(--ease-out), box-shadow 0.25s var(--ease-out);
-  }
-
-  .contact-social-link:hover,
-  .contact-social-link:focus-visible {
-    color: var(--ink);
-    transform: translateY(-0.16rem);
-    box-shadow: 0 1rem 2rem rgba(184, 135, 70, 0.16);
-  }
-
-  .contact-social-link svg {
-    width: 1.25rem;
-    height: 1.25rem;
-    fill: none;
-    stroke: currentColor;
-    stroke-width: 1.45;
-  }
-
-  .contact-social-link .instagram-dot,
-  .contact-social-link .facebook-mark {
-    fill: currentColor;
-    stroke: none;
-  }
-
-  .contact-social-link span {
-    display: none;
-  }
-
-  .contact-actions {
-    width: min(100%, 22rem);
-    margin-inline: auto;
-  }
-
-  .contact-actions .contact-book:not(.contact-call) {
-    display: none;
-  }
-
-  .contact-book {
-    justify-content: center;
-    gap: 0.75rem;
-  }
-
-  .map-wrap {
-    height: 18.5rem;
-    padding: 0 var(--page-x) 4.25rem;
-    background: var(--paper);
-  }
-
-  .map-frame {
-    border-color: rgba(184, 135, 70, 0.46);
-    border-radius: 1.35rem;
-    background: #fffdf8;
-    box-shadow:
-      0 1.1rem 2.1rem rgba(10, 18, 15, 0.12),
-      inset 0 0 0 1px rgba(255, 253, 248, 0.55);
-  }
-
-  .map-frame::before {
-    inset: 0.42rem;
-    border-color: rgba(184, 135, 70, 0.28);
-    border-radius: 1.05rem;
-  }
-
-  .map-frame iframe {
-    filter: saturate(1.2) contrast(1.03) brightness(1.05);
-  }
-
-  .map-veiling {
-    background: linear-gradient(180deg, rgba(255, 253, 248, 0.04), rgba(255, 253, 248, 0.02));
-  }
-
-  .map-label {
-    display: none;
-  }
-
-  .site-footer {
-    padding: 3.35rem var(--page-x) calc(6.25rem + env(safe-area-inset-bottom));
-  }
-
-  .footer-main {
-    display: flex;
-    padding-bottom: 1.7rem;
-    align-items: center;
-    flex-direction: column;
-    gap: 0.95rem;
-  }
-
-  .footer-logo {
-    justify-self: center;
-    color: var(--gold-light);
-    font-size: clamp(2.9rem, 15vw, 4.2rem);
-    line-height: 0.9;
-    text-transform: uppercase;
-  }
-
-  .footer-main > p:not(.footer-phone) {
-    max-width: 18rem;
-    color: rgba(255, 253, 248, 0.78);
-    font-size: 1.12rem;
-    line-height: 1.36;
-    text-align: center;
-  }
-
-  .footer-phone {
-    display: block;
-    margin: 0;
-    font-family: var(--sans);
-    font-size: 0.9rem;
-    line-height: 1.4;
-  }
-
-  .footer-phone a {
-    color: var(--gold-light);
-  }
-
-  .footer-socials {
-    display: flex;
-    justify-content: center;
-    gap: 0.65rem;
-    flex-wrap: wrap;
-  }
-
-  .footer-socials a {
-    display: inline-flex;
-    min-height: 2.6rem;
-    padding: 0 0.95rem;
-    border: 1px solid rgba(240, 207, 138, 0.34);
-    border-radius: 999px;
-    align-items: center;
-    justify-content: center;
-    color: rgba(255, 253, 248, 0.84);
-    font-size: 0.78rem;
-  }
-
-  .footer-socials a:hover,
-  .footer-socials a:focus-visible {
-    color: var(--gold-light);
-  }
-
-  .footer-main > a:not(.footer-logo) {
-    justify-self: center;
-  }
-
-  .footer-bottom {
-    display: grid;
-    justify-content: center;
-    gap: 0.35rem;
-    line-height: 1.5;
-    text-align: center;
-  }
-}
-
-@media (max-width: 760px) {
-  body {
-    padding-bottom: calc(5.35rem + env(safe-area-inset-bottom));
-  }
-
-  .hero {
-    height: 100svh;
-    min-height: 100svh;
-    padding: 6.25rem var(--page-x) calc(5.8rem + env(safe-area-inset-bottom));
-    place-items: center;
-  }
-
-  .hero-title-wrap {
-    display: flex;
-    width: 100%;
-    min-height: 0;
-    padding: 0;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-  }
-
-  .hero-overline,
-  .hero-hours,
-  .hero-edge,
-  .scroll-cue {
-    display: none;
-  }
-
-  .hero h1 {
-    width: 100%;
-    max-width: none;
-    font-size: clamp(2.55rem, 11vw, 3.9rem);
-    letter-spacing: 0.035em;
-    line-height: 0.95;
-    white-space: nowrap;
-  }
-
-  .hero-title-desktop {
-    display: none;
-  }
-
-  .hero-title-mobile {
-    display: inline;
-  }
-
-  .hero-address {
-    margin: 0.7rem 0 0;
-    font-family: var(--sans);
-    font-size: clamp(0.78rem, 3.15vw, 0.95rem);
-    font-weight: 600;
-    letter-spacing: 0.16em;
-    line-height: 1.2;
-  }
-
-  .hero-address p:first-child {
-    display: block;
-  }
-
-  .hero-address p:nth-child(2) {
-    display: none;
-  }
-
-  .hero-socials {
-    position: static;
-    display: flex;
-    margin-top: 1.15rem;
-    align-items: center;
-    justify-content: center;
-    gap: 0.72rem;
-  }
-
-  .hero-social-link {
-    display: inline-flex;
-    width: 3rem;
-    height: 3rem;
-    min-height: 3rem;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .hero-social-link span {
-    display: none;
-  }
-
-  .hero-social-link svg {
-    width: 3rem;
-    height: 3rem;
-    padding: 0.72rem;
-    border-color: rgba(255, 253, 248, 0.78);
-    background: rgba(7, 13, 10, 0.18);
-    backdrop-filter: blur(10px);
-  }
-
-  .hero-actions {
-    width: auto;
-    margin: 0;
-  }
-
-  .hero-secondary {
-    display: none;
-  }
-
-  .hero-primary {
-    position: fixed;
-    z-index: 85;
-    right: var(--page-x);
-    bottom: max(1rem, env(safe-area-inset-bottom));
-    left: var(--page-x);
-    width: auto;
-    min-height: 3.75rem;
-    border-color: rgba(255, 253, 248, 0.86);
-    background: rgba(255, 253, 248, 0.96);
-    color: var(--ink);
-    box-shadow: 0 1rem 2.2rem rgba(4, 9, 7, 0.24);
-    backdrop-filter: blur(14px);
-  }
-
-  .hero-primary:hover,
-  .hero-primary:focus-visible {
-    transform: none;
-  }
-}
-
-@media (max-width: 390px) {
-  .hero h1 {
-    font-size: clamp(2.28rem, 10.7vw, 3.15rem);
-  }
-}
-
-.site-header .brand-mark {
-  width: clamp(8rem, 12vw, 11.5rem);
-  min-width: 8rem;
-}
-
-@media (max-width: 1000px) {
-  .site-header .brand-mark {
-    width: 8rem;
-    min-width: 8rem;
-  }
-}
-
-@media (max-width: 760px) {
-  .site-header .brand-mark {
-    width: 7.1rem;
-    min-width: 7.1rem;
-  }
-
-  .site-header .brand-name {
-    font-size: 1.12rem;
-  }
-
-  .site-header .brand-fish {
-    width: 5rem;
-  }
-}
-
-@media (max-width: 390px) {
-  .site-header .brand-mark {
-    width: 6.5rem;
-    min-width: 6.5rem;
-  }
-
-  .site-header .brand-name {
-    font-size: 1rem;
-  }
-
-  .site-header .brand-fish {
-    width: 4.55rem;
-  }
-}
-
-.site-header .brand-image {
-  width: clamp(8.8rem, 13vw, 12.4rem);
-  height: clamp(3.45rem, 5vw, 4.7rem);
-  min-height: 0;
-  overflow: visible;
-}
-
-.site-header .brand-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  object-position: left center;
-}
-
-@media (max-width: 1000px) {
-  .site-header .brand-image {
-    width: 8.2rem;
-    height: 4.1rem;
-  }
-}
-
-@media (max-width: 760px) {
-  .site-header .brand-image {
-    width: 7.4rem;
-    height: 3.7rem;
-  }
-}
-
-@media (max-width: 390px) {
-  .site-header .brand-image {
-    width: 6.6rem;
-    height: 3.3rem;
-  }
-}
-
-@media (max-width: 1000px) {
-  .brand-image {
-    min-height: 2.75rem;
-    align-items: center;
-  }
-
-  .brand-image img {
-    height: clamp(2.35rem, 3vw, 2.55rem);
-  }
-}
-
-@media (max-width: 760px) {
-  .brand-image img {
-    height: 2.35rem;
-  }
-}
-
-@media (max-width: 390px) {
-  .brand-image img {
-    height: 2.05rem;
-  }
-}
-/* Final mobile booking and desktop hero override */
-.mobile-sticky-book {
-  display: none;
-}
-
-.form-row {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1rem;
-}
-
-.whatsapp-cta-icon .whatsapp-icon-chat {
-  fill: none;
-  stroke: currentColor;
-}
-
-.whatsapp-cta-icon .whatsapp-icon-phone {
-  fill: currentColor;
-  stroke: none;
-}
-
-@media (min-width: 761px) {
-  .hero-secondary {
-    display: none;
-  }
-
-  .hero-image {
-    filter: brightness(1.32) contrast(1.07) saturate(1.06);
-  }
-
-  .hero-shade {
-    background:
-      linear-gradient(180deg, rgba(4, 9, 7, 0.045), rgba(4, 9, 7, 0) 38%, rgba(4, 9, 7, 0.08) 100%),
-      linear-gradient(90deg, rgba(4, 9, 7, 0.018), transparent 58%, rgba(4, 9, 7, 0.018));
-  }
-}
-
-@media (max-width: 760px) {
-  .hero-actions,
-  .hero-primary {
-    display: none;
-  }
-
-  .mobile-sticky-book {
-    position: fixed;
-    z-index: 120;
-    right: var(--page-x);
-    bottom: max(1rem, env(safe-area-inset-bottom));
-    left: var(--page-x);
-    display: inline-flex;
-    min-height: 3.85rem;
-    padding: 0 1.25rem;
-    border: 1px solid rgba(255, 253, 248, 0.88);
-    border-radius: var(--radius-soft);
-    align-items: center;
-    justify-content: center;
-    gap: 0.72rem;
-    background: rgba(255, 253, 248, 0.97);
-    color: var(--ink);
-    font-size: 0.86rem;
-    font-weight: 700;
-    line-height: 1;
-    text-transform: uppercase;
-    box-shadow: 0 1rem 2.25rem rgba(4, 9, 7, 0.28);
-    backdrop-filter: blur(14px);
-  }
-
-  .mobile-sticky-book .whatsapp-cta-icon {
-    width: 1.55rem;
-    height: 1.55rem;
-    color: var(--gold);
-  }
-
-  body.menu-open .mobile-sticky-book,
-  body.modal-open .mobile-sticky-book {
-    display: none;
-  }
-
-  .form-row {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* Final reviews, contact and footer polish */
-.rating-block {
-  display: none;
-}
-
-.reviews-intro,
-.contact-panel,
-.site-footer {
-  text-align: center;
-}
-
-.reviews-intro {
-  align-items: center;
-}
-
-.reviews-intro h2 {
-  max-width: 100%;
-  font-size: clamp(3.15rem, 5.4vw, 5.55rem);
-  line-height: 1;
-  white-space: nowrap;
-}
-
-.rating-column {
-  align-items: center;
-}
-
-.review-awards > span {
-  display: none;
-}
-
-.contact-panel h2 {
-  font-size: clamp(3.6rem, 5vw, 5.35rem);
-  line-height: 1;
-  white-space: nowrap;
-}
-
-.site-footer {
-  padding: clamp(3.7rem, 6vw, 5.4rem) var(--page-x) 1.6rem;
-}
-
-.footer-main {
-  display: flex;
-  padding-bottom: clamp(1.8rem, 4vw, 2.8rem);
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-  gap: 1rem;
-}
-
-.footer-logo {
-  justify-self: center;
-  color: var(--gold-light);
-  font-size: clamp(3.2rem, 6vw, 5rem);
-  line-height: 0.9;
-  text-align: center;
-  text-transform: uppercase;
-}
-
-.footer-main > p:not(.footer-phone) {
-  max-width: 20rem;
-  color: rgba(255, 253, 248, 0.78);
-  font-size: clamp(1.05rem, 1.8vw, 1.35rem);
-  line-height: 1.35;
-  text-align: center;
-}
-
-.footer-phone {
-  display: block;
-  margin: 0;
-  color: var(--gold-light);
-  font: 600 0.92rem/1.35 var(--sans);
-}
-
-.footer-socials {
-  display: flex;
-  justify-content: center;
-  gap: 0.72rem;
-  flex-wrap: wrap;
-}
-
-.footer-social-link {
-  display: inline-flex;
-  width: 3.05rem;
-  height: 3.05rem;
-  min-height: 3.05rem;
-  border: 1px solid rgba(240, 207, 138, 0.38);
-  border-radius: 50%;
-  align-items: center;
-  justify-content: center;
-  color: rgba(255, 253, 248, 0.88);
-  background:
-    radial-gradient(circle at 34% 24%, rgba(240, 207, 138, 0.2), transparent 48%),
-    linear-gradient(145deg, rgba(255, 253, 248, 0.08), rgba(240, 207, 138, 0.08));
-  box-shadow: 0 0.8rem 1.75rem rgba(0, 0, 0, 0.18);
-  transition: transform 0.25s var(--ease-out), color 0.25s var(--ease-out), border-color 0.25s var(--ease-out);
-}
-
-.footer-social-link:hover,
-.footer-social-link:focus-visible {
-  color: var(--gold-light);
-  border-color: rgba(240, 207, 138, 0.68);
-  transform: translateY(-0.14rem);
-}
-
-.footer-social-link svg {
-  width: 1.28rem;
-  height: 1.28rem;
-  fill: none;
-  stroke: currentColor;
-  stroke-width: 1.45;
-}
-
-.footer-social-link .instagram-dot,
-.footer-social-link .facebook-mark {
-  fill: currentColor;
-  stroke: none;
-}
-
-.footer-social-link span {
-  display: none;
-}
-
-.footer-main > a:not(.footer-logo) {
-  justify-self: center;
-  color: rgba(255, 253, 248, 0.7);
-}
-
-.footer-bottom {
-  display: grid;
-  justify-content: center;
-  gap: 0.35rem;
-  line-height: 1.55;
-  text-align: center;
-}
-
-@media (max-width: 760px) {
-  .reviews-section {
-    padding-top: 4.25rem;
-  }
-
-  .reviews-intro {
-    margin-bottom: 1.75rem;
-    gap: 1rem;
-  }
-
-  .reviews-intro h2 {
-    font-size: clamp(2rem, 8.2vw, 2.7rem);
-    white-space: nowrap;
-  }
-
-  .review-grid {
-    gap: 0.9rem;
-    scroll-padding-left: var(--page-x);
-  }
-
-  .review-card {
-    flex: 0 0 min(88vw, 24rem);
-    padding: 1.45rem;
-    border-radius: 0.85rem;
-  }
-
-  .review-card blockquote {
-    min-height: 7.2rem;
-    margin: 1rem 0 0;
-    font-size: 1.22rem;
-    line-height: 1.48;
-  }
-
-  .contact-panel h2 {
-    font-size: clamp(2.8rem, 12vw, 3.75rem);
-  }
-
-  .map-wrap {
-    height: 22.25rem;
-    padding: 0 var(--page-x) 3.7rem;
-    background:
-      linear-gradient(180deg, rgba(255, 253, 248, 0), rgba(184, 135, 70, 0.08)),
-      var(--paper);
-  }
-
-  .map-frame {
-    border: 1px solid rgba(184, 135, 70, 0.58);
-    border-radius: 1.45rem;
-    background: #fffdf8;
-    box-shadow:
-      0 1.25rem 2.6rem rgba(10, 18, 15, 0.15),
-      0 0 0 0.45rem rgba(255, 253, 248, 0.48);
-  }
-
-  .map-frame::before {
-    inset: 0.5rem;
-    border-color: rgba(184, 135, 70, 0.34);
-    border-radius: 1.08rem;
-  }
-
-  .map-frame iframe {
-    filter: saturate(1.28) contrast(1.05) brightness(1.07);
-  }
-
-  .map-veiling {
-    background:
-      linear-gradient(180deg, rgba(255, 253, 248, 0.02), transparent 58%, rgba(255, 253, 248, 0.08)),
-      radial-gradient(circle at 18% 15%, rgba(240, 207, 138, 0.08), transparent 34%);
-  }
-
-  .footer-social-link {
-    width: 3.05rem;
-    height: 3.05rem;
-    min-height: 3.05rem;
-  }
-}
-
-/* Final requested desktop and icon corrections */
-.brand-fish {
-  width: clamp(5.25rem, 8.1vw, 7.4rem);
-}
-
-.brand-fish-tail,
-.brand-fish-outline {
-  stroke-width: 1.45;
-}
-
-.brand-fish-gill {
-  stroke-width: 1.05;
-  opacity: 0.78;
-}
-
-.whatsapp-cta-icon {
-  color: var(--ink);
-  filter: drop-shadow(0 0.12rem 0.2rem rgba(10, 18, 15, 0.18));
-}
-
-.whatsapp-cta-icon .whatsapp-icon-chat {
-  stroke-width: 1.82;
-}
-
-.whatsapp-cta-icon .whatsapp-icon-phone {
-  fill: currentColor;
-  stroke: none;
-}
-
-:where(.book-link, .menu-book, .hero-primary, .mobile-sticky-book, .contact-book, .whatsapp-submit):hover .whatsapp-cta-icon,
-:where(.book-link, .menu-book, .hero-primary, .mobile-sticky-book, .contact-book, .whatsapp-submit):focus-visible .whatsapp-cta-icon {
-  color: var(--ink);
-  filter: drop-shadow(0 0.15rem 0.22rem rgba(10, 18, 15, 0.22));
-  transform: translateY(-1px) scale(1.04);
-}
-
-.whatsapp-submit {
-  background: var(--white);
-  color: var(--ink);
-}
-
-.whatsapp-submit:hover,
-.whatsapp-submit:focus-visible,
-.contact-book:not(.contact-call):hover,
-.contact-book:not(.contact-call):focus-visible {
-  background: var(--white);
-  color: var(--ink);
-}
-
-.mobile-sticky-book .whatsapp-cta-icon,
-.contact-book .whatsapp-cta-icon,
-.menu-book .whatsapp-cta-icon,
-.book-link .whatsapp-cta-icon,
-.hero-primary .whatsapp-cta-icon {
-  color: var(--ink);
-}
-
-@media (min-width: 761px) {
-  .hero-image {
-    filter: brightness(1.4) contrast(1.12) saturate(1.1);
-    transform: none;
-    animation: none;
-  }
-
-  .hero-shade {
-    background:
-      linear-gradient(180deg, rgba(4, 9, 7, 0.02), rgba(4, 9, 7, 0) 42%, rgba(4, 9, 7, 0.045) 100%),
-      linear-gradient(90deg, rgba(4, 9, 7, 0.01), transparent 60%, rgba(4, 9, 7, 0.012));
-  }
-
-  .reviews-intro {
-    grid-template-columns: minmax(0, 1fr) auto;
-    align-items: end;
-    text-align: left;
-  }
-
-  .reviews-intro > div:first-child {
-    justify-self: start;
-    text-align: left;
-  }
-
-  .reviews-intro h2 {
-    margin-top: 1.1rem;
-    text-align: left;
-  }
-
-  .rating-column {
-    align-items: flex-end;
-  }
-
-  .review-awards {
-    display: flex;
-    justify-content: flex-end;
-    gap: 0.78rem;
-  }
-
-  .review-links-summary a {
-    width: 4.85rem;
-    height: 4.85rem;
-    min-height: 4.85rem;
-    color: var(--ink);
-    background: rgba(255, 253, 248, 0.68);
-    box-shadow:
-      inset 0 0 0 1px rgba(10, 18, 15, 0.22),
-      0 0.85rem 1.75rem rgba(10, 18, 15, 0.08);
-  }
-
-  .review-links-summary a:hover,
-  .review-links-summary a:focus-visible {
-    color: var(--ink);
-    background: rgba(255, 253, 248, 0.9);
-    box-shadow:
-      inset 0 0 0 1px rgba(10, 18, 15, 0.34),
-      0 1rem 2rem rgba(10, 18, 15, 0.12);
-  }
-
-  .tripadvisor-badge {
-    background: rgba(255, 253, 248, 0.74);
-    animation: owlBadgeFloat 5.8s ease-in-out infinite;
-  }
-
-  .tripadvisor-badge::after {
-    background: none;
-    opacity: 0;
-  }
-
-  .tripadvisor-badge svg {
-    width: 2.15rem;
-    height: 2.15rem;
-    stroke-width: 1.82;
-  }
-
-  .tripadvisor-badge .owl-eye {
-    fill: rgba(255, 253, 248, 0.96);
-    stroke: var(--ink);
-  }
-
-  .tripadvisor-badge .owl-pupil {
-    fill: var(--ink);
-  }
-
-  .tripadvisor-badge .owl-brow,
-  .tripadvisor-badge .owl-beak {
-    color: var(--ink);
-    stroke: var(--ink);
-  }
-
-  .tripadvisor-badge b {
-    display: none;
-  }
-
-  .contact-list {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-
-  .contact-list > div,
-  .contact-list > div:nth-child(even) {
-    padding: 1rem 1rem 1rem 0;
-  }
-
-  .contact-list > div:nth-child(odd) {
-    border-right: 1px solid rgba(10, 18, 15, 0.2);
-  }
-
-  .contact-list > div:nth-child(3) {
-    border-right: 0;
-  }
-
-  .contact-list > div:nth-child(4) {
-    display: none;
-  }
-}
-
-/* Final monochrome detail trial and cross-device tuning */
+/* Definitive requested Aug 6 corrections */
 html,
 body {
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
 }
 
-.site-header .brand-mark,
-.site-header .brand-fish,
-.site-header .desktop-nav a,
-.site-header .language-switch button.is-active,
 .hero :where(.hero-overline, .hero-hours, .hero-hours span, .hero-edge, .scroll-cue, .hero-social-link) {
   color: var(--white);
-}
-
-.site-header .language-switch {
-  color: rgba(255, 253, 248, 0.58);
-}
-
-.site-header .book-link {
-  border-color: rgba(255, 253, 248, 0.82);
-  color: var(--white);
-}
-
-.site-header .book-link:hover,
-.site-header .book-link:focus-visible {
-  background: var(--white);
-  color: var(--ink);
-}
-
-.hero-social-link svg {
-  border-color: rgba(255, 253, 248, 0.78);
-  background: rgba(255, 253, 248, 0.08);
-}
-
-.hero-social-link:hover svg,
-.hero-social-link:focus-visible svg {
-  border-color: var(--white);
-  color: var(--white);
-}
-
-.hero .scroll-cue i,
-.hero .scroll-cue i::after {
-  background: var(--white);
-}
-
-.section-dark :where(.section-kicker, .carousel-footer > p, .food-card figcaption, .outline-button),
-.restaurant-section :where(.section-kicker, .carousel-footer > p, .food-card figcaption, .outline-button),
-.site-footer :where(.footer-logo, .footer-phone, .footer-phone a, .footer-main > a:not(.footer-logo), .footer-social-link, .footer-bottom) {
-  color: var(--white);
-}
-
-.restaurant-section :where(.outline-button, .carousel-arrows button),
-.site-footer .footer-social-link {
-  border-color: rgba(255, 253, 248, 0.56);
-}
-
-.restaurant-section :where(.outline-button, .carousel-arrows button):hover,
-.restaurant-section :where(.outline-button, .carousel-arrows button):focus-visible {
-  background: var(--white);
-  color: var(--ink);
 }
 
 .location-section :where(.section-kicker, .location-card figcaption, .carousel-footer > p),
@@ -4837,309 +2685,20 @@ body {
   color: var(--ink);
 }
 
-.location-section :where(.carousel-arrows button),
-.reviews-section :where(.review-links-summary a, .reviews-link a),
-.contact-section :where(.contact-social-link, .contact-book) {
-  border-color: rgba(10, 18, 15, 0.45);
+.hero-picture {
+  background-image: url("assets/hero-wine-desktop.jpg");
+  background-position: center center;
+  background-size: cover;
 }
 
-.location-section :where(.carousel-arrows button):hover,
-.location-section :where(.carousel-arrows button):focus-visible,
-.reviews-section :where(.reviews-link a):hover,
-.reviews-section :where(.reviews-link a):focus-visible,
-.contact-section :where(.contact-social-link):hover,
-.contact-section :where(.contact-social-link):focus-visible {
-  background: var(--ink);
-  color: var(--white);
+.brand-name {
+  font-weight: 500;
+  letter-spacing: 0;
 }
 
-.review-links-summary a:hover,
-.review-links-summary a:focus-visible {
-  color: var(--ink);
-}
-
-.site-footer {
-  padding: clamp(2.1rem, 3.2vw, 3.15rem) var(--page-x) 1rem;
-}
-
-.footer-main {
-  padding-bottom: clamp(0.85rem, 1.8vw, 1.25rem);
-  gap: 0.62rem;
-}
-
-.footer-logo {
-  font-size: clamp(2.35rem, 4.2vw, 3.55rem);
-}
-
-.footer-main > p:not(.footer-phone) {
-  max-width: 16rem;
-  font-size: clamp(0.92rem, 1.25vw, 1.05rem);
-  line-height: 1.22;
-}
-
-.footer-phone {
-  font-size: 0.82rem;
-}
-
-.footer-socials {
-  gap: 0.48rem;
-}
-
-.footer-social-link {
-  width: 2.45rem;
-  height: 2.45rem;
-  min-height: 2.45rem;
-  background: rgba(255, 253, 248, 0.05);
-}
-
-.footer-social-link svg {
-  width: 1.08rem;
-  height: 1.08rem;
-}
-
-.footer-bottom {
-  font-size: 0.62rem;
-  gap: 0.2rem;
-}
-
-@supports (height: 100dvh) {
-  .hero {
-    height: 100dvh;
-  }
-}
-
-@media (max-width: 760px) {
-  .hero {
-    height: 100svh;
-    min-height: 100svh;
-  }
-
-  @supports (height: 100dvh) {
-    .hero {
-      height: 100dvh;
-      min-height: 100dvh;
-    }
-  }
-
-  .hero-overline {
-    display: block;
-    margin-bottom: 0.7rem;
-    color: var(--white);
-    font-size: clamp(0.62rem, 2.45vw, 0.76rem);
-    line-height: 1;
-  }
-
-  .hero-hours,
-  .scroll-cue {
-    display: none;
-  }
-
-  .hero-edge {
-    display: block;
-    top: 52%;
-    color: rgba(255, 253, 248, 0.72);
-    font-size: clamp(0.46rem, 1.9vw, 0.58rem);
-    line-height: 1;
-    pointer-events: none;
-  }
-
-  .hero-edge-left {
-    left: max(0.72rem, env(safe-area-inset-left));
-  }
-
-  .hero-edge-right {
-    right: max(0.72rem, env(safe-area-inset-right));
-  }
-
-  .site-footer {
-    padding: 2rem var(--page-x) calc(5.25rem + env(safe-area-inset-bottom));
-  }
-
-  .footer-main {
-    gap: 0.52rem;
-    padding-bottom: 0.9rem;
-  }
-
-  .footer-logo {
-    font-size: clamp(2.35rem, 11vw, 3.2rem);
-  }
-
-  .footer-main > p:not(.footer-phone) {
-    max-width: 14rem;
-    font-size: 0.92rem;
-  }
-
-  .footer-social-link {
-    width: 2.55rem;
-    height: 2.55rem;
-    min-height: 2.55rem;
-  }
-
-  .footer-bottom {
-    font-size: 0.6rem;
-    line-height: 1.35;
-  }
-}
-
-/* Absolute final compact footer override */
-@media (min-width: 761px) {
-  .site-footer {
-    padding: 1.55rem var(--page-x) 0.8rem;
-  }
-
-  .footer-main {
-    display: flex;
-    padding-bottom: 0.75rem;
-    align-items: center;
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 1rem;
-  }
-
-  .footer-logo {
-    font-size: clamp(2.15rem, 3.4vw, 3rem);
-  }
-
-  .footer-main > p:not(.footer-phone) {
-    max-width: 14rem;
-    font-size: 0.86rem;
-    line-height: 1.18;
-    text-align: left;
-  }
-
-  .footer-phone {
-    font-size: 0.78rem;
-  }
-
-  .footer-social-link {
-    width: 2.25rem;
-    height: 2.25rem;
-    min-height: 2.25rem;
-  }
-
-  .footer-social-link svg {
-    width: 1rem;
-    height: 1rem;
-  }
-
-  .footer-bottom {
-    font-size: 0.58rem;
-    line-height: 1.35;
-  }
-}
-
-@media (max-width: 760px) {
-  .site-footer {
-    padding: 1.55rem var(--page-x) 1rem;
-  }
-
-  .footer-main {
-    gap: 0.42rem;
-    padding-bottom: 0.72rem;
-  }
-
-  .footer-logo {
-    font-size: clamp(2.05rem, 9vw, 2.7rem);
-  }
-
-  .footer-main > p:not(.footer-phone) {
-    max-width: 13rem;
-    font-size: 0.82rem;
-    line-height: 1.16;
-  }
-
-  .footer-phone {
-    font-size: 0.76rem;
-  }
-
-  .footer-socials {
-    gap: 0.4rem;
-  }
-
-  .footer-social-link {
-    width: 2.25rem;
-    height: 2.25rem;
-    min-height: 2.25rem;
-  }
-
-  .footer-social-link svg {
-    width: 0.98rem;
-    height: 0.98rem;
-  }
-
-  .footer-bottom {
-    font-size: 0.56rem;
-    line-height: 1.25;
-  }
-}
-
-/* Absolute final logo/icon correction */
-.brand-fish {
-  width: clamp(5.15rem, 7.8vw, 7rem);
-  color: currentColor;
-}
-
-.brand-fish-body,
-.brand-fish-fin,
-.brand-fish-gill {
-  fill: none;
-  stroke: currentColor;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  vector-effect: non-scaling-stroke;
-}
-
-.brand-fish-body {
-  stroke-width: 1.5;
-}
-
-.brand-fish-fin {
-  stroke-width: 1.16;
-}
-
-.brand-fish-gill {
-  stroke-width: 1.08;
-  opacity: 0.82;
-}
-
-.brand-fish-eye {
-  fill: currentColor;
-  stroke: none;
-}
-
-.whatsapp-cta-icon {
-  width: 1.32rem;
-  height: 1.32rem;
-  color: var(--ink);
-  fill: none;
-  stroke: none;
-  filter: none;
-}
-
-.whatsapp-icon-mark {
-  fill: currentColor;
-  stroke: none;
-  transform-box: fill-box;
-  transform-origin: center;
-  animation: whatsappMarkSettle 4.2s ease-in-out infinite;
-}
-
-:where(.book-link, .menu-book, .hero-primary, .mobile-sticky-book, .contact-book, .whatsapp-submit):hover .whatsapp-cta-icon,
-:where(.book-link, .menu-book, .hero-primary, .mobile-sticky-book, .contact-book, .whatsapp-submit):focus-visible .whatsapp-cta-icon {
-  color: var(--ink);
-  filter: none;
-  transform: translateY(-1px) scale(1.035);
-}
-
-.mobile-sticky-book .whatsapp-cta-icon {
-  width: 1.54rem;
-  height: 1.54rem;
-}
-
-/* Definitive EOF brand and WhatsApp correction */
 .brand-fish {
   display: block;
-  width: clamp(5.25rem, 7.4vw, 6.85rem);
+  width: clamp(5.9rem, 8.8vw, 8.25rem);
   height: auto;
   color: currentColor;
   fill: none;
@@ -5158,58 +2717,330 @@ body {
 }
 
 .brand-fish-body {
-  stroke-width: 1.58;
+  stroke-width: 0.86;
 }
 
 .brand-fish-fin {
-  stroke-width: 1.42;
+  stroke-width: 0.72;
+  opacity: 0.94;
 }
 
 .brand-fish-gill {
-  stroke-width: 1.04;
-  opacity: 0.82;
+  stroke-width: 0.64;
+  opacity: 0.68;
 }
 
 .brand-fish-eye {
   fill: currentColor;
   stroke: none;
+  opacity: 0.86;
 }
 
-.whatsapp-cta-icon {
-  display: block;
-  width: 1.24rem;
-  height: 1.24rem;
-  flex: 0 0 1.24rem;
-  overflow: visible;
+.card-brand-mark {
+  width: clamp(8.4rem, 12vw, 11.2rem);
+  min-width: 8.4rem;
   color: var(--ink);
-  fill: currentColor;
-  stroke: none;
+  justify-self: start;
+}
+
+.card-brand-mark .brand-name,
+.card-brand-mark .brand-fish {
+  color: var(--ink);
   filter: none;
+  text-shadow: none;
+}
+
+.card-modal :where(.section-kicker, .card-intro h2 em, .catalog-section h3, .catalog-item > span) {
+  color: var(--ink);
+}
+
+.card-modal :where(.card-tabs button.is-active, .card-close) {
+  border-color: var(--ink);
+  color: var(--ink);
+}
+
+.card-modal :where(.card-header, .catalog-section, .catalog-items, .catalog-item, .catalog-note) {
+  border-color: rgba(10, 18, 15, 0.28);
+}
+
+.contact-socials {
+  display: flex;
+  margin: 0 0 1.2rem;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+}
+
+.contact-social-link {
+  display: inline-flex;
+  min-height: 2.75rem;
+  padding: 0 1rem;
+  border: 1px solid rgba(10, 18, 15, 0.34);
+  align-items: center;
+  gap: 0.55rem;
+  color: var(--ink);
+  font-size: 0.72rem;
+}
+
+.contact-social-link svg {
+  width: 1rem;
+  height: 1rem;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.45;
+}
+
+.tripadvisor-badge {
+  border: 1px solid rgba(10, 18, 15, 0.16);
+  background:
+    radial-gradient(circle at 30% 22%, rgba(255, 253, 248, 0.96), rgba(255, 253, 248, 0.5) 46%, transparent 70%),
+    linear-gradient(145deg, rgba(255, 253, 248, 0.96), rgba(226, 216, 199, 0.76));
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 253, 248, 0.58),
+    0 1.1rem 2.4rem rgba(10, 18, 15, 0.11);
+}
+
+.tripadvisor-badge::after {
+  inset: 0.5rem;
+  border: 1px solid rgba(10, 18, 15, 0.08);
+  background: transparent;
+  opacity: 1;
+  animation: owlPremiumHalo 5.6s ease-in-out infinite;
+}
+
+.tripadvisor-badge svg {
+  width: 3rem;
+  height: 2.25rem;
+  color: var(--ink);
+  stroke-width: 0;
+}
+
+.tripadvisor-badge .tripadvisor-owl {
+  animation: owlPremiumFloat 5.2s var(--ease-out) infinite;
+}
+
+.tripadvisor-badge .owl-frame,
+.tripadvisor-badge .owl-eye,
+.tripadvisor-badge .owl-beak,
+.tripadvisor-badge .owl-gesture {
+  fill: none;
+  stroke: var(--ink);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  vector-effect: non-scaling-stroke;
+}
+
+.tripadvisor-badge .owl-frame {
+  stroke-width: 3.25;
+}
+
+.tripadvisor-badge .owl-eye {
+  fill: rgba(255, 253, 248, 0.92);
+  stroke-width: 3.05;
+  animation: owlPremiumBlink 6.6s ease-in-out infinite;
+}
+
+.tripadvisor-badge .owl-pupil {
+  fill: var(--ink);
+  stroke: none;
+  animation: owlPremiumLook 4.8s ease-in-out infinite;
+}
+
+.tripadvisor-badge .owl-beak {
+  stroke-width: 2.1;
+  animation: owlPremiumBeak 4.8s ease-in-out infinite;
+}
+
+.tripadvisor-badge .owl-gesture {
+  stroke-width: 3.4;
+  transform-box: fill-box;
   transform-origin: center;
-  animation: whatsappIconPulse 4.8s ease-in-out infinite;
 }
 
-.whatsapp-icon-mark {
-  fill: currentColor;
-  stroke: none;
-  transform: none;
+.owl-no-speak .owl-speak-cover {
+  animation: owlSpeakCover 4.4s ease-in-out infinite;
+}
+
+.owl-no-hear .owl-ear-left {
+  transform-origin: right center;
+  animation: owlHearLeft 4.2s ease-in-out infinite;
+}
+
+.owl-no-hear .owl-ear-right {
+  transform-origin: left center;
+  animation: owlHearRight 4.2s ease-in-out infinite;
+}
+
+.owl-no-see .owl-eye-cover {
+  stroke-width: 4;
+  animation: owlSeeCover 4.6s ease-in-out infinite;
+}
+
+.owl-no-see .owl-pupil {
   animation: none;
+  opacity: 0.18;
 }
 
-:where(.book-link, .menu-book, .hero-primary, .mobile-sticky-book, .contact-book, .whatsapp-submit):hover .whatsapp-cta-icon,
-:where(.book-link, .menu-book, .hero-primary, .mobile-sticky-book, .contact-book, .whatsapp-submit):focus-visible .whatsapp-cta-icon {
-  color: var(--ink);
-  filter: none;
-  transform: translateY(-1px) scale(1.04);
+@media (min-width: 761px) {
+  .hero-image {
+    object-position: center center;
+    filter: brightness(0.92) contrast(1.06) saturate(1.04);
+  }
+
+  .hero-shade {
+    background:
+      linear-gradient(180deg, rgba(4, 9, 7, 0.34), rgba(4, 9, 7, 0.12) 34%, rgba(4, 9, 7, 0.1) 66%, rgba(4, 9, 7, 0.32)),
+      linear-gradient(90deg, rgba(4, 9, 7, 0.28), rgba(4, 9, 7, 0.04) 50%, rgba(4, 9, 7, 0.18));
+  }
+
+  .reviews-intro {
+    display: flex;
+    max-width: 86rem;
+    margin-bottom: clamp(3rem, 5vw, 5rem);
+    align-items: center;
+    flex-direction: column;
+    gap: 1.15rem;
+    text-align: center;
+  }
+
+  .reviews-intro > div:first-child,
+  .reviews-intro h2 {
+    justify-self: center;
+    text-align: center;
+  }
+
+  .rating-column {
+    width: 100%;
+    align-items: center;
+  }
+
+  .review-awards {
+    justify-content: center;
+    gap: 0.95rem;
+  }
+
+  .review-awards > span {
+    display: none;
+  }
+
+  .review-links-summary a {
+    width: 5.65rem;
+    height: 5.65rem;
+    min-height: 5.65rem;
+  }
+
+  .contact-list > div:nth-child(2) {
+    border-right: 1px solid rgba(10, 18, 15, 0.2);
+  }
+
+  .site-footer {
+    padding: clamp(2.8rem, 4.2vw, 4rem) var(--page-x) 1.2rem;
+    text-align: center;
+  }
+
+  .footer-main {
+    display: flex;
+    padding-bottom: 1.4rem;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.85rem;
+  }
+
+  .footer-logo,
+  .footer-main > p,
+  .footer-phone,
+  .footer-main > a:not(.footer-logo) {
+    align-self: center;
+    justify-self: center;
+    text-align: center;
+  }
+
+  .footer-logo {
+    font-size: clamp(2.55rem, 3.8vw, 3.65rem);
+  }
+
+  .footer-main > p:not(.footer-phone) {
+    max-width: 20rem;
+    text-align: center;
+  }
+
+  .footer-socials {
+    justify-content: center;
+  }
+
+  .footer-main > a:not(.footer-logo) {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+  }
+
+  .footer-bottom {
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.35rem;
+    text-align: center;
+  }
 }
 
-.mobile-sticky-book .whatsapp-cta-icon {
-  width: 1.42rem;
-  height: 1.42rem;
-  flex-basis: 1.42rem;
+@media (max-width: 760px) {
+  .card-brand-mark {
+    width: 7.2rem;
+    min-width: 7.2rem;
+  }
+
+  .card-brand-mark .brand-name {
+    font-size: 1.05rem;
+  }
+
+  .card-brand-mark .brand-fish {
+    width: 5rem;
+  }
 }
 
-@keyframes whatsappIconPulse {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.055); }
+@keyframes owlPremiumFloat {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  28% { transform: translateY(-1.6px) rotate(-1.4deg); }
+  62% { transform: translateY(0.8px) rotate(1.1deg); }
+}
+
+@keyframes owlPremiumHalo {
+  0%, 100% { transform: scale(0.96); opacity: 0.58; }
+  50% { transform: scale(1.04); opacity: 0.96; }
+}
+
+@keyframes owlPremiumBlink {
+  0%, 86%, 94%, 100% { transform: scaleY(1); }
+  90% { transform: scaleY(0.18); }
+}
+
+@keyframes owlPremiumLook {
+  0%, 100% { transform: translateX(0); }
+  30% { transform: translateX(1.4px); }
+  64% { transform: translateX(-1.2px); }
+}
+
+@keyframes owlPremiumBeak {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(0.8px); }
+}
+
+@keyframes owlSpeakCover {
+  0%, 100% { transform: translateY(0) scaleX(1); }
+  45% { transform: translateY(-1px) scaleX(1.08); }
+}
+
+@keyframes owlHearLeft {
+  0%, 100% { transform: translateX(0) rotate(0deg); }
+  50% { transform: translateX(1.3px) rotate(4deg); }
+}
+
+@keyframes owlHearRight {
+  0%, 100% { transform: translateX(0) rotate(0deg); }
+  50% { transform: translateX(-1.3px) rotate(-4deg); }
+}
+
+@keyframes owlSeeCover {
+  0%, 100% { transform: translateY(0); }
+  45% { transform: translateY(-1.2px); }
 }
