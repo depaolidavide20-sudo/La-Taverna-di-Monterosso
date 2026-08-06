@@ -3832,6 +3832,72 @@ body {
   }
 }
 
+/* Final brand replacement, location exterior, and desktop hero edge pass */
+.site-header .brand-logo-img,
+.footer-brand-mark .brand-logo-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  filter:
+    drop-shadow(0 0 0.08rem rgba(0, 0, 0, 0.95))
+    drop-shadow(0 0.28rem 0.85rem rgba(0, 0, 0, 0.72));
+}
+
+.card-brand-mark .brand-logo-img {
+  filter: none;
+}
+
+.footer-brand-mark {
+  display: inline-flex;
+  width: clamp(4.85rem, 6.5vw, 6.8rem);
+  min-width: 4.85rem;
+  line-height: 0;
+}
+
+.footer-brand-mark .brand-logo-img {
+  opacity: 0.96;
+}
+
+.location-card:nth-child(2) img {
+  object-position: center center;
+}
+
+.location-card:nth-child(3) img {
+  object-position: center 54%;
+}
+
+.location-card:nth-child(4) img {
+  object-position: center center;
+}
+
+@media (min-width: 761px) {
+  .hero-edge {
+    top: 50%;
+  }
+
+  .hero-edge-left {
+    left: clamp(0.9rem, 1.4vw, 1.35rem);
+    writing-mode: vertical-rl;
+    transform: translateY(-50%) rotate(180deg);
+    transform-origin: center;
+  }
+
+  .hero-edge-right {
+    right: clamp(0.9rem, 1.4vw, 1.35rem);
+    writing-mode: vertical-rl;
+    transform: translateY(-50%);
+    transform-origin: center;
+  }
+}
+
+@media (max-width: 760px) {
+  .footer-brand-mark {
+    width: 5.8rem;
+    min-width: 5.8rem;
+  }
+}
+
 /* Final cross-device consistency for menu card, owls, and phone CTA */
 .tripadvisor-badge b {
   color: var(--ink);
