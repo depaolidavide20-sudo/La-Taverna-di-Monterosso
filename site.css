@@ -3916,6 +3916,79 @@ body {
   }
 }
 
+/* Absolute final white header logo override */
+.site-header .header-brand-mark {
+  display: inline-flex;
+  width: auto;
+  min-width: 0;
+  height: clamp(3.95rem, 5.35vw, 5.45rem);
+  align-items: center;
+  line-height: 0;
+}
+
+.site-header .brand-logo-img {
+  display: block;
+  width: auto;
+  max-width: none;
+  height: 100%;
+  object-fit: contain;
+  opacity: 1;
+  filter: none;
+}
+
+@media (max-width: 760px) {
+  .site-header .header-brand-mark {
+    height: 2.7rem;
+  }
+}
+
+/* Absolute final white header logo override */
+.site-header .header-brand-mark {
+  display: inline-flex;
+  width: auto;
+  min-width: 0;
+  height: clamp(3.95rem, 5.35vw, 5.45rem);
+  align-items: center;
+  line-height: 0;
+}
+
+.site-header .brand-logo-img {
+  display: block;
+  width: auto;
+  max-width: none;
+  height: 100%;
+  object-fit: contain;
+  opacity: 1;
+  filter: none;
+}
+
+@media (max-width: 760px) {
+  .site-header .header-brand-mark {
+    height: 2.7rem;
+  }
+}
+
+/* Final white hero/header logo pass */
+.site-header .header-brand-mark {
+  height: clamp(3.75rem, 5vw, 5.15rem);
+}
+
+.site-header .brand-logo-img {
+  display: block;
+  width: auto;
+  max-width: none;
+  height: 100%;
+  object-fit: contain;
+  opacity: 1;
+  filter: none;
+}
+
+@media (max-width: 760px) {
+  .site-header .header-brand-mark {
+    height: 2.7rem;
+  }
+}
+
 /* Final brand replacement, location exterior, and desktop hero edge pass */
 .site-header .brand-logo-img,
 .footer-brand-mark .brand-logo-img {
@@ -4370,5 +4443,30 @@ body {
 
   .card-brand-mark {
     height: 3.45rem;
+  }
+}
+/* Absolute EOF white header logo override */
+.site-header .header-brand-mark {
+  display: inline-flex;
+  width: auto;
+  min-width: 0;
+  height: clamp(3.95rem, 5.35vw, 5.45rem);
+  align-items: center;
+  line-height: 0;
+}
+
+.site-header .brand-logo-img {
+  display: block;
+  width: auto;
+  max-width: none;
+  height: 100%;
+  object-fit: contain;
+  opacity: 1;
+  filter: none;
+}
+
+@media (max-width: 760px) {
+  .site-header .header-brand-mark {
+    height: 2.7rem;
   }
 }
