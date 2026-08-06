@@ -2527,6 +2527,293 @@ body.modal-open {
   }
 }
 
+/* Absolute final logo/icon correction */
+.brand-fish {
+  width: clamp(5.15rem, 7.8vw, 7rem);
+  color: currentColor;
+}
+
+.brand-fish-body,
+.brand-fish-fin,
+.brand-fish-gill {
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  vector-effect: non-scaling-stroke;
+}
+
+.brand-fish-body {
+  stroke-width: 1.5;
+}
+
+.brand-fish-fin {
+  stroke-width: 1.16;
+}
+
+.brand-fish-gill {
+  stroke-width: 1.08;
+  opacity: 0.82;
+}
+
+.brand-fish-eye {
+  fill: currentColor;
+  stroke: none;
+}
+
+.whatsapp-cta-icon {
+  width: 1.32rem;
+  height: 1.32rem;
+  color: var(--ink);
+  fill: none;
+  stroke: none;
+  filter: none;
+}
+
+.whatsapp-icon-mark {
+  fill: currentColor;
+  stroke: none;
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: whatsappMarkSettle 4.2s ease-in-out infinite;
+}
+
+:where(.book-link, .menu-book, .hero-primary, .mobile-sticky-book, .contact-book, .whatsapp-submit):hover .whatsapp-cta-icon,
+:where(.book-link, .menu-book, .hero-primary, .mobile-sticky-book, .contact-book, .whatsapp-submit):focus-visible .whatsapp-cta-icon {
+  color: var(--ink);
+  filter: none;
+  transform: translateY(-1px) scale(1.035);
+}
+
+.mobile-sticky-book .whatsapp-cta-icon {
+  width: 1.54rem;
+  height: 1.54rem;
+}
+
+/* Definitive final brand and WhatsApp correction */
+.brand-fish {
+  display: block;
+  width: clamp(5.25rem, 7.4vw, 6.85rem);
+  height: auto;
+  color: currentColor;
+  fill: none;
+  stroke: none;
+  filter: none;
+}
+
+.brand-fish-body,
+.brand-fish-fin,
+.brand-fish-gill {
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  vector-effect: non-scaling-stroke;
+}
+
+.brand-fish-body {
+  stroke-width: 1.58;
+}
+
+.brand-fish-fin {
+  stroke-width: 1.42;
+}
+
+.brand-fish-gill {
+  stroke-width: 1.04;
+  opacity: 0.82;
+}
+
+.brand-fish-eye {
+  fill: currentColor;
+  stroke: none;
+}
+
+.whatsapp-cta-icon {
+  display: block;
+  width: 1.24rem;
+  height: 1.24rem;
+  flex: 0 0 1.24rem;
+  overflow: visible;
+  color: var(--ink);
+  fill: currentColor;
+  stroke: none;
+  filter: none;
+  transform-origin: center;
+  animation: whatsappIconPulse 4.8s ease-in-out infinite;
+}
+
+.whatsapp-icon-mark {
+  fill: currentColor;
+  stroke: none;
+  transform: none;
+  animation: none;
+}
+
+:where(.book-link, .menu-book, .hero-primary, .mobile-sticky-book, .contact-book, .whatsapp-submit):hover .whatsapp-cta-icon,
+:where(.book-link, .menu-book, .hero-primary, .mobile-sticky-book, .contact-book, .whatsapp-submit):focus-visible .whatsapp-cta-icon {
+  color: var(--ink);
+  filter: none;
+  transform: translateY(-1px) scale(1.04);
+}
+
+.mobile-sticky-book .whatsapp-cta-icon {
+  width: 1.42rem;
+  height: 1.42rem;
+  flex-basis: 1.42rem;
+}
+
+@keyframes whatsappIconPulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.055); }
+}
+
+/* Hard final brand and WhatsApp correction */
+.brand-fish {
+  display: block;
+  width: clamp(5.25rem, 7.4vw, 6.85rem);
+  height: auto;
+  color: currentColor;
+  fill: none;
+  stroke: none;
+  filter: none;
+}
+
+.brand-fish-body,
+.brand-fish-fin,
+.brand-fish-gill {
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  vector-effect: non-scaling-stroke;
+}
+
+.brand-fish-body {
+  stroke-width: 1.58;
+}
+
+.brand-fish-fin {
+  stroke-width: 1.42;
+}
+
+.brand-fish-gill {
+  stroke-width: 1.04;
+  opacity: 0.82;
+}
+
+.brand-fish-eye {
+  fill: currentColor;
+  stroke: none;
+}
+
+.whatsapp-cta-icon {
+  display: block;
+  width: 1.24rem;
+  height: 1.24rem;
+  flex: 0 0 1.24rem;
+  overflow: visible;
+  color: var(--ink);
+  fill: currentColor;
+  stroke: none;
+  filter: none;
+  transform-origin: center;
+  animation: whatsappIconPulse 4.8s ease-in-out infinite;
+}
+
+.whatsapp-icon-mark {
+  fill: currentColor;
+  stroke: none;
+  transform: none;
+  animation: none;
+}
+
+:where(.book-link, .menu-book, .hero-primary, .mobile-sticky-book, .contact-book, .whatsapp-submit):hover .whatsapp-cta-icon,
+:where(.book-link, .menu-book, .hero-primary, .mobile-sticky-book, .contact-book, .whatsapp-submit):focus-visible .whatsapp-cta-icon {
+  color: var(--ink);
+  filter: none;
+  transform: translateY(-1px) scale(1.04);
+}
+
+.mobile-sticky-book .whatsapp-cta-icon {
+  width: 1.42rem;
+  height: 1.42rem;
+  flex-basis: 1.42rem;
+}
+
+@keyframes whatsappIconPulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.055); }
+}
+
+/* Absolute final logo/icon correction */
+.brand-fish {
+  width: clamp(5.15rem, 7.8vw, 7rem);
+  color: currentColor;
+}
+
+.brand-fish-body,
+.brand-fish-fin,
+.brand-fish-gill {
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  vector-effect: non-scaling-stroke;
+}
+
+.brand-fish-body {
+  stroke-width: 1.5;
+}
+
+.brand-fish-fin {
+  stroke-width: 1.16;
+}
+
+.brand-fish-gill {
+  stroke-width: 1.08;
+  opacity: 0.82;
+}
+
+.brand-fish-eye {
+  fill: currentColor;
+  stroke: none;
+}
+
+.whatsapp-cta-icon {
+  width: 1.32rem;
+  height: 1.32rem;
+  color: var(--ink);
+  fill: none;
+  stroke: none;
+  filter: none;
+}
+
+.whatsapp-icon-mark {
+  fill: currentColor;
+  stroke: none;
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: whatsappMarkSettle 4.2s ease-in-out infinite;
+}
+
+:where(.book-link, .menu-book, .hero-primary, .mobile-sticky-book, .contact-book, .whatsapp-submit):hover .whatsapp-cta-icon,
+:where(.book-link, .menu-book, .hero-primary, .mobile-sticky-book, .contact-book, .whatsapp-submit):focus-visible .whatsapp-cta-icon {
+  color: var(--ink);
+  filter: none;
+  transform: translateY(-1px) scale(1.035);
+}
+
+.mobile-sticky-book .whatsapp-cta-icon {
+  width: 1.54rem;
+  height: 1.54rem;
+}
+
+@keyframes whatsappMarkSettle {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.025); }
+}
+
 /* Final compact footer pass */
 @media (min-width: 761px) {
   .site-footer {
@@ -4784,4 +5071,145 @@ body {
     font-size: 0.56rem;
     line-height: 1.25;
   }
+}
+
+/* Absolute final logo/icon correction */
+.brand-fish {
+  width: clamp(5.15rem, 7.8vw, 7rem);
+  color: currentColor;
+}
+
+.brand-fish-body,
+.brand-fish-fin,
+.brand-fish-gill {
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  vector-effect: non-scaling-stroke;
+}
+
+.brand-fish-body {
+  stroke-width: 1.5;
+}
+
+.brand-fish-fin {
+  stroke-width: 1.16;
+}
+
+.brand-fish-gill {
+  stroke-width: 1.08;
+  opacity: 0.82;
+}
+
+.brand-fish-eye {
+  fill: currentColor;
+  stroke: none;
+}
+
+.whatsapp-cta-icon {
+  width: 1.32rem;
+  height: 1.32rem;
+  color: var(--ink);
+  fill: none;
+  stroke: none;
+  filter: none;
+}
+
+.whatsapp-icon-mark {
+  fill: currentColor;
+  stroke: none;
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: whatsappMarkSettle 4.2s ease-in-out infinite;
+}
+
+:where(.book-link, .menu-book, .hero-primary, .mobile-sticky-book, .contact-book, .whatsapp-submit):hover .whatsapp-cta-icon,
+:where(.book-link, .menu-book, .hero-primary, .mobile-sticky-book, .contact-book, .whatsapp-submit):focus-visible .whatsapp-cta-icon {
+  color: var(--ink);
+  filter: none;
+  transform: translateY(-1px) scale(1.035);
+}
+
+.mobile-sticky-book .whatsapp-cta-icon {
+  width: 1.54rem;
+  height: 1.54rem;
+}
+
+/* Definitive EOF brand and WhatsApp correction */
+.brand-fish {
+  display: block;
+  width: clamp(5.25rem, 7.4vw, 6.85rem);
+  height: auto;
+  color: currentColor;
+  fill: none;
+  stroke: none;
+  filter: none;
+}
+
+.brand-fish-body,
+.brand-fish-fin,
+.brand-fish-gill {
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  vector-effect: non-scaling-stroke;
+}
+
+.brand-fish-body {
+  stroke-width: 1.58;
+}
+
+.brand-fish-fin {
+  stroke-width: 1.42;
+}
+
+.brand-fish-gill {
+  stroke-width: 1.04;
+  opacity: 0.82;
+}
+
+.brand-fish-eye {
+  fill: currentColor;
+  stroke: none;
+}
+
+.whatsapp-cta-icon {
+  display: block;
+  width: 1.24rem;
+  height: 1.24rem;
+  flex: 0 0 1.24rem;
+  overflow: visible;
+  color: var(--ink);
+  fill: currentColor;
+  stroke: none;
+  filter: none;
+  transform-origin: center;
+  animation: whatsappIconPulse 4.8s ease-in-out infinite;
+}
+
+.whatsapp-icon-mark {
+  fill: currentColor;
+  stroke: none;
+  transform: none;
+  animation: none;
+}
+
+:where(.book-link, .menu-book, .hero-primary, .mobile-sticky-book, .contact-book, .whatsapp-submit):hover .whatsapp-cta-icon,
+:where(.book-link, .menu-book, .hero-primary, .mobile-sticky-book, .contact-book, .whatsapp-submit):focus-visible .whatsapp-cta-icon {
+  color: var(--ink);
+  filter: none;
+  transform: translateY(-1px) scale(1.04);
+}
+
+.mobile-sticky-book .whatsapp-cta-icon {
+  width: 1.42rem;
+  height: 1.42rem;
+  flex-basis: 1.42rem;
+}
+
+@keyframes whatsappIconPulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.055); }
 }
