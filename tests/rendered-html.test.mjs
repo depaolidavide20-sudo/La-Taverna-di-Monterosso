@@ -149,7 +149,7 @@ test("static assets are self-contained and scoped", async () => {
   assert.match(css, /@media \(max-width:\s*760px\)[\s\S]*\.hero \.hero-socials\s*\{[\s\S]*bottom:\s*1rem/);
   assert.match(css, /Final mobile hero and contact cleanup/);
   assert.match(css, /@media \(max-width:\s*760px\)[\s\S]*\.hero h1\s*\{[\s\S]*white-space:\s*nowrap/);
-  assert.match(css, /@media \(max-width:\s*760px\)[\s\S]*\.hero-overline\s*\{[\s\S]*order:\s*2/);
+  assert.match(css, /@media \(max-width:\s*760px\)[\s\S]*\.hero-overline\s*\{[\s\S]*order:\s*1/);
   assert.match(css, /@media \(max-width:\s*760px\)[\s\S]*\.hero-address\s*\{[\s\S]*order:\s*3/);
   assert.match(css, /@media \(max-width:\s*760px\)[\s\S]*\.hero-hours,[\s\S]*\.hero-actions\s*\{[\s\S]*display:\s*none/);
   assert.match(css, /@media \(max-width:\s*760px\)[\s\S]*\.hero-edge\s*\{[\s\S]*display:\s*block/);
@@ -161,6 +161,14 @@ test("static assets are self-contained and scoped", async () => {
   assert.match(css, /\.footer-social-link/);
   assert.match(css, /flex-direction:\s*column/);
   assert.match(css, /white-space:\s*nowrap/);
+  assert.match(css, /Final mobile-only polish pass/);
+  assert.match(css, /@media \(max-width:\s*760px\)[\s\S]*\.site-header\s*\{[\s\S]*min-height:\s*4\.35rem/);
+  assert.match(css, /@media \(max-width:\s*760px\)[\s\S]*\.hero-overline\s*\{[\s\S]*order:\s*1[\s\S]*margin:\s*0 0 0\.72rem/);
+  assert.match(css, /@media \(max-width:\s*760px\)[\s\S]*\.hero-edge-left\s*\{[\s\S]*transform:\s*translateY\(-50%\) rotate\(180deg\)/);
+  assert.match(css, /@media \(max-width:\s*760px\)[\s\S]*\.mobile-sticky-book\s*\{[\s\S]*bottom:\s*calc\(1rem \+ env\(safe-area-inset-bottom\)\)[\s\S]*border-radius:\s*6px/);
+  assert.match(css, /@media \(max-width:\s*760px\)[\s\S]*\.review-awards > span\s*\{[\s\S]*display:\s*none/);
+  assert.match(css, /@media \(max-width:\s*760px\)[\s\S]*\.tripadvisor-badge b,[\s\S]*\.tripadvisor-badge \.tripadvisor-owl\s*\{[\s\S]*color:\s*var\(--ink\)/);
+  assert.match(css, /@media \(max-width:\s*760px\)[\s\S]*\.contact-section \.contact-actions \.contact-book\s*\{[\s\S]*background:\s*var\(--paper\)[\s\S]*color:\s*var\(--ink\)/);
   assert.doesNotMatch(css, /#1fbf62|whatsapp-icon-bg|whatsapp-icon-ring/);
   assert.doesNotMatch(css, /review-links-summary a:hover[\s\S]{0,220}background:\s*var\(--ink\)/);
   assert.match(css, /\.map-frame/);
