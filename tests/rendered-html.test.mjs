@@ -20,6 +20,7 @@ test("static HTML contains the La Taverna website", async () => {
   assert.match(html, /class="hero-image"[\s\S]*aria-hidden="true"/);
   assert.doesNotMatch(html, /Facciata in pietra de La Taverna di Monterosso/);
   assert.match(html, /header-brand-mark/);
+  assert.match(html, /header-brand-mark[\s\S]*assets\/brand-la-taverna-2026-light\.png/);
   assert.match(html, /assets\/brand-la-taverna-logo\.png/);
   assert.match(html, /alt="La Taverna"/);
   assert.match(html, /card-brand-mark/);
@@ -94,7 +95,7 @@ test("static HTML contains the La Taverna website", async () => {
   assert.doesNotMatch(html, /Grigliata mista|Piatto al cartoccio|Sala de La Taverna con tavoli/);
   assert.doesNotMatch(html, /assets\/hero-entrance-desktop\.jpg|assets\/hero-entrance-mobile\.jpg/);
   assert.doesNotMatch(html, /assets\/food-05\.png|assets\/food-06\.png|assets\/location-01\.png/);
-  assert.doesNotMatch(html, /assets\/brand-la-taverna\.png|assets\/brand-la-taverna-header-v2\.png|assets\/brand-la-taverna-2026-light\.png|assets\/brand-la-taverna-2026-ink\.png|footer-brand-mark|whatsapp-icon-bg|whatsapp-icon-ring/);
+  assert.doesNotMatch(html, /assets\/brand-la-taverna\.png|assets\/brand-la-taverna-header-v2\.png|assets\/brand-la-taverna-2026-ink\.png|footer-brand-mark|whatsapp-icon-bg|whatsapp-icon-ring/);
   assert.doesNotMatch(html, /assets\/location-02\.png/);
   assert.doesNotMatch(html, /assets\/food-03\.png/);
   assert.doesNotMatch(html, /contacts\.socialLabel|latavernadimonterosso\.eatbu\.com/);
@@ -180,6 +181,11 @@ test("static assets are self-contained and scoped", async () => {
   assert.match(css, /\.location-card:nth-child\(4\) img\s*\{[\s\S]*object-position:\s*center center/);
   assert.match(css, /@media \(min-width:\s*761px\)[\s\S]*\.hero-edge\s*\{[\s\S]*top:\s*50%[\s\S]*\.hero-edge-left\s*\{[\s\S]*transform:\s*translateY\(-50%\) rotate\(180deg\)[\s\S]*\.hero-edge-right\s*\{[\s\S]*transform:\s*translateY\(-50%\)/);
   assert.match(css, /@media \(max-width:\s*760px\)[\s\S]*\.site-header\s*\{[\s\S]*min-height:\s*3\.55rem[\s\S]*\.site-header \.header-brand-mark\s*\{[\s\S]*height:\s*2\.55rem/);
+  assert.match(css, /Final white hero\/header logo pass/);
+  assert.match(css, /Absolute EOF white header logo override/);
+  assert.match(css, /\.site-header \.header-brand-mark\s*\{[\s\S]*height:\s*clamp\(3\.95rem,\s*5\.35vw,\s*5\.45rem\)/);
+  assert.match(css, /\.site-header \.brand-logo-img\s*\{[\s\S]*filter:\s*none/);
+  assert.match(css, /@media \(max-width:\s*760px\)[\s\S]*\.site-header \.header-brand-mark\s*\{[\s\S]*height:\s*2\.7rem/);
   assert.match(css, /Final modal brand and desktop contact refinements/);
   assert.match(css, /\.card-brand-mark \.brand-logo-img\s*\{[\s\S]*filter:\s*brightness\(0\) contrast\(1\.08\)/);
   assert.match(css, /\.contact-call \.phone-line-icon\s*\{[\s\S]*stroke-width:\s*1\.08/);
