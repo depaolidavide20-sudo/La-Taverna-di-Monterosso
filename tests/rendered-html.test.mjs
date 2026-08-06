@@ -18,6 +18,9 @@ test("static HTML contains the La Taverna website", async () => {
   assert.match(html, /assets\/hero-wine-mobile\.jpg/);
   assert.match(html, /Facciata in pietra de La Taverna di Monterosso/);
   assert.match(html, /LANTERNA/);
+  assert.match(html, /header-brand-mark/);
+  assert.match(html, /assets\/brand-la-taverna-header\.png/);
+  assert.match(html, /alt="La Taverna"/);
   assert.match(html, /brand-fish/);
   assert.match(html, /brand-fish-body/);
   assert.match(html, /brand-fish-fin/);
@@ -135,9 +138,13 @@ test("static assets are self-contained and scoped", async () => {
   assert.match(css, /Definitive black and white detail pass/);
   assert.match(css, /\.mobile-menu \.menu-book\s*\{[\s\S]*background:\s*var\(--white\)[\s\S]*color:\s*var\(--ink\)/);
   assert.match(css, /body \.mobile-sticky-book\.is-on-light\s*\{[\s\S]*background:\s*var\(--ink\)[\s\S]*color:\s*var\(--white\)/);
-  assert.match(css, /\.hero \.hero-socials\s*\{[\s\S]*left:\s*50%[\s\S]*transform:\s*translateX\(-50%\)/);
   assert.match(css, /\.tripadvisor-badge \.owl-frame\s*\{[\s\S]*stroke-width:\s*2\.05/);
   assert.match(css, /\.site-header \.brand-mark/);
+  assert.match(css, /Final brand image and no-gold corrections/);
+  assert.match(css, /\.site-header \.header-brand-mark\s*\{[\s\S]*width:\s*clamp/);
+  assert.match(css, /--accent-gold-bright:\s*var\(--ink\)/);
+  assert.match(css, /@media \(min-width:\s*761px\)[\s\S]*\.hero \.hero-socials\s*\{[\s\S]*right:\s*var\(--page-x\)[\s\S]*left:\s*auto[\s\S]*transform:\s*none/);
+  assert.match(css, /@media \(max-width:\s*760px\)[\s\S]*\.hero \.hero-socials\s*\{[\s\S]*bottom:\s*1rem/);
   assert.match(css, /\.footer-socials/);
   assert.match(css, /\.footer-social-link/);
   assert.match(css, /flex-direction:\s*column/);
