@@ -20,7 +20,8 @@ test("static HTML contains the La Taverna website", async () => {
   assert.match(html, /class="hero-image"[\s\S]*aria-hidden="true"/);
   assert.doesNotMatch(html, /Facciata in pietra de La Taverna di Monterosso/);
   assert.match(html, /header-brand-mark/);
-  assert.match(html, /header-brand-mark[\s\S]{0,240}src="data:image\/png;base64,/);
+  assert.match(html, /header-brand-mark[\s\S]{0,240}assets\/brand-la-taverna-logo-white\.png/);
+  assert.match(html, /assets\/brand-la-taverna-logo-white\.png/);
   assert.match(html, /assets\/brand-la-taverna-logo\.png/);
   assert.match(html, /alt="La Taverna"/);
   assert.match(html, /card-brand-mark/);
@@ -183,7 +184,7 @@ test("static assets are self-contained and scoped", async () => {
   assert.match(css, /@media \(max-width:\s*760px\)[\s\S]*\.site-header\s*\{[\s\S]*min-height:\s*3\.55rem[\s\S]*\.site-header \.header-brand-mark\s*\{[\s\S]*height:\s*2\.55rem/);
   assert.match(css, /Final white hero\/header logo pass/);
   assert.match(css, /Absolute EOF white header logo override/);
-  assert.match(css, /\.site-header \.header-brand-mark\s*\{[\s\S]*height:\s*clamp\(3\.95rem,\s*5\.35vw,\s*5\.45rem\)/);
+  assert.match(css, /\.site-header \.header-brand-mark\s*\{[\s\S]*height:\s*clamp\(4\.35rem,\s*5\.9vw,\s*6rem\)/);
   assert.match(css, /\.site-header \.brand-logo-img\s*\{[\s\S]*filter:\s*none/);
   assert.match(css, /@media \(max-width:\s*760px\)[\s\S]*\.site-header \.header-brand-mark\s*\{[\s\S]*height:\s*2\.7rem/);
   assert.match(css, /Final modal brand and desktop contact refinements/);
@@ -203,7 +204,9 @@ test("static assets are self-contained and scoped", async () => {
   assert.match(script, /whatsappNumber = "393899215920"/);
   assert.match(script, /scrollRestoration/);
   assert.match(script, /resetInitialHeroScroll/);
+  assert.match(script, /scheduleInitialHeroScrollReset/);
   assert.match(script, /hash && hash !== "#top"/);
+  assert.match(script, /replaceState\(null, document\.title/);
   assert.match(script, /"cta\.menu": "Scopri il nostro menù"/);
   assert.match(script, /"card\.food": "Menù"/);
   assert.match(script, /convivialità/);
