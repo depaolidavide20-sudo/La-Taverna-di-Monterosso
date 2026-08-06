@@ -4067,7 +4067,7 @@ body {
   height: auto;
   object-fit: contain;
   object-position: left center;
-  filter: brightness(0) contrast(1.08);
+  filter: none;
 }
 
 .card-brand-mark .brand-name,
@@ -4118,8 +4118,8 @@ body {
   height: auto;
   object-fit: contain;
   object-position: left center;
-  opacity: 0.92;
-  filter: brightness(0) contrast(1.08);
+  opacity: 1;
+  filter: none;
 }
 
 .card-brand-mark .brand-name,
