@@ -20,7 +20,7 @@ test("static HTML contains the La Taverna website", async () => {
   assert.match(html, /class="hero-image"[\s\S]*aria-hidden="true"/);
   assert.doesNotMatch(html, /Facciata in pietra de La Taverna di Monterosso/);
   assert.match(html, /header-brand-mark/);
-  assert.match(html, /header-brand-mark[\s\S]*assets\/brand-la-taverna-2026-light\.png/);
+  assert.match(html, /header-brand-mark[\s\S]{0,240}src="data:image\/png;base64,/);
   assert.match(html, /assets\/brand-la-taverna-logo\.png/);
   assert.match(html, /alt="La Taverna"/);
   assert.match(html, /card-brand-mark/);
@@ -201,6 +201,9 @@ test("static assets are self-contained and scoped", async () => {
   assert.match(css, /saturate\(1\.18\)/);
   assert.match(css, /@import url\("https:\/\/fonts\.googleapis\.com/);
   assert.match(script, /whatsappNumber = "393899215920"/);
+  assert.match(script, /scrollRestoration/);
+  assert.match(script, /resetInitialHeroScroll/);
+  assert.match(script, /hash && hash !== "#top"/);
   assert.match(script, /"cta\.menu": "Scopri il nostro menù"/);
   assert.match(script, /"card\.food": "Menù"/);
   assert.match(script, /convivialità/);
