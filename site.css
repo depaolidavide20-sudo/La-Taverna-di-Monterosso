@@ -3804,3 +3804,83 @@ body {
     justify-content: center;
   }
 }
+
+/* Final screenshot fixes */
+.hero-image {
+  color: transparent;
+  font-size: 0;
+}
+
+@media (min-width: 761px) {
+  .contact-section .contact-actions .contact-book {
+    background: var(--paper);
+    border-color: rgba(10, 18, 15, 0.45);
+    color: var(--ink);
+    box-shadow: none;
+  }
+
+  .contact-section .contact-actions .contact-book:hover,
+  .contact-section .contact-actions .contact-book:focus-visible {
+    background: var(--paper);
+    border-color: var(--ink);
+    color: var(--ink);
+  }
+
+  .contact-section .contact-actions .contact-book :where(svg, .whatsapp-cta-icon, .whatsapp-icon-mark) {
+    color: currentColor;
+    fill: currentColor;
+  }
+}
+
+@media (max-width: 760px) {
+  .site-footer {
+    padding: clamp(2.8rem, 4.2vw, 4rem) var(--page-x) 1.2rem;
+    text-align: center;
+  }
+
+  .footer-main {
+    display: flex;
+    padding-bottom: 1.4rem;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.85rem;
+  }
+
+  .footer-logo,
+  .footer-main > p,
+  .footer-phone,
+  .footer-main > a:not(.footer-logo) {
+    align-self: center;
+    justify-self: center;
+    text-align: center;
+  }
+
+  .footer-logo {
+    font-size: clamp(2.55rem, 10vw, 3.25rem);
+  }
+
+  .footer-main > p:not(.footer-phone) {
+    max-width: 20rem;
+    text-align: center;
+  }
+
+  .footer-socials {
+    justify-content: center;
+  }
+
+  .footer-main > a:not(.footer-logo) {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+  }
+
+  .footer-bottom {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.35rem;
+    text-align: center;
+  }
+}
