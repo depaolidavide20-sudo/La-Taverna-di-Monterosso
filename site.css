@@ -3934,6 +3934,7 @@ body {
   object-fit: contain;
   opacity: 1;
   filter: none;
+  transform: translateZ(0);
 }
 
 @media (max-width: 760px) {
@@ -4463,6 +4464,7 @@ body {
   object-fit: contain;
   opacity: 1;
   filter: none;
+  transform: translateZ(0);
 }
 
 @media (max-width: 760px) {

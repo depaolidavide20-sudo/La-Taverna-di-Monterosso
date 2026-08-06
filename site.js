@@ -9,6 +9,22 @@ const focusableSelector = "a[href], button:not([disabled]), input:not([disabled]
 const backgroundRegions = [document.querySelector("main"), document.querySelector(".site-footer")].filter(Boolean);
 let lastFocusedElement = null;
 
+if ("scrollRestoration" in window.history) {
+  window.history.scrollRestoration = "manual";
+}
+
+const resetInitialHeroScroll = () => {
+  const hash = window.location.hash;
+  if (hash && hash !== "#top") return;
+  window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+  document.documentElement.scrollTop = 0;
+  document.body.scrollTop = 0;
+};
+
+resetInitialHeroScroll();
+window.addEventListener("pageshow", resetInitialHeroScroll);
+window.addEventListener("load", () => window.requestAnimationFrame(resetInitialHeroScroll), { once: true });
+
 const translations = {
   it: {
     skip: "Vai al contenuto",
