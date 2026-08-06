@@ -3832,6 +3832,90 @@ body {
   }
 }
 
+/* Absolute final logo visibility, slim mobile header, and location order */
+.site-header .header-brand-mark {
+  display: inline-flex;
+  width: auto;
+  min-width: 0;
+  height: clamp(3.15rem, 4.4vw, 4.2rem);
+  align-items: center;
+  line-height: 0;
+}
+
+.site-header .brand-logo-img,
+.card-brand-mark .brand-logo-img {
+  display: block;
+  width: auto;
+  max-width: none;
+  height: 100%;
+  object-fit: contain;
+  opacity: 1;
+  filter: none;
+}
+
+.card-brand-mark {
+  width: auto;
+  min-width: 0;
+  height: clamp(4.05rem, 5.5vw, 5.25rem);
+}
+
+.location-card:nth-child(2) img {
+  object-position: center 54%;
+}
+
+.location-card:nth-child(3) img {
+  object-position: center center;
+}
+
+.location-card:nth-child(4) img {
+  object-position: center center;
+}
+
+@media (min-width: 761px) {
+  .hero-edge {
+    top: 50%;
+  }
+
+  .hero-edge-left {
+    left: clamp(0.9rem, 1.4vw, 1.35rem);
+    writing-mode: vertical-rl;
+    transform: translateY(-50%) rotate(180deg);
+    transform-origin: center;
+  }
+
+  .hero-edge-right {
+    right: clamp(0.9rem, 1.4vw, 1.35rem);
+    writing-mode: vertical-rl;
+    transform: translateY(-50%);
+    transform-origin: center;
+  }
+}
+
+@media (max-width: 760px) {
+  .site-header {
+    min-height: 3.55rem;
+    padding-top: 0.22rem;
+    padding-bottom: 0.22rem;
+  }
+
+  .site-header .header-brand-mark {
+    height: 2.55rem;
+  }
+
+  .language-switch {
+    font-size: 0.54rem;
+  }
+
+  .menu-toggle {
+    width: 2.12rem;
+    height: 2.12rem;
+  }
+
+  .card-brand-mark {
+    height: 3.45rem;
+  }
+}
+
 /* Final brand replacement, location exterior, and desktop hero edge pass */
 .site-header .brand-logo-img,
 .footer-brand-mark .brand-logo-img {
@@ -4202,5 +4286,89 @@ body {
   .contact-section .contact-actions .contact-book :where(svg, .whatsapp-cta-icon, .whatsapp-icon-mark) {
     color: currentColor;
     fill: currentColor;
+  }
+}
+
+/* Post-screenshot logo fix and final mobile header pass */
+.site-header .header-brand-mark {
+  display: inline-flex;
+  width: auto;
+  min-width: 0;
+  height: clamp(3.15rem, 4.4vw, 4.2rem);
+  align-items: center;
+  line-height: 0;
+}
+
+.site-header .brand-logo-img,
+.card-brand-mark .brand-logo-img {
+  display: block;
+  width: auto;
+  max-width: none;
+  height: 100%;
+  object-fit: contain;
+  opacity: 1;
+  filter: none;
+}
+
+.card-brand-mark {
+  width: auto;
+  min-width: 0;
+  height: clamp(4.05rem, 5.5vw, 5.25rem);
+}
+
+.location-card:nth-child(2) img {
+  object-position: center 54%;
+}
+
+.location-card:nth-child(3) img {
+  object-position: center center;
+}
+
+.location-card:nth-child(4) img {
+  object-position: center center;
+}
+
+@media (min-width: 761px) {
+  .hero-edge {
+    top: 50%;
+  }
+
+  .hero-edge-left {
+    left: clamp(0.9rem, 1.4vw, 1.35rem);
+    writing-mode: vertical-rl;
+    transform: translateY(-50%) rotate(180deg);
+    transform-origin: center;
+  }
+
+  .hero-edge-right {
+    right: clamp(0.9rem, 1.4vw, 1.35rem);
+    writing-mode: vertical-rl;
+    transform: translateY(-50%);
+    transform-origin: center;
+  }
+}
+
+@media (max-width: 760px) {
+  .site-header {
+    min-height: 3.55rem;
+    padding-top: 0.22rem;
+    padding-bottom: 0.22rem;
+  }
+
+  .site-header .header-brand-mark {
+    height: 2.55rem;
+  }
+
+  .language-switch {
+    font-size: 0.54rem;
+  }
+
+  .menu-toggle {
+    width: 2.12rem;
+    height: 2.12rem;
+  }
+
+  .card-brand-mark {
+    height: 3.45rem;
   }
 }
