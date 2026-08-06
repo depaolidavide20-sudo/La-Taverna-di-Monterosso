@@ -175,6 +175,11 @@ test("static assets are self-contained and scoped", async () => {
   assert.match(css, /\.card-brand-mark \.brand-logo-img\s*\{[\s\S]*filter:\s*brightness\(0\) contrast\(1\.08\)/);
   assert.match(css, /\.contact-call \.phone-line-icon\s*\{[\s\S]*stroke-width:\s*1\.08/);
   assert.match(css, /@media \(min-width:\s*761px\)[\s\S]*\.contact-phone-cell\s*\{[\s\S]*padding-left:\s*1rem/);
+  assert.match(css, /Final cross-device consistency for menu card, owls, and phone CTA/);
+  assert.match(css, /\.tripadvisor-badge b\s*\{[\s\S]*color:\s*var\(--ink\)/);
+  assert.match(css, /\.card-brand-mark \.brand-logo-img\s*\{[\s\S]*object-fit:\s*contain[\s\S]*filter:\s*brightness\(0\) contrast\(1\.08\)/);
+  assert.match(css, /\.contact-section \.contact-actions \.contact-call \.phone-line-icon,[\s\S]*\.contact-section \.contact-actions \.contact-call \.phone-line-icon path\s*\{[\s\S]*fill:\s*none[\s\S]*stroke:\s*currentColor/);
+  assert.match(css, /@media \(max-width:\s*760px\)[\s\S]*\.contact-section \.contact-actions \.contact-call \.phone-line-icon,[\s\S]*\.contact-section \.contact-actions \.contact-call \.phone-line-icon path\s*\{[\s\S]*fill:\s*none[\s\S]*stroke:\s*currentColor/);
   assert.doesNotMatch(css, /#1fbf62|whatsapp-icon-bg|whatsapp-icon-ring/);
   assert.doesNotMatch(css, /review-links-summary a:hover[\s\S]{0,220}background:\s*var\(--ink\)/);
   assert.match(css, /\.map-frame/);
