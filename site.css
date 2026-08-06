@@ -3044,3 +3044,451 @@ body {
   0%, 100% { transform: translateY(0); }
   45% { transform: translateY(-1.2px); }
 }
+
+/* Definitive black and white detail pass */
+.site-header,
+.hero,
+.restaurant-section,
+.site-footer,
+.mobile-menu,
+.mobile-menu .menu-panel {
+  --section-detail: var(--white);
+}
+
+.location-section,
+.reviews-section,
+.contact-section,
+.card-modal,
+.booking-modal {
+  --section-detail: var(--ink);
+}
+
+:where(.site-header, .hero, .restaurant-section, .site-footer, .mobile-menu)
+  :where(.section-kicker, .hero-overline, .hero-hours, .hero-hours span, .hero-address, .hero-edge, .scroll-cue, .menu-panel-kicker, .mobile-menu-meta, .desktop-nav a, .brand-mark, .footer-logo, .footer-phone a, .footer-main > p, .footer-main > a, .footer-bottom, .footer-social-link) {
+  color: var(--white);
+}
+
+:where(.location-section, .reviews-section, .contact-section, .card-modal, .booking-modal)
+  :where(.section-kicker, h3, figcaption, figcaption span, .carousel-footer > p, .review-links-summary a, .reviews-link a, .stars, .contact-list a, .contact-list p, .contact-social-link, h2 em, .card-intro h2 em, .catalog-section h3, .catalog-item > span, form label > span) {
+  color: var(--ink);
+}
+
+.desktop-nav a::after,
+.footer-main > a::after,
+.restaurant-section .section-kicker::after,
+.mobile-menu nav a::after {
+  background: var(--white);
+}
+
+.location-section .section-kicker::after,
+.reviews-section .section-kicker::after,
+.contact-section .section-kicker::after,
+.card-modal .section-kicker::after,
+.booking-modal .section-kicker::after {
+  background: var(--ink);
+}
+
+.language-switch,
+.language-switch button,
+.language-switch span,
+.mobile-menu nav a,
+.mobile-menu nav a span,
+.mobile-menu nav a b,
+.mobile-menu nav a .ui-icon,
+.mobile-menu-meta a,
+.mobile-menu-meta .ui-icon,
+.menu-toggle,
+.menu-toggle span {
+  color: var(--white);
+  border-color: rgba(255, 253, 248, 0.3);
+}
+
+.mobile-menu .menu-book {
+  background: var(--white);
+  border-color: var(--white);
+  color: var(--ink);
+  box-shadow: 0 1rem 2.6rem rgba(0, 0, 0, 0.24);
+}
+
+.mobile-menu .menu-book :where(.whatsapp-cta-icon, .whatsapp-icon-mark) {
+  color: currentColor;
+  fill: currentColor;
+}
+
+.mobile-sticky-book {
+  display: none;
+  background: var(--white);
+  border-color: var(--white);
+  color: var(--ink);
+}
+
+.mobile-sticky-book.is-on-dark {
+  background: var(--white);
+  border-color: var(--white);
+  color: var(--ink);
+}
+
+.mobile-sticky-book.is-on-light {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: var(--white);
+}
+
+.mobile-sticky-book :where(.whatsapp-cta-icon, .whatsapp-icon-mark),
+:where(.book-link, .hero-primary, .contact-book, .whatsapp-submit) :where(.whatsapp-cta-icon, .whatsapp-icon-mark) {
+  color: currentColor;
+  fill: currentColor;
+}
+
+.book-link,
+.hero-primary,
+.contact-book,
+.whatsapp-submit {
+  border-color: currentColor;
+}
+
+.book-link,
+.hero-primary {
+  background: var(--white);
+  border-color: var(--white);
+  color: var(--ink);
+}
+
+.hero-primary,
+.contact-book,
+.whatsapp-submit {
+  color: var(--ink);
+}
+
+.contact-book,
+.whatsapp-submit {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: var(--white);
+}
+
+.mobile-menu .menu-book:hover .whatsapp-cta-icon,
+.mobile-menu .menu-book:focus-visible .whatsapp-cta-icon,
+.mobile-sticky-book.is-on-dark:hover .whatsapp-cta-icon,
+.mobile-sticky-book.is-on-dark:focus-visible .whatsapp-cta-icon {
+  color: var(--ink);
+}
+
+.mobile-sticky-book.is-on-light:hover .whatsapp-cta-icon,
+.mobile-sticky-book.is-on-light:focus-visible .whatsapp-cta-icon,
+.contact-book:hover .whatsapp-cta-icon,
+.contact-book:focus-visible .whatsapp-cta-icon,
+.whatsapp-submit:hover .whatsapp-cta-icon,
+.whatsapp-submit:focus-visible .whatsapp-cta-icon {
+  color: var(--white);
+}
+
+.hero-social-link,
+.footer-social-link {
+  border-color: rgba(255, 253, 248, 0.42);
+  color: var(--white);
+}
+
+.hero-social-link svg,
+.footer-social-link svg,
+.contact-social-link svg {
+  color: currentColor;
+  stroke: currentColor;
+  fill: none;
+}
+
+.hero-social-link .facebook-mark,
+.footer-social-link .facebook-mark,
+.contact-social-link .facebook-mark {
+  fill: currentColor;
+  stroke: none;
+}
+
+.brand-fish {
+  width: clamp(5.6rem, 8vw, 7.8rem);
+  color: currentColor;
+}
+
+.brand-fish-body {
+  stroke-width: 1.08;
+}
+
+.brand-fish-fin {
+  stroke-width: 0.92;
+}
+
+.brand-fish-gill {
+  stroke-width: 0.72;
+  opacity: 0.72;
+}
+
+.contact-phone-cell {
+  min-width: 0;
+}
+
+.contact-phone-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(0.8rem, 1.8vw, 1.25rem);
+}
+
+.contact-phone-link {
+  white-space: nowrap;
+}
+
+.contact-socials {
+  margin: 0;
+  justify-content: center;
+}
+
+.contact-social-link {
+  min-height: 2.35rem;
+  padding: 0 0.8rem;
+  border-color: rgba(10, 18, 15, 0.32);
+  color: var(--ink);
+  font-size: 0.66rem;
+  letter-spacing: 0.08em;
+  white-space: nowrap;
+}
+
+.booking-dialog h2 em,
+.booking-dialog label > span {
+  color: var(--ink);
+}
+
+.booking-dialog input:focus,
+.booking-dialog select:focus,
+.booking-dialog textarea:focus {
+  border-bottom-color: var(--ink);
+}
+
+.map-label {
+  border-color: rgba(255, 253, 248, 0.36);
+}
+
+.map-label > span,
+.map-label a,
+.map-label a .ui-icon {
+  color: var(--white);
+}
+
+.map-label a {
+  border-color: rgba(255, 253, 248, 0.5);
+}
+
+.map-label a:hover,
+.map-label a:focus-visible {
+  background: var(--white);
+  color: var(--ink);
+}
+
+.site-header .brand-mark,
+.site-header .brand-name,
+.site-header .brand-fish,
+.site-header .desktop-nav a,
+.site-header .language-switch,
+.site-header .language-switch button,
+.site-header .language-switch span {
+  color: var(--white);
+}
+
+.hero .hero-overline,
+.hero .hero-address,
+.hero .hero-hours,
+.hero .hero-hours span,
+.hero .hero-edge,
+.hero .scroll-cue,
+.restaurant-section .section-kicker,
+.restaurant-section .heading-copy,
+.restaurant-section .heading-copy p {
+  color: var(--white);
+}
+
+.location-section .section-kicker,
+.location-section .location-card figcaption,
+.location-section .location-card figcaption span,
+.reviews-section .section-kicker,
+.reviews-section h2 em,
+.reviews-section .stars,
+.contact-section .section-kicker,
+.contact-section h2 em,
+.contact-section .contact-list h3,
+.contact-section .contact-list a,
+.contact-section .contact-list p {
+  color: var(--ink);
+}
+
+.site-footer .footer-logo,
+.site-footer .footer-main > p,
+.site-footer .footer-phone a,
+.site-footer .footer-main > a:not(.footer-logo),
+.site-footer .footer-bottom,
+.site-footer .footer-social-link {
+  color: var(--white);
+}
+
+.hero-actions {
+  display: flex;
+  margin-top: 1.35rem;
+  justify-content: center;
+}
+
+.hero-primary {
+  display: inline-flex;
+  min-height: 3.25rem;
+  padding: 0 1.2rem;
+  border-width: 1px;
+  border-style: solid;
+  align-items: center;
+  justify-content: center;
+  gap: 0.72rem;
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.tripadvisor-badge {
+  border-color: rgba(10, 18, 15, 0.13);
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 253, 248, 0.52),
+    0 0.9rem 2rem rgba(10, 18, 15, 0.09);
+}
+
+.tripadvisor-badge::after {
+  border-color: rgba(10, 18, 15, 0.06);
+}
+
+.tripadvisor-badge svg {
+  width: 2.9rem;
+  height: 2.15rem;
+  color: var(--ink);
+}
+
+.tripadvisor-badge .owl-frame {
+  stroke-width: 2.05;
+}
+
+.tripadvisor-badge .owl-eye {
+  stroke-width: 1.85;
+}
+
+.tripadvisor-badge .owl-beak {
+  stroke-width: 1.15;
+}
+
+.tripadvisor-badge .owl-gesture {
+  stroke-width: 2;
+}
+
+@media (min-width: 761px) {
+  .hero .hero-socials {
+    position: absolute;
+    right: auto;
+    bottom: clamp(6.2rem, 9vh, 7.4rem);
+    left: 50%;
+    justify-content: center;
+    transform: translateX(-50%);
+  }
+
+  .contact-list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .contact-list > div:nth-child(2) {
+    border-right: 1px solid rgba(10, 18, 15, 0.2);
+  }
+
+  .contact-phone-cell {
+    display: flex;
+    min-height: 11rem;
+    flex-direction: column;
+  }
+
+  .contact-phone-row {
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .contact-socials {
+    width: 100%;
+    gap: 0.5rem;
+  }
+
+  .contact-social-link {
+    min-height: 2.2rem;
+    padding: 0 0.68rem;
+  }
+
+  .site-footer .footer-main {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.85rem;
+  }
+}
+
+@media (max-width: 760px) {
+  .hero .hero-socials {
+    right: var(--page-x);
+    bottom: 4.8rem;
+    left: auto;
+    transform: none;
+  }
+
+  .contact-phone-row {
+    flex-direction: column;
+  }
+
+  .mobile-sticky-book {
+    position: fixed;
+    z-index: 55;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    min-height: calc(3.25rem + env(safe-area-inset-bottom));
+    padding: 0.85rem var(--page-x) calc(0.85rem + env(safe-area-inset-bottom));
+    border-width: 1px 0 0;
+    border-style: solid;
+    border-radius: 0;
+    align-items: center;
+    justify-content: center;
+    gap: 0.7rem;
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    line-height: 1;
+    text-transform: uppercase;
+    transition: transform 220ms var(--ease-out);
+  }
+
+  .mobile-sticky-book .whatsapp-cta-icon {
+    width: 1.1rem;
+    height: 1.1rem;
+    flex: 0 0 1.1rem;
+  }
+
+  body .mobile-sticky-book.is-on-light {
+    background: var(--ink);
+    border-color: var(--ink);
+    color: var(--white);
+  }
+
+  body .mobile-sticky-book.is-on-dark {
+    background: var(--white);
+    border-color: var(--white);
+    color: var(--ink);
+  }
+
+  body.menu-open .mobile-sticky-book {
+    opacity: 0;
+    pointer-events: none;
+  }
+}

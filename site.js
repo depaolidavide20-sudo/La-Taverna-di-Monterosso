@@ -305,6 +305,57 @@ const updateHeader = () => header?.classList.toggle("is-scrolled", window.scroll
 updateHeader();
 window.addEventListener("scroll", updateHeader, { passive: true });
 
+const mobileStickyBook = document.querySelector(".mobile-sticky-book");
+const stickyBookSections = [
+  { element: document.querySelector("#top"), theme: "dark" },
+  { element: document.querySelector("#ristorante"), theme: "dark" },
+  { element: document.querySelector("#location"), theme: "light" },
+  { element: document.querySelector("#recensioni"), theme: "light" },
+  { element: document.querySelector("#contatti"), theme: "light" },
+  { element: document.querySelector(".site-footer"), theme: "dark" },
+].filter(({ element }) => element);
+
+const setStickyBookTheme = (theme) => {
+  if (!mobileStickyBook) return;
+  const isOnLight = theme === "light";
+  mobileStickyBook.classList.toggle("is-on-light", isOnLight);
+  mobileStickyBook.classList.toggle("is-on-dark", !isOnLight);
+};
+
+const updateStickyBookTheme = () => {
+  if (!stickyBookSections.length) return;
+  const footerSection = stickyBookSections.find(({ element }) => element.matches(".site-footer"));
+  const footerRect = footerSection?.element.getBoundingClientRect();
+  if (footerRect && footerRect.top <= window.innerHeight * 0.72 && footerRect.bottom > 0) {
+    setStickyBookTheme("dark");
+    return;
+  }
+
+  const isAtPageEnd = window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 12;
+  if (isAtPageEnd) {
+    setStickyBookTheme("dark");
+    return;
+  }
+
+  const sampleY = Math.max(96, Math.min(window.innerHeight - 96, window.innerHeight * 0.64));
+  const sampleElement = document.elementFromPoint(window.innerWidth / 2, sampleY);
+  const activeSection = stickyBookSections.find(({ element }) => element.contains(sampleElement))
+    || stickyBookSections.reduce((current, section) => {
+      const rect = section.element.getBoundingClientRect();
+      const distance = Math.abs(rect.top - sampleY);
+      return distance < current.distance ? { section, distance } : current;
+    }, { section: stickyBookSections[0], distance: Number.POSITIVE_INFINITY }).section;
+
+  setStickyBookTheme(activeSection.theme);
+};
+
+if (mobileStickyBook) {
+  setStickyBookTheme("dark");
+  updateStickyBookTheme();
+  window.addEventListener("scroll", updateStickyBookTheme, { passive: true });
+  window.addEventListener("resize", updateStickyBookTheme);
+}
+
 const setupCarousel = ({ trackSelector, cardSelector, currentSelector, prevSelector, nextSelector }) => {
   const track = document.querySelector(trackSelector);
   const cards = [...document.querySelectorAll(cardSelector)];
