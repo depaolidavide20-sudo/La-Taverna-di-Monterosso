@@ -15,15 +15,26 @@ if ("scrollRestoration" in window.history) {
 
 const resetInitialHeroScroll = () => {
   const hash = window.location.hash;
-  if (hash && hash !== "#top") return;
+  const isMobileViewport = window.matchMedia?.("(max-width: 760px)")?.matches ?? window.innerWidth <= 760;
+  if (hash && hash !== "#top") {
+    if (!isMobileViewport) return;
+    window.history.replaceState(null, document.title, `${window.location.pathname}${window.location.search}`);
+  }
   window.scrollTo({ top: 0, left: 0, behavior: "auto" });
   document.documentElement.scrollTop = 0;
   document.body.scrollTop = 0;
 };
 
-resetInitialHeroScroll();
-window.addEventListener("pageshow", resetInitialHeroScroll);
-window.addEventListener("load", () => window.requestAnimationFrame(resetInitialHeroScroll), { once: true });
+const scheduleInitialHeroScrollReset = () => {
+  resetInitialHeroScroll();
+  window.requestAnimationFrame(resetInitialHeroScroll);
+  window.setTimeout(resetInitialHeroScroll, 80);
+  window.setTimeout(resetInitialHeroScroll, 260);
+};
+
+scheduleInitialHeroScrollReset();
+window.addEventListener("pageshow", scheduleInitialHeroScrollReset);
+window.addEventListener("load", scheduleInitialHeroScrollReset, { once: true });
 
 const translations = {
   it: {
