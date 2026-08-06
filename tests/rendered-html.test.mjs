@@ -20,10 +20,12 @@ test("static HTML contains the La Taverna website", async () => {
   assert.match(html, /class="hero-image"[\s\S]*aria-hidden="true"/);
   assert.doesNotMatch(html, /Facciata in pietra de La Taverna di Monterosso/);
   assert.match(html, /header-brand-mark/);
-  assert.match(html, /assets\/brand-la-taverna-header-v2\.png/);
+  assert.match(html, /assets\/brand-la-taverna-2026-light\.png/);
+  assert.match(html, /assets\/brand-la-taverna-2026-ink\.png/);
   assert.match(html, /alt="La Taverna"/);
   assert.match(html, /card-brand-mark/);
-  assert.match(html, /card-brand-mark[\s\S]*assets\/brand-la-taverna-header-v2\.png/);
+  assert.match(html, /card-brand-mark[\s\S]*assets\/brand-la-taverna-2026-ink\.png/);
+  assert.match(html, /footer-brand-mark[\s\S]*assets\/brand-la-taverna-2026-light\.png/);
   assert.match(html, /Scopri il nostro menù/);
   assert.match(html, /Menù/);
   assert.match(html, /convivialità/);
@@ -44,8 +46,10 @@ test("static HTML contains the La Taverna website", async () => {
   assert.match(html, /https:\/\/www\.instagram\.com\/ristorante_la_taverna_5_terre\//);
   assert.match(html, /https:\/\/www\.facebook\.com\/p\/La-Taverna-di-Monterosso-100054517236999\/\?locale=it_IT/);
   assert.match(html, /assets\/location-01\.jpg/);
+  assert.match(html, /assets\/location-exterior-terrace\.png/);
   assert.match(html, /assets\/location-03\.png/);
   assert.match(html, /assets\/location-04\.png/);
+  assert.match(html, /data-i18n="location\.exterior">L'esterno/);
   assert.match(html, /assets\/food-01\.png/);
   assert.match(html, /assets\/food-02\.png/);
   assert.match(html, /assets\/food-03\.jpg/);
@@ -60,7 +64,7 @@ test("static HTML contains the La Taverna website", async () => {
   assert.match(html, /ristorante-lataverna@libero\.it/);
   assert.match(html, /data-food-track/);
   assert.match(html, /data-location-track/);
-  assert.match(html, /data-location-current>01<\/span> \/ 03/);
+  assert.match(html, /data-location-current>01<\/span> \/ 04/);
   assert.match(html, /class="map-frame"/);
   assert.match(html, /z=18/);
   assert.match(html, /contacts\.openMap/);
@@ -91,7 +95,7 @@ test("static HTML contains the La Taverna website", async () => {
   assert.doesNotMatch(html, /Grigliata mista|Piatto al cartoccio|Sala de La Taverna con tavoli/);
   assert.doesNotMatch(html, /assets\/hero-entrance-desktop\.jpg|assets\/hero-entrance-mobile\.jpg/);
   assert.doesNotMatch(html, /assets\/food-05\.png|assets\/food-06\.png|assets\/location-01\.png/);
-  assert.doesNotMatch(html, /assets\/brand-la-taverna\.png|whatsapp-icon-bg|whatsapp-icon-ring/);
+  assert.doesNotMatch(html, /assets\/brand-la-taverna\.png|assets\/brand-la-taverna-header-v2\.png|whatsapp-icon-bg|whatsapp-icon-ring/);
   assert.doesNotMatch(html, /assets\/location-02\.png/);
   assert.doesNotMatch(html, /assets\/food-03\.png/);
   assert.doesNotMatch(html, /contacts\.socialLabel|latavernadimonterosso\.eatbu\.com/);
@@ -171,6 +175,10 @@ test("static assets are self-contained and scoped", async () => {
   assert.match(css, /@media \(max-width:\s*760px\)[\s\S]*\.review-awards > span\s*\{[\s\S]*display:\s*none/);
   assert.match(css, /@media \(max-width:\s*760px\)[\s\S]*\.tripadvisor-badge b,[\s\S]*\.tripadvisor-badge \.tripadvisor-owl\s*\{[\s\S]*color:\s*var\(--ink\)/);
   assert.match(css, /@media \(max-width:\s*760px\)[\s\S]*\.contact-section \.contact-actions \.contact-book\s*\{[\s\S]*background:\s*var\(--paper\)[\s\S]*color:\s*var\(--ink\)/);
+  assert.match(css, /Final brand replacement, location exterior, and desktop hero edge pass/);
+  assert.match(css, /\.footer-brand-mark\s*\{[\s\S]*width:\s*clamp\(4\.85rem,\s*6\.5vw,\s*6\.8rem\)/);
+  assert.match(css, /\.location-card:nth-child\(2\) img\s*\{[\s\S]*object-position:\s*center center/);
+  assert.match(css, /@media \(min-width:\s*761px\)[\s\S]*\.hero-edge\s*\{[\s\S]*top:\s*50%[\s\S]*\.hero-edge-left\s*\{[\s\S]*transform:\s*translateY\(-50%\) rotate\(180deg\)[\s\S]*\.hero-edge-right\s*\{[\s\S]*transform:\s*translateY\(-50%\)/);
   assert.match(css, /Final modal brand and desktop contact refinements/);
   assert.match(css, /\.card-brand-mark \.brand-logo-img\s*\{[\s\S]*filter:\s*brightness\(0\) contrast\(1\.08\)/);
   assert.match(css, /\.contact-call \.phone-line-icon\s*\{[\s\S]*stroke-width:\s*1\.08/);
@@ -189,6 +197,7 @@ test("static assets are self-contained and scoped", async () => {
   assert.match(script, /"cta\.menu": "Scopri il nostro menù"/);
   assert.match(script, /"card\.food": "Menù"/);
   assert.match(script, /convivialità/);
+  assert.match(script, /"location\.exterior": "L'esterno"/);
   assert.match(script, /"reviews\.title": "Cosa dicono di noi"/);
   assert.match(script, /"contacts\.title": "Contatti"/);
   assert.match(script, /"form\.time": "Orario"/);
