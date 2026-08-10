@@ -58,14 +58,14 @@ const translations = {
     "hero.hours": "<span>PRANZO, CENA &amp; CONVIVIALITÀ</span> CUCINA ITALIANA - PESCE - CARNE - PIZZA",
     "hero.edge": "Cucina italiana & sapori liguri",
     "hero.discover": "Scopri La Taverna",
-    "story.kicker": "01 · La nostra storia",
+    "story.kicker": "01 La nostra storia",
     "story.title": "La nostra storia",
     "story.copy1": "La mia storia in cucina inizia nel lontano <strong>1982</strong>. Dopo aver appreso i segreti della cucina siciliana e della tradizione italiana, ho trasformato questa passione in un viaggio che mi ha accompagnato per oltre quarant'anni.",
     "story.copy2": "Nel corso degli anni ho dato vita a <strong>quattro ristoranti</strong>: il primo a Sarzana, dedicato alla cucina di carne, e successivamente tre ristoranti nelle Cinque Terre, tra Riomaggiore e Monterosso, fino ad arrivare a <strong>La Taverna</strong>.",
     "story.copy3": "La mia cucina è rimasta fedele a un principio semplice: <strong>rispettare la materia prima e lasciare che siano i suoi sapori autentici a parlare</strong>. Una cucina tradizionale, fatta di esperienza, cura e attenzione.",
     "story.quote": "<strong>“Solo osservando tutti i piccoli dettagli si possono ottenere grandi cose.”</strong>",
     "story.copy4": "È questa filosofia, insieme all'amore e alla passione per il mio lavoro, che ancora oggi mi spinge a continuare il viaggio iniziato tanti anni fa.",
-    "restaurant.kicker": "02 · La nostra cucina",
+    "restaurant.kicker": "02 Ristorante",
     "restaurant.copy1": "Piatti italiani, specialità di mare e sapori liguri in un ristorante accogliente nel cuore di Monterosso.",
     "restaurant.copy2": "Una tavola semplice, curata e generosa per vivere pranzo e cena tra le Cinque Terre.",
     "restaurant.mobileCopy": "Cucina italiana, pesce e sapori liguri nel cuore di Monterosso.",
@@ -80,7 +80,7 @@ const translations = {
     "food.ribs": "Le costolette",
     "food.semifreddo": "Il semifreddo",
     "food.houseDessert": "Il dolce della casa",
-    "location.kicker": "03 · A Monterosso",
+    "location.kicker": "03 Location",
     "location.copy1": "Via Molinelli 39, a pochi passi dal ritmo luminoso di Monterosso al Mare.",
     "location.copy2": "Sala, tavoli all'aperto e atmosfera informale per una sosta di gusto nelle Cinque Terre.",
     "location.front": "La tavola",
@@ -92,20 +92,14 @@ const translations = {
     "location.terrace1": "La terrazza",
     "location.terrace2": "Il dehors",
     "location.terrace3": "L'atmosfera",
-    "luggage.kicker": "04 · Deposito bagagli",
+    "luggage.kicker": "04 Deposito bagagli",
     "luggage.title": "Deposito bagagli",
-    "luggage.copy": "Lascia valigie e zaini in un punto comodo nel cuore di Monterosso e goditi mare, vicoli e partenza senza peso.",
+    "luggage.copy": "Lascia le valigie e gli zaini in un punto comodo nel cuore di Monterosso e goditi mare, vicoli e partenza senza peso.",
     "luggage.badge": "Servizio turistico",
     "luggage.large": "Bagaglio/valigia grande",
     "luggage.medium": "Bagaglio/valigia media",
     "luggage.backpack": "Zaino",
     "luggage.book": "Prenota deposito",
-    "luggage.line1Label": "Dove",
-    "luggage.line1": "Via Molinelli 39",
-    "luggage.line2Label": "Ideale per",
-    "luggage.line2": "check-in, check-out e partenze",
-    "luggage.line3Label": "Prenotazione",
-    "luggage.line3": "rapida via WhatsApp",
     "luggage.formKicker": "Scrivici su WhatsApp",
     "luggage.formTitle": "Prenota<br><em>il deposito.</em>",
     "luggage.formIntro": "Scegli il tipo di bagaglio: prepareremo il messaggio e apriremo direttamente WhatsApp.",
@@ -115,7 +109,7 @@ const translations = {
     "luggage.optionMedium": "Bagaglio/valigia media - 3€",
     "luggage.optionBackpack": "Zaino - 2€",
     "luggage.placeholder": "Orario di ritiro o informazioni utili",
-    "reviews.kicker": "05 · Recensioni",
+    "reviews.kicker": "05 Recensioni",
     "reviews.title": "Cosa dicono di noi",
     "reviews.awards": "Canali recensioni",
     "reviews.cardLabel1": "Cucina",
@@ -129,7 +123,7 @@ const translations = {
     "reviews.author3": "Via Molinelli 39",
     "reviews.read": "Leggi le recensioni",
     "reviews.leave": "Lascia una recensione",
-    "contacts.kicker": "06 · Contatti",
+    "contacts.kicker": "06 Contatti",
     "contacts.title": "Contatti",
     "contacts.where": "Dove siamo",
     "contacts.hoursLabel": "Orari",
@@ -146,7 +140,7 @@ const translations = {
     "legal.notes": "Note legali",
     "legal.manageCookies": "Gestisci cookie",
     "cookie.title": "Privacy e servizi esterni",
-    "cookie.copy": "Usiamo solo strumenti tecnici. La mappa di Google viene caricata solo se accetti i servizi esterni.",
+    "cookie.copy": "Usiamo solo strumenti tecnici. WhatsApp e Google Maps vengono aperti o caricati solo se accetti i servizi esterni.",
     "cookie.necessary": "Solo necessari",
     "cookie.accept": "Accetta servizi esterni",
     "cookie.preferences": "Dettagli",
@@ -163,7 +157,7 @@ const translations = {
     "form.message": "Messaggio",
     "form.placeholder": "Richieste o informazioni utili",
     "form.submit": "Continua su WhatsApp",
-    "form.note": "Nessun dato viene salvato sul sito: il messaggio viene aperto direttamente in WhatsApp.",
+    "form.note": "Nessun dato viene salvato sul sito: il messaggio viene aperto in WhatsApp solo dopo il consenso ai servizi esterni.",
   },
   en: {
     skip: "Skip to content",
@@ -186,14 +180,14 @@ const translations = {
     "hero.hours": "<span>LUNCH, DINNER &amp; CONVIVIALITY</span> ITALIAN CUISINE - SEAFOOD - MEAT - PIZZA",
     "hero.edge": "Italian cuisine & Ligurian flavours",
     "hero.discover": "Discover La Taverna",
-    "story.kicker": "01 · Our story",
+    "story.kicker": "01 Our story",
     "story.title": "Our story",
     "story.copy1": "My story in the kitchen began back in <strong>1982</strong>. After learning the secrets of Sicilian cuisine and Italian tradition, I turned this passion into a journey that has stayed with me for more than forty years.",
     "story.copy2": "Over the years I opened <strong>four restaurants</strong>: the first in Sarzana, dedicated to meat cuisine, then three restaurants in the Cinque Terre, between Riomaggiore and Monterosso, leading to <strong>La Taverna</strong>.",
     "story.copy3": "My cuisine has remained faithful to a simple principle: <strong>respecting the raw ingredient and letting its authentic flavours speak</strong>. Traditional cooking, shaped by experience, care and attention.",
     "story.quote": "<strong>“Only by observing every small detail can great things be achieved.”</strong>",
     "story.copy4": "This philosophy, together with love and passion for my work, is what still drives me to continue the journey that began so many years ago.",
-    "restaurant.kicker": "02 · Our cuisine",
+    "restaurant.kicker": "02 Restaurant",
     "restaurant.copy1": "Italian dishes, seafood specialities and Ligurian flavours in a welcoming restaurant in the heart of Monterosso.",
     "restaurant.copy2": "A simple, curated and generous table for lunch and dinner in the Cinque Terre.",
     "restaurant.mobileCopy": "Italian cuisine, seafood and Ligurian flavours in the heart of Monterosso.",
@@ -208,7 +202,7 @@ const translations = {
     "food.ribs": "Grilled ribs",
     "food.semifreddo": "Semifreddo",
     "food.houseDessert": "House dessert",
-    "location.kicker": "03 · In Monterosso",
+    "location.kicker": "03 Location",
     "location.copy1": "Via Molinelli 39, close to the bright rhythm of Monterosso al Mare.",
     "location.copy2": "Dining room, outdoor tables and an informal mood for a tasteful stop in the Cinque Terre.",
     "location.front": "The table",
@@ -220,20 +214,14 @@ const translations = {
     "location.terrace1": "The terrace",
     "location.terrace2": "The outdoor dining area",
     "location.terrace3": "The atmosphere",
-    "luggage.kicker": "04 · Luggage storage",
+    "luggage.kicker": "04 Luggage storage",
     "luggage.title": "Luggage storage",
-    "luggage.copy": "Leave suitcases and backpacks in a convenient spot in the heart of Monterosso and enjoy the sea, lanes and departure hands-free.",
+    "luggage.copy": "Leave your suitcases and backpacks in a convenient spot in the heart of Monterosso and enjoy the sea, lanes and departure hands-free.",
     "luggage.badge": "Tourist service",
     "luggage.large": "Large bag/suitcase",
     "luggage.medium": "Medium bag/suitcase",
     "luggage.backpack": "Backpack",
     "luggage.book": "Book storage",
-    "luggage.line1Label": "Where",
-    "luggage.line1": "Via Molinelli 39",
-    "luggage.line2Label": "Best for",
-    "luggage.line2": "check-in, check-out and departures",
-    "luggage.line3Label": "Booking",
-    "luggage.line3": "fast via WhatsApp",
     "luggage.formKicker": "Message us on WhatsApp",
     "luggage.formTitle": "Book<br><em>storage.</em>",
     "luggage.formIntro": "Choose the luggage type: we will prepare your message and open WhatsApp directly.",
@@ -243,7 +231,7 @@ const translations = {
     "luggage.optionMedium": "Medium bag/suitcase - €3",
     "luggage.optionBackpack": "Backpack - €2",
     "luggage.placeholder": "Pick-up time or useful information",
-    "reviews.kicker": "05 · Reviews",
+    "reviews.kicker": "05 Reviews",
     "reviews.title": "What guests say",
     "reviews.awards": "Review channels",
     "reviews.cardLabel1": "Cuisine",
@@ -257,7 +245,7 @@ const translations = {
     "reviews.author3": "Via Molinelli 39",
     "reviews.read": "Read reviews",
     "reviews.leave": "Leave a review",
-    "contacts.kicker": "06 · Contacts",
+    "contacts.kicker": "06 Contacts",
     "contacts.title": "Contacts",
     "contacts.where": "Find us",
     "contacts.hoursLabel": "Opening hours",
@@ -274,7 +262,7 @@ const translations = {
     "legal.notes": "Legal notes",
     "legal.manageCookies": "Manage cookies",
     "cookie.title": "Privacy and external services",
-    "cookie.copy": "We only use technical tools. Google Maps is loaded only if you accept external services.",
+    "cookie.copy": "We only use technical tools. WhatsApp and Google Maps are opened or loaded only if you accept external services.",
     "cookie.necessary": "Necessary only",
     "cookie.accept": "Accept external services",
     "cookie.preferences": "Details",
@@ -291,7 +279,7 @@ const translations = {
     "form.message": "Message",
     "form.placeholder": "Requests or useful information",
     "form.submit": "Continue on WhatsApp",
-    "form.note": "No data is stored on this website: the message opens directly in WhatsApp.",
+    "form.note": "No data is stored on this website: the message opens in WhatsApp only after consent to external services.",
   },
 };
 
@@ -986,6 +974,8 @@ const cookieBanner = document.querySelector("[data-cookie-banner]");
 const mapFrame = document.querySelector("[data-map-src]");
 const mapConsent = document.querySelector("[data-map-consent]");
 const mapFrameWrap = mapFrame?.closest(".map-frame");
+let externalServicesAllowed = false;
+let pendingExternalAction = null;
 
 const readConsent = () => {
   try {
@@ -1017,6 +1007,21 @@ const hideCookieBanner = () => {
   }, 220);
 };
 
+const hasExternalServicesConsent = () => externalServicesAllowed || readConsent()?.externalServices === true;
+
+const openExternalUrl = (url) => window.open(url, "_blank", "noopener,noreferrer");
+
+const requestExternalUrl = (url) => {
+  if (hasExternalServicesConsent()) {
+    openExternalUrl(url);
+    return true;
+  }
+
+  pendingExternalAction = () => openExternalUrl(url);
+  showCookieBanner();
+  return false;
+};
+
 const loadExternalMap = ({ persist = true } = {}) => {
   if (!mapFrame) return;
   if (!mapFrame.getAttribute("src")) mapFrame.setAttribute("src", mapFrame.dataset.mapSrc || "");
@@ -1032,17 +1037,29 @@ const unloadExternalMap = () => {
 };
 
 const setExternalConsent = (externalServices) => {
+  externalServicesAllowed = externalServices;
   saveConsent(externalServices);
   if (externalServices) loadExternalMap({ persist: false });
   else unloadExternalMap();
   hideCookieBanner();
+
+  const action = externalServices ? pendingExternalAction : null;
+  pendingExternalAction = null;
+  action?.();
 };
 
 document.querySelector("[data-cookie-accept]")?.addEventListener("click", () => setExternalConsent(true));
 document.querySelector("[data-cookie-necessary]")?.addEventListener("click", () => setExternalConsent(false));
 document.querySelector("[data-map-load]")?.addEventListener("click", () => {
-  loadExternalMap();
-  hideCookieBanner();
+  setExternalConsent(true);
+});
+
+document.querySelectorAll("a[href*='google.com/maps']").forEach((link) => {
+  link.addEventListener("click", (event) => {
+    if (hasExternalServicesConsent()) return;
+    event.preventDefault();
+    requestExternalUrl(link.href);
+  });
 });
 
 document.querySelectorAll("[data-cookie-manage]").forEach((button) => {
@@ -1053,6 +1070,7 @@ document.querySelectorAll("[data-cookie-manage]").forEach((button) => {
 });
 
 const initialConsent = readConsent();
+externalServicesAllowed = initialConsent?.externalServices === true;
 if (initialConsent?.externalServices) {
   loadExternalMap({ persist: false });
 } else if (initialConsent) {
@@ -1112,7 +1130,7 @@ bookingForm?.addEventListener("submit", (event) => {
         note ? `\n${note}` : "",
       ].join("");
 
-  window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`, "_blank", "noopener,noreferrer");
+  requestExternalUrl(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`);
 });
 
 luggageForm?.addEventListener("submit", (event) => {
@@ -1155,7 +1173,7 @@ luggageForm?.addEventListener("submit", (event) => {
         note ? `\n${note}` : "",
       ].join("");
 
-  window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`, "_blank", "noopener,noreferrer");
+  requestExternalUrl(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`);
 });
 
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;

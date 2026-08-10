@@ -3970,6 +3970,8 @@ body {
 
 .story-copy {
   position: relative;
+  grid-column: 2;
+  grid-row: 1;
   z-index: 2;
   max-width: 37rem;
   padding: 0;
@@ -4018,6 +4020,8 @@ body {
 
 .story-visual {
   position: relative;
+  grid-column: 1;
+  grid-row: 1;
   width: min(100%, 42rem);
   min-height: clamp(25rem, 42vw, 35.5rem);
 }
@@ -4110,8 +4114,7 @@ body {
   border-bottom: 1px solid rgba(255, 255, 255, 0.14);
 }
 
-.luggage-service-head span,
-.luggage-service-lines span {
+.luggage-service-head span {
   color: var(--white);
   font-size: 0.58rem;
   font-weight: 600;
@@ -4149,31 +4152,6 @@ body {
   font-size: 2.35rem;
   font-weight: 400;
   line-height: 1;
-}
-
-.luggage-service-lines {
-  display: grid;
-  border-top: 1px solid rgba(255, 255, 255, 0.14);
-}
-
-.luggage-service-lines p {
-  display: grid;
-  margin: 0;
-  padding: 1rem 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.11);
-  gap: 0.35rem;
-}
-
-.luggage-service-lines p:last-child {
-  border-bottom: 0;
-  padding-bottom: 0;
-}
-
-.luggage-service-lines strong {
-  color: rgba(255, 255, 255, 0.92);
-  font-size: 0.88rem;
-  font-weight: 500;
-  line-height: 1.45;
 }
 
 .luggage-actions {
@@ -4334,6 +4312,12 @@ body {
     grid-template-columns: 1fr;
   }
 
+  .story-copy,
+  .story-visual {
+    grid-column: 1;
+    grid-row: auto;
+  }
+
   .story-copy {
     padding-bottom: 0;
   }
@@ -4358,17 +4342,34 @@ body {
 
   .story-section,
   .luggage-section {
+    display: flex;
+    flex-direction: column;
     min-height: auto;
     padding-top: clamp(3.6rem, 13vw, 5rem);
     padding-bottom: clamp(3.6rem, 13vw, 5rem);
   }
 
+  .story-copy,
+  .luggage-panel {
+    display: contents;
+  }
+
+  .story-copy .section-kicker,
+  .luggage-panel .section-kicker {
+    order: 1;
+    align-self: stretch;
+  }
+
   .story-copy h2,
   .luggage-panel h2 {
+    order: 2;
+    align-self: stretch;
     font-size: 3.4rem;
   }
 
   .story-visual {
+    order: 3;
+    align-self: stretch;
     min-height: clamp(26rem, 112vw, 33rem);
   }
 
@@ -4386,6 +4387,8 @@ body {
   }
 
   .story-body {
+    order: 4;
+    align-self: stretch;
     font-size: 0.78rem;
     line-height: 1.5;
     gap: 0.62rem;
@@ -4399,6 +4402,25 @@ body {
   .luggage-actions,
   .luggage-form-row {
     grid-template-columns: 1fr;
+  }
+
+  .luggage-panel > p:not(.section-kicker) {
+    order: 3;
+    align-self: stretch;
+  }
+
+  .luggage-service-card {
+    order: 4;
+    width: 100%;
+  }
+
+  .luggage-service-head {
+    display: none;
+  }
+
+  .luggage-actions {
+    order: 5;
+    width: 100%;
   }
 
   .luggage-actions .contact-book {
@@ -4513,6 +4535,7 @@ body {
   align-items: center;
   background: rgba(7, 13, 10, 0.96);
   color: var(--white);
+  font-family: var(--sans);
   box-shadow: 0 1.2rem 3rem rgba(0, 0, 0, 0.28);
   opacity: 0;
   transform: translateY(1rem);
@@ -4530,16 +4553,17 @@ body {
 
 .cookie-banner h2 {
   margin: 0 0 0.25rem;
-  color: var(--gold-light);
-  font-family: var(--serif);
-  font-size: clamp(1.25rem, 2.4vw, 1.7rem);
-  font-weight: 400;
-  letter-spacing: 0;
+  color: var(--white);
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
 }
 
 .cookie-banner p {
   margin: 0;
-  color: rgba(255, 253, 248, 0.72);
+  color: var(--white);
   font-size: 0.74rem;
   line-height: 1.45;
 }
@@ -4553,8 +4577,15 @@ body {
 
 .cookie-actions button:first-child,
 .cookie-actions button:last-child {
+  border-color: rgba(255, 255, 255, 0.62);
   background: transparent;
   color: var(--white);
+}
+
+.cookie-actions button[data-cookie-accept] {
+  border-color: var(--white);
+  background: var(--white);
+  color: var(--ink);
 }
 
 .legal-modal {
