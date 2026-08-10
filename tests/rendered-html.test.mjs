@@ -31,7 +31,7 @@ test("static HTML contains the La Taverna website", async () => {
   assert.match(html, /class="footer-logo"[\s\S]*>La Taverna<\/a>/);
   assert.match(html, /Scopri il nostro menù/);
   assert.match(html, /Menù/);
-  assert.match(html, /convivialità/);
+  assert.match(html, /CUCINA ITALIANA - PESCE - CARNE - PIZZA/);
   assert.match(html, /phone-line-icon/);
   assert.doesNotMatch(html, /LANTERNA|Lanterna, torna|brand-fish-tail|brand-fish-outline/);
   assert.doesNotMatch(html, /convivialita|Scopri il nostro menu|Il nostro<br \/><em>menu\.<\/em>/);
@@ -63,7 +63,8 @@ test("static HTML contains the La Taverna website", async () => {
   assert.match(html, /assets\/location-01\.jpg/);
   assert.match(html, /assets\/location-03\.png/);
   assert.match(html, /assets\/location-04\.png/);
-  assert.match(html, /assets\/location-04\.png[\s\S]*assets\/location-terrace-01\.jpg[\s\S]*assets\/location-terrace-02\.jpg[\s\S]*assets\/location-terrace-03\.jpg/);
+  assert.match(html, /assets\/location-04\.png[\s\S]*assets\/location-terrace-01\.jpg[\s\S]*assets\/location-terrace-03\.jpg/);
+  assert.doesNotMatch(html, /assets\/location-terrace-02\.jpg/);
   assert.match(html, /data-i18n="location\.terrace1">La terrazza/);
   assert.doesNotMatch(html, /assets\/location-exterior-terrace\.png/);
   assert.match(html, /assets\/food-01\.png/);
@@ -90,7 +91,7 @@ test("static HTML contains the La Taverna website", async () => {
   assert.match(html, /data-food-track/);
   assert.match(html, /data-location-track/);
   assert.match(html, /data-food-current>01<\/span> \/ 11/);
-  assert.match(html, /data-location-current>01<\/span> \/ 06/);
+  assert.match(html, /data-location-current>01<\/span> \/ 05/);
   assert.match(html, /class="map-frame"/);
   assert.match(html, /data-map-src="https:\/\/www\.google\.com\/maps/);
   assert.doesNotMatch(html, /\n\s+src="https:\/\/www\.google\.com\/maps/);
@@ -261,7 +262,7 @@ test("static assets are self-contained and scoped", async () => {
   assert.match(script, /starters,[\s\S]*firstCourses \? \{ \.\.\.firstCourses, it: "Primi"/);
   assert.match(script, /redWines\.items\.length \? redWines[\s\S]*whites \? \{ \.\.\.whites, it: "Bianchi"/);
   assert.match(script, /"card\.food": "Menù"/);
-  assert.match(script, /convivialità/);
+  assert.match(script, /CUCINA ITALIANA - PESCE - CARNE - PIZZA/);
   assert.match(script, /"location\.exterior": "L'esterno"/);
   assert.match(script, /"reviews\.title": "Cosa dicono di noi"/);
   assert.match(script, /"contacts\.title": "Contatti"/);
