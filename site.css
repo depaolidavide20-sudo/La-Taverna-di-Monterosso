@@ -4020,8 +4020,8 @@ body {
 }
 
 .story-body blockquote {
-  padding: 0.72rem 0 0.72rem 1rem;
-  border-left: 1px solid var(--gold);
+  padding: 0.72rem 0;
+  border-left: 0;
   color: var(--white);
   font-family: var(--serif);
   font-size: 1.35rem;
@@ -5412,7 +5412,7 @@ body {
 
   .story-body blockquote {
     padding: 0.75rem 0 0;
-    border-top: 1px solid rgba(184, 135, 70, 0.7);
+    border-top: 0;
     border-left: 0;
   }
 
