@@ -33,8 +33,10 @@
   </a>
 
   <nav class="desktop-nav" aria-label="Navigazione principale">
+    <a href="#storia" data-i18n="nav.story">Storia</a>
     <a href="#ristorante" data-i18n="nav.restaurant">Ristorante</a>
     <a href="#location" data-i18n="nav.location">Location</a>
+    <a href="#deposito-bagagli" data-i18n="nav.luggage">Deposito bagagli</a>
     <a href="#recensioni" data-i18n="nav.reviews">Recensioni</a>
     <a href="#contatti" data-i18n="nav.contacts">Contatti</a>
   </nav>
@@ -62,10 +64,12 @@
   <div class="menu-panel" tabindex="-1">
     <p class="menu-panel-kicker" id="mobile-menu-title">La Taverna · Monterosso</p>
     <nav aria-label="Navigazione mobile">
-      <a href="#ristorante"><span>01</span><b data-i18n="nav.restaurant">Ristorante</b><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5 19 19"></path><path d="M10 19h9v-9"></path></svg></a>
-      <a href="#location"><span>02</span><b data-i18n="nav.location">Location</b><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5 19 19"></path><path d="M10 19h9v-9"></path></svg></a>
-      <a href="#recensioni"><span>03</span><b data-i18n="nav.reviews">Recensioni</b><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5 19 19"></path><path d="M10 19h9v-9"></path></svg></a>
-      <a href="#contatti"><span>04</span><b data-i18n="nav.contacts">Contatti</b><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5 19 19"></path><path d="M10 19h9v-9"></path></svg></a>
+      <a href="#storia"><span>01</span><b data-i18n="nav.story">Storia</b><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5 19 19"></path><path d="M10 19h9v-9"></path></svg></a>
+      <a href="#ristorante"><span>02</span><b data-i18n="nav.restaurant">Ristorante</b><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5 19 19"></path><path d="M10 19h9v-9"></path></svg></a>
+      <a href="#location"><span>03</span><b data-i18n="nav.location">Location</b><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5 19 19"></path><path d="M10 19h9v-9"></path></svg></a>
+      <a href="#deposito-bagagli"><span>04</span><b data-i18n="nav.luggage">Deposito bagagli</b><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5 19 19"></path><path d="M10 19h9v-9"></path></svg></a>
+      <a href="#recensioni"><span>05</span><b data-i18n="nav.reviews">Recensioni</b><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5 19 19"></path><path d="M10 19h9v-9"></path></svg></a>
+      <a href="#contatti"><span>06</span><b data-i18n="nav.contacts">Contatti</b><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5 19 19"></path><path d="M10 19h9v-9"></path></svg></a>
     </nav>
     <a class="menu-book" href="#prenota" data-booking-trigger data-context="Prenotazione tavolo">
       <span data-i18n="cta.bookTable">Prenota un tavolo</span>
@@ -78,7 +82,7 @@
       <div>
         <a href="tel:+390187829111">+39 0187 829111</a>
         <a href="https://www.google.com/maps/search/?api=1&amp;query=La%20Taverna%20Via%20Molinelli%2039%20Monterosso%20al%20Mare" target="_blank" rel="noreferrer">Maps <svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5"></path><path d="M9 5h10v10"></path></svg></a>
-        <a href="mailto:ristorante-lataverna@libero.it">Email <svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5"></path><path d="M9 5h10v10"></path></svg></a>
+        <a href="mailto:SPADAROPIETRO52@GMAIL.COM">Email <svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5"></path><path d="M9 5h10v10"></path></svg></a>
       </div>
     </div>
   </div>
@@ -88,11 +92,9 @@
   <section class="hero" id="top" aria-label="La Taverna di Monterosso, ristorante a Monterosso al Mare">
     <picture class="hero-picture">
       <source media="(max-width: 760px)" srcset="assets/hero-wine-mobile.jpg" />
-      <source media="(min-width: 761px)" srcset="assets/hero-wine-desktop.jpg 1x, assets/hero-wine-desktop-2x.jpg 2x" />
       <img
         class="hero-image"
         src="assets/hero-wine-desktop.jpg"
-        srcset="assets/hero-wine-desktop.jpg 1x, assets/hero-wine-desktop-2x.jpg 2x"
         width="1672"
         height="941"
         fetchpriority="high"
@@ -153,16 +155,39 @@
     <div class="hero-edge hero-edge-left" data-i18n="hero.edge">Cucina italiana &amp; sapori liguri</div>
     <div class="hero-edge hero-edge-right">44.1461° N · 9.6549° E</div>
 
-    <a class="scroll-cue" href="#ristorante" aria-label="Scopri La Taverna">
+    <a class="scroll-cue" href="#storia" aria-label="Scopri La Taverna">
       <span data-i18n="hero.discover">Scopri La Taverna</span>
       <i aria-hidden="true"></i>
     </a>
 
   </section>
 
+  <section class="story-section section-dark" id="storia">
+    <div class="story-visual reveal" aria-label="Immagini della storia di La Taverna">
+      <figure class="story-photo story-photo-main">
+        <img src="assets/story-chefs-plating.png" width="941" height="1672" alt="Chef de La Taverna con piatti di pesce preparati in cucina" loading="lazy" decoding="async" />
+      </figure>
+      <figure class="story-photo story-photo-inset">
+        <img src="assets/story-chefs-fish.png" width="1086" height="1448" alt="Chef de La Taverna con pesce fresco in cucina" loading="lazy" decoding="async" />
+      </figure>
+    </div>
+
+    <div class="story-copy reveal reveal-delay">
+      <p class="section-kicker" data-i18n="story.kicker">01 · La nostra storia</p>
+      <h2 data-i18n="story.title">La nostra storia</h2>
+      <div class="story-body">
+        <p data-i18n-html="story.copy1">La mia storia in cucina inizia nel lontano <strong>1982</strong>. Dopo aver appreso i segreti della cucina siciliana e della tradizione italiana, ho trasformato questa passione in un viaggio che mi ha accompagnato per oltre quarant'anni.</p>
+        <p data-i18n-html="story.copy2">Nel corso degli anni ho dato vita a <strong>quattro ristoranti</strong>: il primo a Sarzana, dedicato alla cucina di carne, e successivamente tre ristoranti nelle Cinque Terre, tra Riomaggiore e Monterosso, fino ad arrivare a <strong>La Taverna</strong>.</p>
+        <p data-i18n-html="story.copy3">La mia cucina è rimasta fedele a un principio semplice: <strong>rispettare la materia prima e lasciare che siano i suoi sapori autentici a parlare</strong>. Una cucina tradizionale, fatta di esperienza, cura e attenzione.</p>
+        <blockquote data-i18n-html="story.quote"><strong>“Solo osservando tutti i piccoli dettagli si possono ottenere grandi cose.”</strong></blockquote>
+        <p data-i18n-html="story.copy4">È questa filosofia, insieme all'amore e alla passione per il mio lavoro, che ancora oggi mi spinge a continuare il viaggio iniziato tanti anni fa.</p>
+      </div>
+    </div>
+  </section>
+
   <section class="restaurant-section section-dark" id="ristorante">
     <div class="section-heading reveal">
-      <p class="section-kicker" data-i18n="restaurant.kicker">01 · La nostra cucina</p>
+      <p class="section-kicker" data-i18n="restaurant.kicker">02 · La nostra cucina</p>
       <h2 data-i18n="nav.restaurant">Ristorante</h2>
       <div class="heading-copy">
         <p data-i18n="restaurant.copy1">
@@ -196,13 +221,33 @@
           <figcaption><span>05</span><p data-i18n="food.ligurian">Gli spaghetti alle vongole</p></figcaption>
         </figure>
         <figure class="food-card food-card-offset">
+          <img src="assets/restaurant-meat-cellar.jpg" width="1122" height="1402" alt="Cella di frollatura con tagli di carne e cantina vini de La Taverna" loading="lazy" decoding="async" />
+          <figcaption><span>06</span><p data-i18n="food.meatCellar">La selezione di carne</p></figcaption>
+        </figure>
+        <figure class="food-card">
+          <img src="assets/restaurant-fritto-misto.png" width="1169" height="1345" alt="Frittura mista di pesce con gambero, calamari, acciughe e limone" loading="lazy" decoding="async" />
+          <figcaption><span>07</span><p data-i18n="food.frittoMisto">La frittura</p></figcaption>
+        </figure>
+        <figure class="food-card food-card-offset">
+          <img src="assets/restaurant-fiorentina.jpg" width="1086" height="1448" alt="Bistecca alla fiorentina servita su piastra calda" loading="lazy" decoding="async" />
+          <figcaption><span>08</span><p data-i18n="food.fiorentina">La fiorentina</p></figcaption>
+        </figure>
+        <figure class="food-card">
+          <img src="assets/restaurant-costine.jpg" width="1086" height="1448" alt="Costolette alla griglia servite con vino rosso" loading="lazy" decoding="async" />
+          <figcaption><span>09</span><p data-i18n="food.ribs">Le costolette</p></figcaption>
+        </figure>
+        <figure class="food-card food-card-offset">
+          <img src="assets/restaurant-dessert-semifreddo.png" width="1287" height="1222" alt="Dessert al cucchiaio con crema, salsa al cioccolato, amaretto e caramello" loading="lazy" decoding="async" />
+          <figcaption><span>10</span><p data-i18n="food.semifreddo">Il semifreddo</p></figcaption>
+        </figure>
+        <figure class="food-card">
           <img src="assets/food-06.jpg" width="941" height="1672" alt="Dessert al cucchiaio con crema e salsa gialla" loading="lazy" decoding="async" />
-          <figcaption><span>06</span><p data-i18n="food.wine">Il dolce della casa</p></figcaption>
+          <figcaption><span>11</span><p data-i18n="food.houseDessert">Il dolce della casa</p></figcaption>
         </figure>
       </div>
 
       <div class="carousel-footer">
-        <p><span data-food-current>01</span> / 06</p>
+        <p><span data-food-current>01</span> / 11</p>
         <div class="carousel-arrows">
           <button type="button" data-food-prev aria-label="Piatto precedente"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12H4"></path><path d="m10 6-6 6 6 6"></path></svg></button>
           <button type="button" data-food-next aria-label="Piatto successivo"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h16"></path><path d="m14 6 6 6-6 6"></path></svg></button>
@@ -222,7 +267,7 @@
 
   <section class="location-section" id="location">
     <div class="section-heading location-heading reveal">
-      <p class="section-kicker" data-i18n="location.kicker">02 · A Monterosso</p>
+      <p class="section-kicker" data-i18n="location.kicker">03 · A Monterosso</p>
       <h2 data-i18n="nav.location">Location</h2>
       <div class="heading-copy">
         <p data-i18n="location.copy1">Via Molinelli 39, a pochi passi dal ritmo luminoso di Monterosso al Mare.</p>
@@ -245,13 +290,21 @@
           <figcaption><span>03</span><p data-i18n="location.table">I dettagli</p></figcaption>
         </figure>
         <figure class="location-card">
-          <img src="assets/location-exterior-terrace.png" width="1448" height="1086" alt="Esterno de La Taverna con dehors, tavoli all'aperto e verde di Monterosso" loading="lazy" decoding="async" />
-          <figcaption><span>04</span><p data-i18n="location.exterior">L'esterno</p></figcaption>
+          <img src="assets/location-terrace-01.jpg" width="1086" height="1448" alt="Dehors coperto de La Taverna con tavoli apparecchiati e sedute gialle" loading="lazy" decoding="async" />
+          <figcaption><span>04</span><p data-i18n="location.terrace1">La terrazza</p></figcaption>
+        </figure>
+        <figure class="location-card">
+          <img src="assets/location-terrace-02.jpg" width="1086" height="1448" alt="Ingresso del dehors de La Taverna con tavoli apparecchiati sotto la copertura gialla" loading="lazy" decoding="async" />
+          <figcaption><span>05</span><p data-i18n="location.terrace2">Il dehors</p></figcaption>
+        </figure>
+        <figure class="location-card">
+          <img src="assets/location-terrace-03.jpg" width="1086" height="1448" alt="Tavoli del dehors de La Taverna illuminati da luce calda" loading="lazy" decoding="async" />
+          <figcaption><span>06</span><p data-i18n="location.terrace3">L'atmosfera</p></figcaption>
         </figure>
       </div>
 
       <div class="carousel-footer carousel-footer-dark">
-        <p><span data-location-current>01</span> / 04</p>
+        <p><span data-location-current>01</span> / 06</p>
         <div class="carousel-arrows">
           <button type="button" data-location-prev aria-label="Ambiente precedente"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12H4"></path><path d="m10 6-6 6 6 6"></path></svg></button>
           <button type="button" data-location-next aria-label="Ambiente successivo"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h16"></path><path d="m14 6 6 6-6 6"></path></svg></button>
@@ -260,53 +313,57 @@
     </div>
   </section>
 
+  <section class="luggage-section section-dark" id="deposito-bagagli">
+    <div class="luggage-panel reveal">
+      <p class="section-kicker" data-i18n="luggage.kicker">04 · Deposito bagagli</p>
+      <h2 data-i18n="luggage.title">Deposito bagagli</h2>
+      <p data-i18n="luggage.copy">Lascia valigie e zaini in un punto comodo nel cuore di Monterosso e goditi mare, vicoli e partenza senza peso.</p>
+      <div class="luggage-actions">
+        <a class="contact-book" href="#deposito-bagagli-form" data-luggage-trigger>
+          <span data-i18n="luggage.book">Prenota deposito</span>
+          <svg class="whatsapp-cta-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path class="whatsapp-icon-mark" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347M12.051 21.785h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.999-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.002-5.45 4.436-9.884 9.889-9.884a9.822 9.822 0 0 1 6.988 2.899 9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.883-9.887 9.883M20.52 3.449A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.946L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0 0 20.52 3.449"></path>
+          </svg>
+        </a>
+        <a class="contact-book contact-call" href="tel:+390187829111">
+          <span data-i18n="cta.call">Chiama ora</span>
+          <svg class="phone-line-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M21.3 16.9v2.35a2.1 2.1 0 0 1-2.28 2.1 20.1 20.1 0 0 1-8.76-3.12 19.7 19.7 0 0 1-6.08-6.08 20.1 20.1 0 0 1-3.12-8.8A2.1 2.1 0 0 1 3.15 1.1h2.35a2.1 2.1 0 0 1 2.08 1.8c.13 1 .36 1.98.7 2.92a2.1 2.1 0 0 1-.48 2.17L6.8 9a16.1 16.1 0 0 0 7.2 7.2l1.01-1a2.1 2.1 0 0 1 2.17-.49c.94.35 1.92.58 2.92.71a2.1 2.1 0 0 1 1.2 1.48Z"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+    <div class="luggage-service-card reveal reveal-delay">
+      <div class="luggage-service-head">
+        <span data-i18n="luggage.badge">Servizio turistico</span>
+      </div>
+      <div class="luggage-options" aria-label="Tariffe deposito bagagli">
+        <article>
+          <span data-i18n="luggage.large">Bagaglio/valigia grande</span>
+          <strong>€ 5</strong>
+        </article>
+        <article>
+          <span data-i18n="luggage.medium">Bagaglio/valigia media</span>
+          <strong>€ 3</strong>
+        </article>
+        <article>
+          <span data-i18n="luggage.backpack">Zaino</span>
+          <strong>€ 2</strong>
+        </article>
+      </div>
+      <div class="luggage-service-lines" aria-label="Dettagli del servizio">
+        <p><span data-i18n="luggage.line1Label">Dove</span><strong data-i18n="luggage.line1">Via Molinelli 39</strong></p>
+        <p><span data-i18n="luggage.line2Label">Ideale per</span><strong data-i18n="luggage.line2">check-in, check-out e partenze</strong></p>
+        <p><span data-i18n="luggage.line3Label">Prenotazione</span><strong data-i18n="luggage.line3">rapida via WhatsApp</strong></p>
+      </div>
+    </div>
+  </section>
+
   <section class="reviews-section" id="recensioni">
     <div class="reviews-intro reveal">
       <div>
-        <p class="section-kicker" data-i18n="reviews.kicker">03 · Recensioni</p>
+        <p class="section-kicker" data-i18n="reviews.kicker">05 · Recensioni</p>
         <h2 data-i18n="reviews.title">Cosa dicono di noi</h2>
-      </div>
-      <div class="rating-column">
-        <div class="review-awards review-links-summary" aria-label="Canali recensioni La Taverna">
-          <span data-i18n="reviews.awards">Canali recensioni</span>
-          <a class="tripadvisor-badge owl-no-speak" href="https://www.tripadvisor.it/Restaurant_Review-g187820-d8008467-Reviews-La_Taverna-Monterosso_al_Mare_Cinque_Terre_Italian_Riviera_Liguria.html" target="_blank" rel="noreferrer" aria-label="Recensioni La Taverna su Tripadvisor">
-            <svg class="tripadvisor-owl" viewBox="0 0 64 48" aria-hidden="true">
-              <path class="owl-frame" d="M3 18h10.8C18.7 10.2 25.1 6.4 32 6.4s13.3 3.8 18.2 11.6H61"></path>
-              <circle class="owl-eye owl-eye-left" cx="22" cy="25.5" r="10.4"></circle>
-              <circle class="owl-eye owl-eye-right" cx="42" cy="25.5" r="10.4"></circle>
-              <circle class="owl-pupil owl-pupil-left" cx="22" cy="25.5" r="3"></circle>
-              <circle class="owl-pupil owl-pupil-right" cx="42" cy="25.5" r="3"></circle>
-              <path class="owl-beak" d="m29 33.2 3 3.2 3-3.2"></path>
-              <path class="owl-gesture owl-speak-cover" d="M22.8 36.1c5-4.4 13.4-4.4 18.4 0"></path>
-            </svg>
-            <b>Tripadvisor</b>
-          </a>
-          <a class="tripadvisor-badge owl-no-hear" href="https://www.tripadvisor.it/Restaurant_Review-g187820-d8008467-Reviews-La_Taverna-Monterosso_al_Mare_Cinque_Terre_Italian_Riviera_Liguria.html" target="_blank" rel="noreferrer" aria-label="Esperienze La Taverna su Tripadvisor">
-            <svg class="tripadvisor-owl" viewBox="0 0 64 48" aria-hidden="true">
-              <path class="owl-frame" d="M3 18h10.8C18.7 10.2 25.1 6.4 32 6.4s13.3 3.8 18.2 11.6H61"></path>
-              <circle class="owl-eye owl-eye-left" cx="22" cy="25.5" r="10.4"></circle>
-              <circle class="owl-eye owl-eye-right" cx="42" cy="25.5" r="10.4"></circle>
-              <circle class="owl-pupil owl-pupil-left" cx="22" cy="25.5" r="3"></circle>
-              <circle class="owl-pupil owl-pupil-right" cx="42" cy="25.5" r="3"></circle>
-              <path class="owl-beak" d="m29 33.2 3 3.2 3-3.2"></path>
-              <path class="owl-gesture owl-ear-cover owl-ear-left" d="M13.2 19.2c-4.3 5.4-4.2 12.9 0.3 18"></path>
-              <path class="owl-gesture owl-ear-cover owl-ear-right" d="M50.8 19.2c4.3 5.4 4.2 12.9-0.3 18"></path>
-            </svg>
-            <b>Reviews</b>
-          </a>
-          <a class="tripadvisor-badge owl-no-see" href="https://www.tripadvisor.it/Restaurant_Review-g187820-d8008467-Reviews-La_Taverna-Monterosso_al_Mare_Cinque_Terre_Italian_Riviera_Liguria.html" target="_blank" rel="noreferrer" aria-label="La Taverna a Monterosso su Tripadvisor">
-            <svg class="tripadvisor-owl" viewBox="0 0 64 48" aria-hidden="true">
-              <path class="owl-frame" d="M3 18h10.8C18.7 10.2 25.1 6.4 32 6.4s13.3 3.8 18.2 11.6H61"></path>
-              <circle class="owl-eye owl-eye-left" cx="22" cy="25.5" r="10.4"></circle>
-              <circle class="owl-eye owl-eye-right" cx="42" cy="25.5" r="10.4"></circle>
-              <circle class="owl-pupil owl-pupil-left" cx="22" cy="25.5" r="3"></circle>
-              <circle class="owl-pupil owl-pupil-right" cx="42" cy="25.5" r="3"></circle>
-              <path class="owl-beak" d="m29 33.2 3 3.2 3-3.2"></path>
-              <path class="owl-gesture owl-eye-cover" d="M11.8 23.6c5.1-4.3 15.2-4.3 20.4 0M31.8 23.6c5.1-4.3 15.2-4.3 20.4 0"></path>
-            </svg>
-            <b>5 Terre</b>
-          </a>
-        </div>
       </div>
     </div>
 
@@ -351,7 +408,7 @@
 
   <section class="contact-section" id="contatti">
     <div class="contact-panel reveal">
-      <p class="section-kicker" data-i18n="contacts.kicker">04 · Contatti</p>
+      <p class="section-kicker" data-i18n="contacts.kicker">06 · Contatti</p>
       <h2 data-i18n="contacts.title">Contatti</h2>
 
       <div class="contact-list">
@@ -364,6 +421,10 @@
         <div>
           <h3 data-i18n="contacts.hoursLabel">Orari</h3>
           <p data-i18n-html="contacts.hours">Pranzo e cena<br />tutti i giorni</p>
+        </div>
+        <div>
+          <h3 data-i18n="contacts.email">Email</h3>
+          <a href="mailto:SPADAROPIETRO52@GMAIL.COM">SPADAROPIETRO52@GMAIL.COM</a>
         </div>
         <div class="contact-phone-cell">
           <h3 data-i18n="contacts.phone">Telefono</h3>
@@ -393,11 +454,15 @@
       <div class="map-frame">
         <iframe
           title="Mappa di La Taverna di Monterosso"
-          src="https://www.google.com/maps?q=La%20Taverna%20di%20Monterosso%2C%20Via%20Molinelli%2039%2C%2019016%20Monterosso%20al%20Mare%20SP&amp;z=18&amp;output=embed"
+          data-map-src="https://www.google.com/maps?q=La%20Taverna%20di%20Monterosso%2C%20Via%20Molinelli%2039%2C%2019016%20Monterosso%20al%20Mare%20SP&amp;z=18&amp;output=embed"
           loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"
         ></iframe>
         <div class="map-veiling" aria-hidden="true"></div>
+        <div class="map-consent" data-map-consent>
+          <p data-i18n="map.notice">La mappa di Google viene caricata solo dopo il consenso ai servizi esterni.</p>
+          <button type="button" data-map-load data-i18n="map.load">Carica la mappa</button>
+        </div>
         <div class="map-label">
           <span data-i18n="contacts.mapLabel">Monterosso al Mare · Cinque Terre</span>
           <strong>La Taverna di Monterosso</strong>
@@ -447,8 +512,14 @@
     <a href="#top"><span data-i18n="footer.top">Torna su</span><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20V4"></path><path d="m6 10 6-6 6 6"></path></svg></a>
   </div>
   <div class="footer-bottom">
-    <p>© <span data-year></span> La Taverna di Monterosso</p>
-    <p>Via Molinelli 39 · Monterosso al Mare</p>
+    <p>© <span data-year></span> RISTORANTE LA TAVERNA · SPADARO PIETRO SRLS · P.IVA/C.F. 01571370111</p>
+    <p>Via Molinelli 39 · 19016 Monterosso al Mare (SP) · <a href="mailto:SPADAROPIETRO52@GMAIL.COM">SPADAROPIETRO52@GMAIL.COM</a></p>
+  </div>
+  <div class="footer-legal-links" aria-label="Informazioni legali">
+    <button type="button" data-legal-trigger="privacy" data-i18n="legal.privacy">Privacy</button>
+    <button type="button" data-legal-trigger="cookies" data-i18n="legal.cookies">Cookie</button>
+    <button type="button" data-legal-trigger="notes" data-i18n="legal.notes">Note legali</button>
+    <button type="button" data-cookie-manage data-i18n="legal.manageCookies">Gestisci cookie</button>
   </div>
 </footer>
 
@@ -542,6 +613,138 @@
       <p class="form-note" data-i18n="form.note">Nessun dato viene salvato sul sito.</p>
     </form>
   </section>
+</div>
+
+<div class="luggage-modal" data-luggage-modal aria-hidden="true" hidden>
+  <button class="luggage-backdrop" type="button" aria-label="Chiudi il form deposito bagagli" data-luggage-close></button>
+  <section class="luggage-dialog" role="dialog" aria-modal="true" aria-labelledby="luggage-title" tabindex="-1">
+    <button class="luggage-close" type="button" aria-label="Chiudi" data-luggage-close>
+      <span></span><span></span>
+    </button>
+    <p class="section-kicker" data-i18n="luggage.formKicker">Scrivici su WhatsApp</p>
+    <h2 id="luggage-title" data-i18n-html="luggage.formTitle">Prenota<br /><em>il deposito.</em></h2>
+    <p class="booking-intro" data-i18n="luggage.formIntro">
+      Scegli il tipo di bagaglio: prepareremo il messaggio e apriremo direttamente WhatsApp.
+    </p>
+
+    <form data-luggage-form>
+      <label>
+        <span data-i18n="form.name">Nome e cognome *</span>
+        <input type="text" name="name" autocomplete="name" required />
+      </label>
+      <div class="form-row">
+        <label>
+          <span data-i18n="form.date">Data</span>
+          <input type="date" name="date" />
+        </label>
+        <label>
+          <span data-i18n="form.time">Orario</span>
+          <input type="time" name="time" />
+        </label>
+      </div>
+      <div class="form-row luggage-form-row">
+        <label>
+          <span data-i18n="luggage.type">Tipo bagaglio *</span>
+          <select name="item" autocomplete="off" required>
+            <option value="" data-i18n="form.choose">Scegli</option>
+            <option value="Bagaglio/valigia grande - 5€" data-i18n="luggage.optionLarge">Bagaglio/valigia grande - 5€</option>
+            <option value="Bagaglio/valigia media - 3€" data-i18n="luggage.optionMedium">Bagaglio/valigia media - 3€</option>
+            <option value="Zaino - 2€" data-i18n="luggage.optionBackpack">Zaino - 2€</option>
+          </select>
+        </label>
+        <label>
+          <span data-i18n="luggage.quantity">Quantità</span>
+          <input type="number" name="quantity" min="1" value="1" inputmode="numeric" />
+        </label>
+      </div>
+      <label>
+        <span data-i18n="form.message">Messaggio</span>
+        <textarea name="message" rows="3" data-i18n-placeholder="luggage.placeholder" placeholder="Orario di ritiro o informazioni utili"></textarea>
+      </label>
+      <button class="whatsapp-submit" type="submit">
+        <span data-i18n="form.submit">Continua su WhatsApp</span>
+        <svg class="whatsapp-cta-icon" viewBox="0 0 24 24" aria-hidden="true">
+          <path class="whatsapp-icon-mark" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347M12.051 21.785h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.999-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.002-5.45 4.436-9.884 9.889-9.884a9.822 9.822 0 0 1 6.988 2.899 9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.883-9.887 9.883M20.52 3.449A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.946L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0 0 20.52 3.449"></path>
+        </svg>
+      </button>
+      <p class="form-note" data-i18n="form.note">Nessun dato viene salvato sul sito.</p>
+    </form>
+  </section>
+</div>
+
+<div class="legal-modal" data-legal-modal aria-hidden="true" hidden>
+  <button class="legal-backdrop" type="button" aria-label="Chiudi le informazioni legali" data-legal-close></button>
+  <section class="legal-dialog" role="dialog" aria-modal="true" aria-labelledby="legal-title" tabindex="-1">
+    <button class="legal-close" type="button" aria-label="Chiudi" data-legal-close>
+      <span></span><span></span>
+    </button>
+    <p class="section-kicker">La Taverna · Informazioni legali</p>
+    <h2 id="legal-title">Privacy,<br /><em>cookie e note legali.</em></h2>
+
+    <div class="legal-tabs" role="tablist" aria-label="Seleziona informativa">
+      <button class="is-active" type="button" role="tab" aria-selected="true" data-legal-tab="privacy">Privacy</button>
+      <button type="button" role="tab" aria-selected="false" data-legal-tab="cookies">Cookie</button>
+      <button type="button" role="tab" aria-selected="false" data-legal-tab="notes">Note legali</button>
+    </div>
+
+    <div class="legal-content">
+      <article class="legal-panel is-active" data-legal-panel="privacy">
+        <h3>Informativa privacy</h3>
+        <p><strong>Ultimo aggiornamento:</strong> 09/08/2026.</p>
+        <p><strong>Titolare del trattamento:</strong> SPADARO PIETRO SRLS, P.IVA/C.F. 01571370111, attività RISTORANTE LA TAVERNA, Via Molinelli 39, 19016 Monterosso al Mare (SP). Email: <a href="mailto:SPADAROPIETRO52@GMAIL.COM">SPADAROPIETRO52@GMAIL.COM</a>.</p>
+        <p>Questo sito presenta l'attività, il menu, la carta vini, i contatti e permette di aprire una conversazione WhatsApp per richieste o prenotazioni. Il sito non salva i dati inseriti nel modulo: il messaggio viene composto nel browser e inviato solo quando scegli di proseguire su WhatsApp.</p>
+        <h4>Dati trattati</h4>
+        <ul>
+          <li>Dati tecnici di navigazione necessari al funzionamento del sito.</li>
+          <li>Dati che inserisci volontariamente nel modulo, nelle email, nelle telefonate o nei messaggi WhatsApp.</li>
+          <li>Preferenza cookie/servizi esterni salvata nel browser.</li>
+          <li>Dati tecnici trasmessi a Google per il caricamento dei font e, solo dopo consenso, per Google Maps.</li>
+        </ul>
+        <h4>Finalità e basi giuridiche</h4>
+        <ul>
+          <li>Funzionamento, sicurezza e consultazione del sito: legittimo interesse e misure tecniche necessarie.</li>
+          <li>Gestione di richieste, prenotazioni e contatti: esecuzione di misure precontrattuali o contrattuali richieste dall'utente.</li>
+          <li>Servizi esterni non essenziali, come la mappa incorporata: consenso.</li>
+          <li>Adempimenti di legge: obbligo legale, quando applicabile.</li>
+        </ul>
+        <h4>Conservazione, destinatari e diritti</h4>
+        <p>I dati sono conservati per il tempo necessario a gestire la richiesta e gli eventuali obblighi amministrativi o fiscali. Possono essere trattati da fornitori tecnici e, su tua iniziativa, da servizi esterni come WhatsApp, Google Maps o social network. Puoi chiedere accesso, rettifica, cancellazione, limitazione, opposizione e portabilità dei dati scrivendo all'email del titolare. Hai inoltre diritto di proporre reclamo all'Autorità Garante per la protezione dei dati personali.</p>
+      </article>
+
+      <article class="legal-panel" data-legal-panel="cookies">
+        <h3>Cookie policy</h3>
+        <p>Il sito non usa cookie di profilazione, sistemi di advertising o analytics. Per ricordare la scelta sui servizi esterni viene usata una preferenza tecnica nel browser.</p>
+        <h4>Strumenti presenti</h4>
+        <ul>
+          <li><strong>Preferenza consenso:</strong> necessaria per ricordare se hai accettato o rifiutato il caricamento dei servizi esterni.</li>
+          <li><strong>Google Fonts:</strong> usato per la tipografia del sito; il caricamento può comportare richieste tecniche ai server Google.</li>
+          <li><strong>Google Maps:</strong> la mappa viene caricata solo dopo consenso o pressione del pulsante "Carica la mappa". Google potrebbe trattare dati secondo le proprie informative.</li>
+          <li><strong>WhatsApp, Instagram, Facebook e Google:</strong> si aprono solo quando selezioni i relativi link o invii un messaggio.</li>
+        </ul>
+        <p>Puoi modificare la scelta in qualsiasi momento dal link "Gestisci cookie" nel footer. Puoi anche cancellare dati e preferenze dal browser.</p>
+      </article>
+
+      <article class="legal-panel" data-legal-panel="notes">
+        <h3>Note legali</h3>
+        <p><strong>Proprietario del sito:</strong> SPADARO PIETRO SRLS · <strong>Nome attività:</strong> RISTORANTE LA TAVERNA · <strong>P.IVA/C.F.:</strong> 01571370111 · <strong>Email:</strong> <a href="mailto:SPADAROPIETRO52@GMAIL.COM">SPADAROPIETRO52@GMAIL.COM</a>.</p>
+        <p><strong>Indirizzo attività:</strong> Via Molinelli 39, 19016 Monterosso al Mare (SP).</p>
+        <p>Testi, immagini e segni distintivi presenti nel sito sono riferiti a RISTORANTE LA TAVERNA e non possono essere riutilizzati senza autorizzazione. Menu, prezzi, etichette, annate e disponibilità possono cambiare senza preavviso.</p>
+        <p>In caso di allergie o intolleranze alimentari, informa sempre il personale prima dell'ordinazione. Alcuni prodotti possono essere sottoposti ad abbattimento rapido della temperatura secondo la normativa igienico-sanitaria applicabile.</p>
+      </article>
+    </div>
+  </section>
+</div>
+
+<div class="cookie-banner" data-cookie-banner hidden role="region" aria-label="Preferenze cookie">
+  <div>
+    <h2 data-i18n="cookie.title">Privacy e servizi esterni</h2>
+    <p data-i18n="cookie.copy">Usiamo solo strumenti tecnici. La mappa di Google viene caricata solo se accetti i servizi esterni.</p>
+  </div>
+  <div class="cookie-actions">
+    <button type="button" data-cookie-necessary data-i18n="cookie.necessary">Solo necessari</button>
+    <button type="button" data-cookie-accept data-i18n="cookie.accept">Accetta servizi esterni</button>
+    <button type="button" data-legal-trigger="cookies" data-i18n="cookie.preferences">Dettagli</button>
+  </div>
 </div>
 
 <a class="mobile-sticky-book" href="#prenota" data-booking-trigger data-context="Prenotazione tavolo">
