@@ -54,7 +54,7 @@ test("static HTML contains the La Taverna website", async () => {
   assert.match(html, /data-i18n="luggage\.kicker">04 BAGAGLI/);
   assert.match(html, /data-i18n="reviews\.kicker">05 Recensioni/);
   assert.match(html, /data-i18n="contacts\.kicker">06 Contatti/);
-  assert.match(html, /id="storia"[\s\S]*data-i18n="story\.title">La nostra storia[\s\S]*La mia storia in cucina inizia nel lontano <strong>1982<\/strong>[\s\S]*quattro ristoranti[\s\S]*Solo osservando tutti i piccoli dettagli[\s\S]*assets\/story-chefs-plating\.png[\s\S]*assets\/story-chefs-fish\.png[\s\S]*id="ristorante"/);
+  assert.match(html, /id="storia"[\s\S]*data-i18n="story\.title">La nostra storia[\s\S]*La mia storia in cucina inizia nel lontano <strong>1982<\/strong>[\s\S]*cinque ristoranti[\s\S]*Milazzo, in Sicilia[\s\S]*Solo osservando tutti i piccoli dettagli[\s\S]*assets\/story-chefs-plating\.png[\s\S]*assets\/story-chefs-fish\.png[\s\S]*id="ristorante"/);
   assert.match(html, /data-i18n="luggage\.title">Deposito bagagli/);
   assert.doesNotMatch(html, /class="luggage-media"/);
   assert.match(html, /class="luggage-service-card/);
