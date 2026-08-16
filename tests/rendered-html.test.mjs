@@ -9,7 +9,10 @@ test("static HTML contains the La Taverna website", async () => {
   assert.match(html, /<html class="notranslate" lang="it" translate="no">/);
   assert.match(html, /<body class="notranslate" translate="no">/);
   assert.match(html, /<meta name="google" content="notranslate" \/>/);
-  assert.match(html, /<meta name="robots" content="notranslate" \/>/);
+  assert.match(html, /<meta name="robots" content="index, follow" \/>/);
+  assert.match(html, /<link rel="canonical" href="https:\/\/latavernadimonterosso\.it\/" \/>/);
+  assert.match(html, /<meta property="og:url" content="https:\/\/latavernadimonterosso\.it\/" \/>/);
+  assert.doesNotMatch(html, /noindex|www\.latavernadimonterosso\.it|\.vercel\.app/i);
   assert.match(html, /<title>La Taverna di Monterosso \| Ristorante a Monterosso al Mare<\/title>/i);
   assert.match(html, /https:\/\/fonts\.googleapis\.com/);
   assert.match(html, /https:\/\/fonts\.gstatic\.com/);
@@ -317,4 +320,27 @@ test("static assets are self-contained and scoped", async () => {
   assert.doesNotMatch(css, /hero-verve|dish-0|location-0|_sites-preview|codex-preview/i);
   assert.doesNotMatch(script, /convivialita|Scopri il nostro menu|Il nostro<br><em>menu\.<\/em>/);
   assert.doesNotMatch(script, /Verve|393465874048|mailto:\$\{contactEmail\}|Richiesta:|Request:|Data:|Guests:|Recensioni aggiornate|Updated reviews/i);
+});
+
+test("seo sitemap and robots use the canonical domain", async () => {
+  const [sitemap, robots] = await Promise.all([
+    readFile(new URL("../sitemap.xml", import.meta.url), "utf8"),
+    readFile(new URL("../robots.txt", import.meta.url), "utf8"),
+  ]);
+
+  assert.match(sitemap, /^<\?xml version="1\.0" encoding="UTF-8"\?>/);
+  assert.match(sitemap, /<urlset xmlns="http:\/\/www\.sitemaps\.org\/schemas\/sitemap\/0\.9">/);
+  assert.match(sitemap, /<loc>https:\/\/latavernadimonterosso\.it\/<\/loc>/);
+  assert.doesNotMatch(sitemap, /lastmod|www\.latavernadimonterosso\.it|\.vercel\.app|\/api\/|\/admin\/|localhost/i);
+
+  assert.equal(
+    robots.trim(),
+    [
+      "User-agent: *",
+      "Allow: /",
+      "",
+      "Sitemap: https://latavernadimonterosso.it/sitemap.xml",
+    ].join("\n")
+  );
+  assert.doesNotMatch(robots, /www\.latavernadimonterosso\.it|\.vercel\.app|Disallow:\s*\//i);
 });
