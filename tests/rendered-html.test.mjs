@@ -34,7 +34,7 @@ test("static HTML contains the La Taverna website", async () => {
   assert.match(html, /class="footer-logo"[\s\S]*>La Taverna<\/a>/);
   assert.match(html, /Scopri il nostro menù/);
   assert.match(html, /Menù/);
-  assert.match(html, /CUCINA ITALIANA - PESCE - CARNE - PIZZA/);
+  assert.match(html, /CUCINA ITALIANA - PESCE - CARNE/);
   assert.match(html, /phone-line-icon/);
   assert.doesNotMatch(html, /LANTERNA|Lanterna, torna|brand-fish-tail|brand-fish-outline/);
   assert.doesNotMatch(html, /convivialita|Scopri il nostro menu|Il nostro<br \/><em>menu\.<\/em>/);
@@ -99,11 +99,12 @@ test("static HTML contains the La Taverna website", async () => {
   assert.match(html, /<figcaption><span>13<\/span><p data-i18n="food\.tunaTagliata">La tagliata di tonno<\/p><\/figcaption>[\s\S]*<figcaption><span>14<\/span><p data-i18n="food\.semifreddo">Il semifreddo<\/p><\/figcaption>[\s\S]*<figcaption><span>15<\/span><p data-i18n="food\.houseDessert">Il dolce della casa<\/p><\/figcaption>/);
   assert.doesNotMatch(html, /assets\/restaurant-dessert-tiramisu\.jpg/);
   assert.match(html, /La Taverna di Monterosso/);
-  assert.match(html, /Ristorante - Pizzeria/);
+  assert.match(html, /data-i18n="hero\.overline">Ristorante/);
   assert.match(html, /Monterosso al Mare/);
   assert.match(html, /Via Molinelli 39/);
   assert.match(html, /\+39 0187 829111/);
-  assert.match(html, /SPADAROPIETRO52@GMAIL\.COM/);
+  assert.match(html, /ristorante-lataverna@libero\.it/);
+  assert.doesNotMatch(html, new RegExp("gm" + "ail\\\\.com", "i"));
   assert.match(html, /SPADARO PIETRO SRLS/);
   assert.match(html, /01571370111/);
   assert.match(html, /data-food-track/);
@@ -313,7 +314,7 @@ test("static assets are self-contained and scoped", async () => {
   assert.match(script, /starters,[\s\S]*firstCourses \? \{ \.\.\.firstCourses, it: "Primi"/);
   assert.match(script, /redWines\.items\.length \? redWines[\s\S]*whites \? \{ \.\.\.whites, it: "Bianchi"/);
   assert.match(script, /"card\.food": "Menù"/);
-  assert.match(script, /CUCINA ITALIANA - PESCE - CARNE - PIZZA/);
+  assert.match(script, /CUCINA ITALIANA - PESCE - CARNE/);
   assert.match(script, /"location\.exterior": "L'esterno"/);
   assert.match(script, /"reviews\.title": "Cosa dicono di noi"/);
   assert.match(script, /"contacts\.title": "Contatti"/);
